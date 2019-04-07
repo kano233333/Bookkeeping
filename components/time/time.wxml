@@ -1,0 +1,5 @@
+<view class="section">
+  <picker mode="date" fields="{{fields}}" start="{{start}}" end="{{end}}" bindchange="bindDateChange">
+    <slot></slot>
+  </picker>
+</view>
