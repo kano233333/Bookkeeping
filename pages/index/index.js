@@ -7,48 +7,66 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    islogin:true
   },
   onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
+    this.isSq();
+  },
+  getPickerTimer(data){
+    console.log(data)
+  },
+  isSq(){
+    var _this = this;
+    wx.getSetting({
+      success(res){
+        if(res.authSetting['scope.userInfo']){
+          _this.isLogin();
+        } else {
+          _this.setData({
+            islogin:false
           })
         }
+      }
+    })
+  },
+  isLogin(){
+    var sessionID = wx.getStorageSync('sessionID');
+    var _this = this;
+    if(sessionID){
+      // wx.request({
+      //   url:_this.globalData.ip+'/userLogin',
+      //   data:{
+      //     uuid:sessionID
+      //   }
+      // }).then((res)=>{
+      //   if(res.state==1) {
+      _this.getUserInfo();
+      // }
+      // }).catch(()=>{})
+    }else{
+      this.setData({
+        islogin:false
       })
     }
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
+  getUserInfo(){
+    var _this = this;
+    wx.getUserInfo({
+      success(res){
+        app.globalData.userInfo = res.userInfo;
+        console.log(res)
+        _this.setData({
+          islogin:true,
+          motto:'Hello '+app.globalData.userInfo.nickName
+        })
+      }
+    })
+  },
+  loginModel(){
     this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+      islogin:true,
+      motto:'Hello '+app.globalData.userInfo.nickName
     })
   }
 })

@@ -1,0 +1,48 @@
+.model_sq {
+    width:550rpx;
+    height:450rpx;
+    padding:50rpx;
+    background-color:#fff;
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+    z-index:2;
+    border-radius:10rpx;
+}
+.login {
+    width:100vw;
+    height:100vh;
+    background-color: rgba(166,166,166,0.9);
+    position:fixed;
+    top:0;
+    left:0;
+}
+.p1 {
+    font-size:40rpx;
+}
+.p2 {
+    font-size:32rpx;
+    color:#888;
+}
+
+.model_sq text {
+    display:block;
+    margin:40rpx 0;
+}
+.login button {
+    width:90%;
+    font-size:38rpx;
+    background-color: #10d63b;
+    color:#fff;
+}
+.jz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+

@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "time-picker":"../../components/time/time"
+    "time-picker":"../../components/time/time",
+    "login":"../../components/login/login"
   }
 }

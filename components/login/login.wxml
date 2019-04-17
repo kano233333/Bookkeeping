@@ -1,0 +1,7 @@
+<view class="login">
+  <view class="model_sq jz">
+    <text class="p1">请求获取以下权限</text>
+    <text class="p2">获取您的公开信息（昵称，头像等）</text>
+    <button open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">授权</button>
+  </view>
+</view>
