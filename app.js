@@ -6,6 +6,7 @@ App({
   globalData: {
     userInfo: null,
     userStatus:'',
-    ip:''
+    ip:'',
+    intervalTime:1200000
   }
 })

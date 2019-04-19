@@ -32,18 +32,26 @@ Page({
   },
   isLogin(){
     var sessionID = wx.getStorageSync('sessionID');
+    var timestamp = wx.getStorageSync('timestamp');
+    var currenstamp = Date.parse(new Date());
+    console.log(currenstamp-timestamp)
     var _this = this;
-    if(sessionID){
-      // wx.request({
-      //   url:_this.globalData.ip+'/userLogin',
-      //   data:{
-      //     uuid:sessionID
-      //   }
-      // }).then((res)=>{
-      //   if(res.state==1) {
-      _this.getUserInfo();
-      // }
-      // }).catch(()=>{})
+
+    if(sessionID && (currenstamp-timestamp)<app.globalData.intervalTime){
+      console.log('未过期')
+      wx.request({
+        url:_this.globalData.ip+'/userLogin',
+        data:{
+          uuid:sessionID
+        }
+      }).then((res)=>{
+        if(res.state==1) {
+          _this.getUserInfo();
+        }
+      }).catch(()=>{})
+    }else if(sessionID && (currenstamp-timestamp)>=app.globalData.intervalTime){
+      console.log('已过期')
+      this.doLogin();
     }else{
       this.setData({
         islogin:false
@@ -63,10 +71,24 @@ Page({
       }
     })
   },
-  loginModel(){
-    this.setData({
-      islogin:true,
-      motto:'Hello '+app.globalData.userInfo.nickName
+  doLogin(){
+    var _this = this;
+    wx.login({
+      success:function(res){
+        if(res.code){
+          wx.request({
+            url:app.globalData.ip+'/userLogin',
+            header:{
+              'cookie':res.code
+            }
+          }).then((res)=>{
+            wx.setStorageSync('sessionID', res.sessionID);
+            var timestamp = Date.parse(new Date())
+            wx.setStorageSync('timestamp',timestamp)
+            _this.getUserInfo();
+          }).catch((err)=>{})
+        }
+      }
     })
   }
 })
