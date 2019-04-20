@@ -32,6 +32,7 @@ Page({
   },
   isLogin(){
     var sessionID = wx.getStorageSync('sessionID');
+    console.log(sessionID)
     var timestamp = wx.getStorageSync('timestamp');
     var currenstamp = Date.parse(new Date());
     console.log(currenstamp-timestamp)
@@ -40,22 +41,24 @@ Page({
     if(sessionID && (currenstamp-timestamp)<app.globalData.intervalTime){
       console.log('未过期')
       wx.request({
-        url:_this.globalData.ip+'/userLogin',
-        data:{
-          uuid:sessionID
+        url:app.globalData.ip+'/auth',
+        header:{
+          cookie: "JSESSIONID="+sessionID+";domain=localhost;path=/wx"
+        },
+        success:function(res){
+          console.log(res)
+          var data = res.data.replace(/'/g,'"');
+          var _data = JSON.parse(data);
+          if(_data.static==1){
+            _this.getUserInfo();
+          }
         }
-      }).then((res)=>{
-        if(res.state==1) {
-          _this.getUserInfo();
-        }
-      }).catch(()=>{})
-    }else if(sessionID && (currenstamp-timestamp)>=app.globalData.intervalTime){
+      })
+    }else if((currenstamp-timestamp)>=app.globalData.intervalTime){
       console.log('已过期')
       this.doLogin();
-    }else{
-      this.setData({
-        islogin:false
-      })
+    }else if(sessionID==''){
+      this.doLogin();
     }
   },
   getUserInfo(){
@@ -73,20 +76,30 @@ Page({
   },
   doLogin(){
     var _this = this;
+    console.log('login')
     wx.login({
       success:function(res){
         if(res.code){
           wx.request({
-            url:app.globalData.ip+'/userLogin',
-            header:{
-              'cookie':res.code
+            url:app.globalData.ip+'/auth',
+            data:{
+              code:res.code
+            },
+            success:function(res){
+              console.log(res)
+              var data = res.data.replace(/'/g,'"');
+              var _data = JSON.parse(data);
+              if(_data.static==1){
+                console.log(res.cookies[0].value)
+                wx.setStorageSync('sessionID', res.cookies[0].value);
+                var timestamp = Date.parse(new Date())
+                wx.setStorageSync('timestamp',timestamp)
+                _this.getUserInfo();
+              }else{
+                app.requestFail()
+              }
             }
-          }).then((res)=>{
-            wx.setStorageSync('sessionID', res.sessionID);
-            var timestamp = Date.parse(new Date())
-            wx.setStorageSync('timestamp',timestamp)
-            _this.getUserInfo();
-          }).catch((err)=>{})
+          })
         }
       }
     })
