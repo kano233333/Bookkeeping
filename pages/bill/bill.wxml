@@ -1,0 +1,10 @@
+<!--pages/bill/bill.wxml-->
+<view>
+  <view class="nav_bg"></view>
+  <view class="bill_total"></view>
+  <view class="bill_detail_wrap">
+    <view class="bill_detail"></view>
+    <view class="bill_detail"></view>
+    <view class="bill_detail"></view>
+  </view>
+</view>

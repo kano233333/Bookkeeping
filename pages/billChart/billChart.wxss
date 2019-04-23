@@ -1,0 +1,11 @@
+.charts_wrap {
+  margin: 2.66666667vw 0;
+}
+.charts_wrap .chart {
+  width: 88vw;
+  height: 49.86666667vw;
+  background-color: #ef5351;
+  margin: 2.66666667vw auto;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=billChart.wxss.map */

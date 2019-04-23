@@ -1,0 +1,20 @@
+.bill_select {
+  height: 10.66666667vw;
+  background-color: #d84642;
+}
+.bill_total {
+  height: 8vw;
+  margin: 3px;
+  border: 1px solid #d4d4d4;
+  border-radius: 3px;
+}
+.bill_detail_wrap {
+  margin: 10px 2.4vw;
+}
+.bill_detail_wrap .bill_detail {
+  border: 1px solid #d4d4d4;
+  height: 13.06666667vw;
+  margin: 1px 0;
+  border-radius: 4px;
+}
+/*# sourceMappingURL=bill.wxss.map */

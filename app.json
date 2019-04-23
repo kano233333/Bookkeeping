@@ -1,11 +1,52 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/bill/bill",
+    "pages/add/add",
+    "pages/billChart/billChart",
+    "pages/jiChat/jiChat",
+    "pages/user/user",
+    "pages/login/login"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#ef5351",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "color":"#989898",
+    "selectedColor":"#de4346",
+    "backgroundColor":"#f9f9f9",
+    "list":[
+      {
+        "pagePath":"pages/bill/bill",
+        "text":"细则",
+        "iconPath":"/static/imgs/bill1.png",
+        "selectedIconPath":"/static/imgs/bill2.png"
+      },
+      {
+        "pagePath":"pages/jiChat/jiChat",
+        "text":"小计",
+        "iconPath":"/static/imgs/ji1.png",
+        "selectedIconPath":"/static/imgs/ji2.png"
+      },
+      {
+        "pagePath":"pages/add/add",
+        "text":"记一笔",
+        "iconPath":"/static/imgs/add1.png",
+        "selectedIconPath":"/static/imgs/add2.png"
+      },
+      {
+        "pagePath":"pages/billChart/billChart",
+        "text":"账池",
+        "iconPath":"/static/imgs/chart1.png",
+        "selectedIconPath":"/static/imgs/chart2.png"
+      },
+      {
+        "pagePath":"pages/user/user",
+        "text":"我的",
+        "iconPath":"/static/imgs/user1.png",
+        "selectedIconPath":"/static/imgs/user2.png"
+      }
+    ]
   }
 }

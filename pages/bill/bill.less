@@ -1,0 +1,25 @@
+@allWidth:750;
+.s(@sx,@x){
+  @{sx}:@x/@allWidth*100vw;
+}
+.bill_select {
+  .s(height,80);
+  background-color: #d84642;
+}
+
+.bill_total {
+  .s(height,60);
+  margin: 3px;
+  border: 1px solid #d4d4d4;
+  border-radius:3px;
+}
+
+.bill_detail_wrap {
+  margin:10px 18/@allWidth*100vw;
+  .bill_detail {
+    border: 1px solid #d4d4d4;
+    .s(height,98);
+    margin:1px 0;
+    border-radius:4px;
+  }
+}

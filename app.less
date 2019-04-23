@@ -1,3 +1,8 @@
+@allWidth:750;
+.s(@sx,@x){
+    @{sx}:@x/@allWidth*100vw;
+}
+
 .container {
   height: 100%;
   display: flex;
@@ -7,14 +12,15 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 }
+
 .jz {
-  display: flex;
+  display:flex;
   justify-content: center;
   align-items: center;
 }
+
 .nav_bg {
-  height: 10.66666667vw;
+  .s(height,80);
   background-color: #d84642;
-  color: #fff;
+  color:#fff;
 }
-/*# sourceMappingURL=app.wxss.map */

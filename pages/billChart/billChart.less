@@ -1,0 +1,15 @@
+@allWidth:750;
+.s(@sx,@x){
+    @{sx}:@x/@allWidth*100vw;
+}
+
+.charts_wrap {
+  margin: 20/@allWidth*100vw 0;
+  .chart {
+    .s(width,660);
+    .s(height,374);
+    background-color: #ef5351;
+    margin: 20/@allWidth*100vw auto;
+    border-radius:5px;
+  }
+}

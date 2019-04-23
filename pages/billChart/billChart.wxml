@@ -1,0 +1,10 @@
+<!--pages/billChart/billChart.wxml-->
+<view>
+  <view class="nav_bg">
+    账池
+  </view>
+  <view class="charts_wrap">
+    <view class="chart"></view>
+    <view class="chart"></view>
+  </view>
+</view>

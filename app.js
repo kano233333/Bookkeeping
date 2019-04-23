@@ -23,6 +23,10 @@ App({
       success(res){
         if(res.authSetting['scope.userInfo']){
           _this.isLogin();
+        }else{
+          wx.navigateTo({
+            url:"/pages/login/login"
+          })
         }
       }
     })
