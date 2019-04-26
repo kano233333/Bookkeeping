@@ -5,7 +5,7 @@ Page({
   bindgetuserinfo:function(){
     app.doLogin();
     wx.navigateTo({
-      url:'/pages/index/index'
+      url:'/pages/bill/bill'
     })
   }
 })

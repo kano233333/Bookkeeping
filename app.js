@@ -22,6 +22,7 @@ App({
     wx.getSetting({
       success(res){
         if(res.authSetting['scope.userInfo']){
+          console.log(res)
           _this.isLogin();
         }else{
           wx.navigateTo({
@@ -99,5 +100,7 @@ App({
         }
       }
     })
-  }
+  },
+//  -------------------------
+
 })

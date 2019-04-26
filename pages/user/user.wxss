@@ -1,1 +1,51 @@
-/* pages/user/user.wxss */
+.user {
+  min-height: 100vh;
+  background-color: #ededed;
+}
+.user_head_wrap {
+  height: 53.33333333vw;
+  background-color: #eb5d5a;
+  overflow: hidden;
+}
+.user_head_wrap .user_head {
+  margin-top: 16vw;
+  text-align: center;
+}
+.user_head_wrap .user_head > image {
+  width: 20.53333333vw;
+  height: 20.53333333vw;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin: 0 auto;
+  box-shadow: 2px 2px 8px rgba(82, 82, 82, 0.8);
+}
+.user_head_wrap .user_head > text {
+  display: block;
+  color: #fff;
+}
+.user_bill_wrap {
+  height: 20vw;
+  background-color: #fff;
+  font-size: 3.2vw;
+  display: flex;
+}
+.user_bill_wrap > view {
+  flex: 1;
+  flex-direction: column;
+}
+.user_bill_wrap .user_bill_left {
+  border-right: 1px solid rgba(226, 226, 226, 0.8);
+}
+.user_bill_wrap .user_bill_right {
+  border-left: 1px solid rgba(226, 226, 226, 0.8);
+}
+.user_func_wrap {
+  margin-top: 2.66666667vw;
+}
+.user_func_wrap .user_func {
+  height: 13.33333333vw;
+  background-color: #fff;
+  margin-bottom: 2px;
+  font-size: 4vw;
+}
+/*# sourceMappingURL=user.wxss.map */

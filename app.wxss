@@ -12,6 +12,10 @@
   justify-content: center;
   align-items: center;
 }
+.jz_y {
+  display: flex;
+  align-items: center;
+}
 .nav_bg {
   height: 10.66666667vw;
   background-color: #d84642;

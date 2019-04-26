@@ -1,2 +1,30 @@
 <!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="user">
+  <view class="user_head_wrap">
+    <view class="user_head">
+      <image />
+      <text>用户名字</text>
+    </view>
+  </view>
+  <view class="user_bill_wrap">
+    <view class="user_bill_left jz">
+      <text>123</text>
+      <text>总记账笔数</text>
+    </view>
+    <view class="user_bill_right jz">
+      <text>123</text>
+      <text>当前余额</text>
+    </view>
+  </view>
+  <view class="user_func_wrap">
+    <view class="user_func jz_y">
+      <text>修改小金库</text>
+    </view>
+    <view class="user_func jz_y">
+      <text>图标管理</text>
+    </view>
+    <view class="user_func jz_y">
+      <text>关于</text>
+    </view>
+  </view>
+</view>
