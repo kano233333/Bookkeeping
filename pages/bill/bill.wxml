@@ -1,10 +1,12 @@
 <!--pages/bill/bill.wxml-->
 <view>
-  <view class="nav_bg"></view>
+  <view class="nav_bg">
+    <time-picker start="1999-09" end="2200-09" fields="month" bind:pickerEvent="getPickerTimer">
+      <text>{{timePick}}</text>
+    </time-picker>
+  </view>
   <view class="bill_total"></view>
   <view class="bill_detail_wrap">
-    <view class="bill_detail"></view>
-    <view class="bill_detail"></view>
-    <view class="bill_detail"></view>
+    <bill-bar wx:for="{{billList}}" billData="{{item}}" wx:key="{{index}}"></bill-bar>
   </view>
 </view>

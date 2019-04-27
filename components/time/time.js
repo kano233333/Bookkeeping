@@ -14,7 +14,6 @@ Component({
   },
   methods: {
     bindDateChange: function (e) {
-      console.log(e)
       this.triggerEvent('pickerEvent',{timeData:e.detail.value})
     }
   }

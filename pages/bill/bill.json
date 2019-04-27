@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "bill-bar":"../../components/billbar/billbar",
+    "time-picker":"../../components/time/time"
+  }
 }

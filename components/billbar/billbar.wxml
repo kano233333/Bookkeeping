@@ -1,0 +1,16 @@
+<view class="bill_detail {{billClass}}" bindtap="showMore">
+  <view class="bill_upper">
+    <view class="bill_left">
+      <text class="icon"></text>
+      <text class="text">{{billData.text}}</text>
+    </view>
+    <view class="bill_right">
+      <text>{{billData.time}}</text>
+      <text>{{billData.money}}</text>
+    </view>
+    <text wx:if="{{!moreShow}}" class="more">...</text>
+  </view>
+  <view wx:if="{{moreShow}}" class="bz">
+    <text>备注:{{billData.more}}</text>
+  </view>
+</view>

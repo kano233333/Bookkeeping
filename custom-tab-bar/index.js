@@ -51,7 +51,10 @@ Component({
         this.setData({
           addShow: false
         })
-        wx.switchTab({url})
+        var _this = this
+        wx.switchTab({
+          url:url
+        })
       }
     }
   }
