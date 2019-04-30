@@ -1,7 +1,10 @@
 <!--pages/bill/bill.wxml-->
 <view>
-  <view class="nav_bg">
-    <time-picker start="1999-09" end="2200-09" fields="month" bind:pickerEvent="getPickerTimer">
+  <view class="nav_bg jz">
+    <view class="t_select" style="height:{{selectHeight}}">
+      <text bindtap="selectPicker" wx:for="{{selectPickers}}" wx:key="{{index}}" data-select="{{index}}">{{item.value}}</text>
+    </view>
+    <time-picker wx:if="{{reload}}" class="time_picker" start="1999-09" end="2200-09" fields="{{fields}}" bind:pickerEvent="getPickerTimer">
       <text>{{timePick}}</text>
     </time-picker>
   </view>

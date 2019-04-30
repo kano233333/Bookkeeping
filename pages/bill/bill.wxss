@@ -17,4 +17,26 @@
   margin: 1px 0;
   border-radius: 4px;
 }
+.nav_bg {
+  font-size: 18px;
+  position: relative;
+}
+.t_select {
+  width: 18.66666667vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  transition: 0.5s height;
+}
+.t_select > text {
+  height: 10.66666667vw;
+  display: block;
+  background-color: #d84642;
+  text-align: center;
+  line-height: 2;
+}
+.time_picker {
+  text-align: center;
+}
 /*# sourceMappingURL=bill.wxss.map */

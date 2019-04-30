@@ -23,10 +23,5 @@ Component({
         })
       }
     }
-  },
-  lifetimes:{
-    ready(){
-      console.log(this.data.billData)
-    }
   }
 });
