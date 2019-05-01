@@ -1,2 +1,16 @@
-<!--pages/achieve/achieve.wxml-->
-<text>pages/achieve/achieve.wxml</text>
+<view class="achieve">
+  <view class="achieve_upper">
+    <text>已获得成就</text>
+  </view>
+  <view class="achieve_main">
+    <view class="list_wrap">
+      <view class="list_left">
+        <text>中华小当家</text>
+        <text>解锁条件：</text>
+      </view>
+      <view class="list_right"></view>
+    </view>
+    <view class="list_wrap"></view>
+    <view class="list_wrap"></view>
+  </view>
+</view>
