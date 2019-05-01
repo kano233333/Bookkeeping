@@ -5,7 +5,9 @@
     "pages/billChart/billChart",
     "pages/jiChat/jiChat",
     "pages/user/user",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/chat/chat",
+    "pages/achieve/achieve"
   ],
   "window":{
     "backgroundTextStyle":"light",

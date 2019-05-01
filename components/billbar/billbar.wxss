@@ -1,11 +1,12 @@
 .bill_detail {
-  font-size: 12px;
+  font-size: 2.4vw;
   height: 8.66666667vw;
   border: 1px solid #d4d4d4;
   margin: 1px 0;
   border-radius: 4px;
   padding: 2.4vw 5.6vw;
   transition: 0.8s all;
+  background-color: #fff;
 }
 .bill_upper {
   display: flex;
@@ -16,15 +17,20 @@
   position: absolute;
   bottom: -8px;
   right: -1.86666667vw;
-  font-size: 12px;
   letter-spacing: 2px;
 }
 .bz {
   animation: 0.5s center_scale_show forwards;
   position: relative;
   top: 1.33333333vw;
-  color: #c5c5c5;
-  font-size: 11px;
+  color: #666;
+}
+.bz .operation {
+  text-align: right;
+  color: #999999;
+}
+.bz .operation > text {
+  margin: 0 2vw;
 }
 .bz:before {
   content: '';
@@ -63,5 +69,8 @@
   display: block;
   text-align: right;
   font-size: 10px;
+}
+.bill_right text:nth-of-type(1) {
+  color: #999;
 }
 /*# sourceMappingURL=billbar.wxss.map */

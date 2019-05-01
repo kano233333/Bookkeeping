@@ -1,12 +1,29 @@
+.bill {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #ededed;
+}
 .bill_select {
   height: 10.66666667vw;
-  background-color: #d84642;
+  background-color: #fff;
+  font-size: 15px;
+  position: relative;
 }
 .bill_total {
-  height: 8vw;
-  margin: 3px;
-  border: 1px solid #d4d4d4;
-  border-radius: 3px;
+  height: 13.06666667vw;
+  margin-top: 1px;
+  background-color: #fff;
+  font-size: 4vw;
+  letter-spacing: 2px;
+  padding: 0 4vw;
+  display: flex;
+  align-items: center;
+}
+.bill_total > .wrap {
+  flex: 1;
+}
+.bill_total > .wrap > text {
+  margin-left: 5.33333333vw;
 }
 .bill_detail_wrap {
   margin: 10px 2.4vw;
@@ -18,23 +35,26 @@
   border-radius: 4px;
 }
 .nav_bg {
-  font-size: 18px;
+  font-size: 15px;
   position: relative;
 }
 .t_select {
-  width: 18.66666667vw;
+  width: 16.26666667vw;
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 2.66666667vw;
+  top: 2.4vw;
   overflow: hidden;
-  transition: 0.5s height;
+  transition: 0.2s height;
+  color: #fff;
+  font-size: 3.2vw;
 }
 .t_select > text {
-  height: 10.66666667vw;
+  height: 6.13333333vw;
+  border-radius: 10px;
   display: block;
   background-color: #d84642;
   text-align: center;
-  line-height: 2;
+  line-height: 1.8;
 }
 .time_picker {
   text-align: center;

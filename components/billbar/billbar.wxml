@@ -12,5 +12,9 @@
   </view>
   <view wx:if="{{moreShow}}" class="bz">
     <text>备注:{{billData.more}}</text>
+    <view class="operation">
+      <text>编辑</text>
+      <text>删除</text>
+    </view>
   </view>
 </view>

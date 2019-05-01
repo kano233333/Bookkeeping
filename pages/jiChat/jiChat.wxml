@@ -1,2 +1,12 @@
-<!--pages/jichat/jiChat.wxml-->
-<text>pages/jichat/jiChat.wxml</text>
+<view class="ji">
+  <view class="ji_wrap">
+    <navigator open-type="redirectTo"  url="/pages/chat/chat">
+      <image src="/static/imgs/ji/lt.png" />
+      <text>小记·聊天</text>
+    </navigator>
+    <navigator open-type="switchTab"  url="/pages/achieve/achieve">
+      <image src="/static/imgs/ji/cj.png" />
+      <text>小记·成就</text>
+    </navigator>
+  </view>
+</view>

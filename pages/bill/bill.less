@@ -2,16 +2,33 @@
 .s(@sx,@x){
   @{sx}:@x/@allWidth*100vw;
 }
+.bill {
+  min-width:100vw;
+  min-height:100vh;
+  background-color: #ededed;
+}
 .bill_select {
   .s(height,80);
-  background-color: #d84642;
+  background-color: #fff;
+  font-size:15px;
+  position:relative;
 }
 
 .bill_total {
-  .s(height,60);
-  margin: 3px;
-  border: 1px solid #d4d4d4;
-  border-radius:3px;
+  .s(height,98);
+  margin-top:1px;
+  background-color: #fff;
+  .s(font-size,30);
+  letter-spacing:2px;
+  padding:0 30/@allWidth*100vw;
+  display:flex;
+  align-items: center;
+  >.wrap {
+    flex:1;
+    >text {
+      .s(margin-left,40);
+    }
+  }
 }
 
 .bill_detail_wrap {
@@ -24,22 +41,25 @@
   }
 }
 .nav_bg {
-  font-size:18px;
+  font-size:15px;
   position:relative;
 }
 .t_select {
-  .s(width,140);
+  .s(width,122);
   position:absolute;
-  left:0;
-  top:0;
+  .s(left,20);
+  .s(top,18);
   overflow: hidden;
-  transition:0.5s height;
+  transition:0.2s height;
+  color:#fff;
+  .s(font-size,24);
   >text {
-    .s(height,80);
+    .s(height,46);
+    border-radius:10px;
     display:block;
     background-color: #d84642;
     text-align:center;
-    line-height:2;
+    line-height:1.8;
   }
 }
 .time_picker {

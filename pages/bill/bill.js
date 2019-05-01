@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
-const selectH = 10.67
+const selectH = 6.133
 let formatTime = require('../../utils/util').formatTime
 const billList = [
   {

@@ -1,6 +1,6 @@
 <!--pages/bill/bill.wxml-->
-<view>
-  <view class="nav_bg jz">
+<view class="bill">
+  <view class="bill_select jz">
     <view class="t_select" style="height:{{selectHeight}}">
       <text bindtap="selectPicker" wx:for="{{selectPickers}}" wx:key="{{index}}" data-select="{{index}}">{{item.value}}</text>
     </view>
@@ -8,7 +8,10 @@
       <text>{{timePick}}</text>
     </time-picker>
   </view>
-  <view class="bill_total"></view>
+  <view class="bill_total">
+    <view class="wrap">总收入:<text>{{1.11}}元</text></view>
+    <view class="wrap">总支出:<text>{{2.22}}元</text></view>
+  </view>
   <view class="bill_detail_wrap">
     <bill-bar wx:for="{{billList}}" billData="{{item}}" wx:key="{{index}}"></bill-bar>
   </view>

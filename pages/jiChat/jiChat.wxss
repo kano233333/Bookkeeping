@@ -1,1 +1,24 @@
-/* pages/jichat/jiChat.wxss */
+.ji_wrap {
+  display: grid;
+  grid-template-columns: 44.26666667vw 44.26666667vw;
+  grid-template-rows: 44.26666667vw;
+  grid-column-gap: 2.66666667vw;
+  margin: 12.53333333vw 4.4vw 0 4.4vw;
+}
+.ji_wrap > navigator {
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(162, 162, 162, 0.8);
+  position: relative;
+}
+.ji_wrap > navigator image {
+  width: 100%;
+  height: 100%;
+}
+.ji_wrap > navigator text {
+  position: absolute;
+  bottom: 2.66666667vw;
+  right: 5.33333333vw;
+  font-size: 4vw;
+  letter-spacing: 3px;
+}
+/*# sourceMappingURL=jiChat.wxss.map */
