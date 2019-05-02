@@ -3,14 +3,15 @@
     <text>已获得成就</text>
   </view>
   <view class="achieve_main">
-    <view class="list_wrap">
+    <view class="list_wrap" wx:for="{{achieveList}}">
       <view class="list_left">
-        <text>中华小当家</text>
-        <text>解锁条件：</text>
+        <text>{{item.text}}</text>
+        <text>解锁条件：{{item.condition}}</text>
       </view>
-      <view class="list_right"></view>
+      <view class="list_right">
+        <text>2019-1-2</text>
+        <image src="{{item.image}}" />
+      </view>
     </view>
-    <view class="list_wrap"></view>
-    <view class="list_wrap"></view>
   </view>
 </view>

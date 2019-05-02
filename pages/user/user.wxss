@@ -10,6 +10,7 @@
 .user_head_wrap .user_head {
   margin-top: 16vw;
   text-align: center;
+  position: relative;
 }
 .user_head_wrap .user_head > image {
   width: 20.53333333vw;
@@ -19,9 +20,23 @@
   margin: 0 auto;
   box-shadow: 2px 2px 8px rgba(82, 82, 82, 0.8);
 }
-.user_head_wrap .user_head > text {
+.user_head_wrap .user_head .username {
   display: block;
   color: #fff;
+  font-size: 4vw;
+  letter-spacing: 2px;
+}
+.user_head_wrap .user_head .designation {
+  position: absolute;
+  font-size: 2.4vw;
+  top: 22.66666667vw;
+  right: 21.33333333vw;
+  color: #a67d34;
+  background: linear-gradient(#f9f297, #dec436);
+  border-radius: 10px;
+  padding: 1px 10px;
+  letter-spacing: 2px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.08);
 }
 .user_bill_wrap {
   height: 20vw;
@@ -47,5 +62,10 @@
   background-color: #fff;
   margin-bottom: 2px;
   font-size: 4vw;
+}
+.user_func_wrap .user_func image {
+  width: 5.06666667vw;
+  height: 5.06666667vw;
+  margin: 0 3.73333333vw;
 }
 /*# sourceMappingURL=user.wxss.map */

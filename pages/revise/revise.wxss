@@ -1,0 +1,21 @@
+.revise {
+  padding: 2.66666667vw 1.33333333vw;
+}
+.title {
+  height: 13.06666667vw;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0 6.13333333vw;
+  font-size: 4vw;
+  margin-bottom: 1px;
+}
+.title .label {
+  font-size: 3.2vw;
+}
+.title:nth-of-type(1) {
+  margin-bottom: 2.66666667vw;
+}
+.not_select {
+  color: rgba(204, 204, 204, 0.8);
+}
+/*# sourceMappingURL=revise.wxss.map */

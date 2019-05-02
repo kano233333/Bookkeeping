@@ -1,0 +1,16 @@
+.about {
+  padding: 2.66666667vw 1.33333333vw;
+}
+.title {
+  height: 13.06666667vw;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0 6.13333333vw;
+  font-size: 4vw;
+  margin-bottom: 1px;
+}
+.title:nth-of-type(2) {
+  margin-bottom: 2.66666667vw;
+  font-size: 3.2vw;
+}
+/*# sourceMappingURL=about.wxss.map */

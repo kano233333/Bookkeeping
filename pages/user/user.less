@@ -15,6 +15,7 @@
   .user_head {
     .s(margin-top,120);
     text-align: center;
+    position:relative;
     >image {
       .s(width,154);
       .s(height,154);
@@ -23,9 +24,23 @@
       margin:0 auto;
       box-shadow: 2px 2px 8px rgba(82, 82, 82, 0.8);
     }
-    >text {
+    .username {
       display: block;
       color:#fff;
+      .s(font-size,30);
+      letter-spacing: 2px;
+    }
+    .designation {
+      position:absolute;
+      .s(font-size,18);
+      .s(top,170);
+      .s(right,160);
+      color:#a67d34;
+      background: linear-gradient(#f9f297,#dec436);
+      border-radius:10px;
+      padding:1px 10px;
+      letter-spacing: 2px;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.08);
     }
   }
 }
@@ -54,5 +69,10 @@
     background-color: #fff;
     margin-bottom: 2px;
     .s(font-size,30);
+    image {
+      .s(width,38);
+      .s(height,38);
+      margin:0 28/@allWidth*100vw;
+    }
   }
 }

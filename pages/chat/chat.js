@@ -1,66 +1,46 @@
 // pages/chat/chat.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    scrollTop: 0,
+    inputValue:'',
+    chatList:[
+      {
+        type:"0",
+        value:"hi"
+      }
+    ],
+    valueX:'',
+    inputFocus:false
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad:function(){
+    this.setScrollTop()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  setScrollTop:function(){
+    let len = this.data.chatList.length
+    if(len*50<300){
+      return
+    }
+    this.setData({
+      scrollTop:len*50
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  sendChat:function(){
+    let obj = {
+      type:"1",
+      value:this.data.inputValue
+    }
+    let list = this.data.chatList
+    list.push(obj)
+    let _this = this
+    this.setData({
+      chatList:list,
+      valueX:''
+    },()=>{
+      _this.setScrollTop()
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  getInput:function(e){
+    let value = e.detail.value
+    this.data.inputValue = value
   }
 })

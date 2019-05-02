@@ -3,7 +3,8 @@
   <view class="user_head_wrap">
     <view class="user_head">
       <image />
-      <text>用户名字</text>
+      <text class="username">用户名字</text>
+      <text class="designation">初出茅庐</text>
     </view>
   </view>
   <view class="user_bill_wrap">
@@ -17,14 +18,17 @@
     </view>
   </view>
   <view class="user_func_wrap">
-    <view class="user_func jz_y">
+    <navigator url="/pages/revise/revise" class="user_func jz_y">
+      <image src="/static/imgs/user/xg.png" />
       <text>修改小金库</text>
-    </view>
-    <view class="user_func jz_y">
+    </navigator>
+    <navigator url="/pages/manage/manage" class="user_func jz_y">
+      <image src="/static/imgs/user/gl.png" />
       <text>图标管理</text>
-    </view>
-    <view class="user_func jz_y">
+    </navigator>
+    <navigator url="/pages/about/about" class="user_func jz_y">
+      <image src="/static/imgs/user/about.png" />
       <text>关于</text>
-    </view>
+    </navigator>
   </view>
 </view>

@@ -1,2 +1,14 @@
-<!--pages/chat/chat.wxml-->
-<text>pages/chat/chat.wxml</text>
+<view class="all chat">
+  <scroll-view class="chat_info" scroll-y="{{true}}" scroll-top="{{scrollTop}}" scroll-with-animation="true">
+    <view wx:if="{{chatList.length!=0}}" class="chat_detail {{item.type==1?'user':'xiaoji'}}" wx:for="{{chatList}}" wx:key="{{index}}">
+      <image />
+      <view>
+        {{item.value}}
+      </view>
+    </view>
+  </scroll-view>
+  <view class="send_wrap jz_y">
+    <input cursor-spacing="8" bindinput="getInput" value="{{valueX}}" focus="{{inputFocus}}" />
+    <button bindtap="sendChat">发送</button>
+  </view>
+</view>

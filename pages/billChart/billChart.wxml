@@ -1,10 +1,14 @@
 <!--pages/billChart/billChart.wxml-->
-<view>
-  <view class="nav_bg">
-    账池
+<view class="bill_chart">
+  <view class="chart_head">
+    <text class="{{type==0 ? 'bor_btm' :''}}" bindtap="shiftType" data-type="0">本周</text>
+    <text class="{{type==1 ? 'bor_btm' :''}}" bindtap="shiftType" data-type="1">本月</text>
+    <text class="{{type==2 ? 'bor_btm' :''}}" bindtap="shiftType" data-type="2">本年</text>
   </view>
-  <view class="charts_wrap">
-    <view class="chart"></view>
-    <view class="chart"></view>
+  <view class="chart"></view>
+  <view class="chart_head2">
+    <text class="{{type2==0 ? 'bor_btm' :''}}" bindtap="shiftType2" data-type="0">消费项柱状图</text>
+    <text class="{{type2==1 ? 'bor_btm' :''}}" bindtap="shiftType2" data-type="1">支、收、余饼状图</text>
+    <text class="{{type2==2 ? 'bor_btm' :''}}" bindtap="shiftType2" data-type="2">月余额表</text>
   </view>
 </view>

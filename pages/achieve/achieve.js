@@ -1,66 +1,57 @@
 // pages/achieve/achieve.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    achieveList:[
+      {
+        text:'初出茅庐',
+        image:'/static/imgs/ji/1.png',
+        condition:'记账7天'
+      },
+      {
+        text:'有条有理',
+        image:'/static/imgs/ji/2.png',
+        condition:'记账7天且支出/收入>15%'
+      },
+      {
+        text:'稍有成就',
+        image:'/static/imgs/ji/3.png',
+        condition:'记账7天且支出/收入>30%'
+      },
+      {
+        text:'中华小当家',
+        image:'/static/imgs/ji/4.png',
+        condition:'记账21天且支出/收入>15%'
+      },
+      {
+        text:'家里没矿',
+        image:'/static/imgs/ji/5.png',
+        condition:'记账21天且支出/收入>30%'
+      },
+      {
+        text:'理财达人',
+        image:'/static/imgs/ji/6.png',
+        condition:'记账45天且支出/收入>15%'
+      },
+      {
+        text:'聚宝大亨',
+        image:'/static/imgs/ji/7.png',
+        condition:'记账45天且支出/收入>30%'
+      },
+      {
+        text:'勒紧腰带',
+        image:'/static/imgs/ji/8.png',
+        condition:'收入=支出'
+      },
+      {
+        text:'入不敷出',
+        image:'/static/imgs/ji/9.png',
+        condition:'100%<支出/收入<130%'
+      },
+      {
+        text:'家里有矿',
+        image:'/static/imgs/ji/10.png',
+        condition:'支出/收入>130%'
+      },
+    ]
   }
 })

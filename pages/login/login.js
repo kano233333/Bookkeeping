@@ -4,7 +4,7 @@ Page({
   data: {},
   bindgetuserinfo:function(){
     app.doLogin();
-    wx.navigateTo({
+    wx.switchTab({
       url:'/pages/bill/bill'
     })
   }

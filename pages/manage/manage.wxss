@@ -1,0 +1,30 @@
+.manage {
+  padding: 2.66666667vw 1.33333333vw;
+}
+.title {
+  height: 13.06666667vw;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0 6.13333333vw;
+  font-size: 4vw;
+  margin-bottom: 1px;
+}
+.title .label {
+  font-size: 3.2vw;
+}
+.select {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 1px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4vw 5vw 4vw 5vw;
+}
+.select image {
+  margin: 2.66666667vw 3vw;
+  width: 8.53333333vw;
+  height: 8.53333333vw;
+  background-color: #eb5d5a;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=manage.wxss.map */

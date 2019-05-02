@@ -49,7 +49,7 @@ Page({
     reload:true
   },
   onLoad: function () {
-    // app.isSq();
+    app.isSq();
     this.setTabBar(0)
   },
   getPickerTimer(data){

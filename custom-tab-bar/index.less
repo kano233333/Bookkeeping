@@ -50,11 +50,36 @@
   z-index:111;
   bottom: 48px;
   background-color: #fff;
-  height:200px;
+  .s(height,338);
   width:100vw;
+  box-shadow: 0 -1px 2px #888;
+  display: flex;
+  justify-content:center;
+  .s(padding-top,78);
+  >.sd_add {
+    margin:0 106/@allWidth*100vw;
+  }
+  image {
+    .s(width,120);
+    .s(height,120);
+  }
+  text {
+    display: block;
+    text-align:center;
+    font-size:18/@allWidth*100vw;
+  }
+  .cancel {
+    position:absolute;
+    .s(bottom,28);
+    left:0;
+    right:0;
+    margin:0 auto;
+    .s(width,40);
+    .s(height,40);
+  }
 }
 .add-bg {
-  background-color: rgba(164, 164, 164, 0.8);
+  background-color: #ededed;
   position:fixed;
   z-index: 1;
   top:0;

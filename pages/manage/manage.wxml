@@ -1,0 +1,18 @@
+<view class="all manage">
+  <view class="title jz_y_between">
+    <text>我的标签 <text class="label">(23)</text></text>
+  </view>
+  <view class="select">
+    <image />
+    <image />
+    <image />
+    <image />
+    <image />
+    <image />
+    <image />
+    <image />
+  </view>
+  <view class="title jz_y_between">
+    <text>自定义标签</text>
+  </view>
+</view>

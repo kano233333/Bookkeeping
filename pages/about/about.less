@@ -1,0 +1,20 @@
+@allWidth:750;
+.s(@sx,@x){
+    @{sx}:@x/@allWidth*100vw;
+}
+
+.about {
+  padding:20/@allWidth*100vw 10/@allWidth*100vw;
+}
+.title {
+  .s(height,98);
+  background-color: #fff;
+  border-radius:5px;
+  padding:0 46/@allWidth*100vw;
+  .s(font-size,30);
+  margin-bottom: 1px;
+}
+.title:nth-of-type(2) {
+  margin-bottom: 20/@allWidth*100vw;
+  .s(font-size,24);
+}

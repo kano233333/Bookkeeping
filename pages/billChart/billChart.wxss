@@ -1,11 +1,37 @@
-.charts_wrap {
-  margin: 2.66666667vw 0;
+.chart_head {
+  height: 10.66666667vw;
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
 }
-.charts_wrap .chart {
-  width: 88vw;
-  height: 49.86666667vw;
-  background-color: #ef5351;
-  margin: 2.66666667vw auto;
-  border-radius: 5px;
+.chart_head > text {
+  padding: 0 2px;
+  line-height: 3.2;
+  font-size: 3.2vw;
+}
+.chart_head > text:nth-of-type(2) {
+  margin: 0 20.53333333vw;
+}
+.chart_head2 {
+  height: 12.8vw;
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+.chart_head2 > text {
+  padding: 0 2px;
+  line-height: 5;
+  font-size: 2.4vw;
+}
+.chart_head2 > text:nth-of-type(2) {
+  margin: 0 13.6vw;
+}
+.chart {
+  height: 57.33333333vw;
+  border: 1px solid #ededed;
 }
 /*# sourceMappingURL=billChart.wxss.map */

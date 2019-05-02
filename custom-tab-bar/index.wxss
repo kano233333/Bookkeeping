@@ -39,11 +39,36 @@
   z-index: 111;
   bottom: 48px;
   background-color: #fff;
-  height: 200px;
+  height: 45.06666667vw;
   width: 100vw;
+  box-shadow: 0 -1px 2px #888;
+  display: flex;
+  justify-content: center;
+  padding-top: 10.4vw;
+}
+.add > .sd_add {
+  margin: 0 14.13333333vw;
+}
+.add image {
+  width: 16vw;
+  height: 16vw;
+}
+.add text {
+  display: block;
+  text-align: center;
+  font-size: 2.4vw;
+}
+.add .cancel {
+  position: absolute;
+  bottom: 3.73333333vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 5.33333333vw;
+  height: 5.33333333vw;
 }
 .add-bg {
-  background-color: rgba(164, 164, 164, 0.8);
+  background-color: #ededed;
   position: fixed;
   z-index: 1;
   top: 0;

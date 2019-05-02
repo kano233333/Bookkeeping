@@ -1,0 +1,85 @@
+.sd_add {
+  min-height: 100vh;
+  background-color: #ededed;
+  padding-bottom: 6.4vw;
+  font-size: 3.2vw;
+}
+.sd_add input {
+  background-color: #fff;
+}
+.add_head {
+  height: 10.66666667vw;
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.add_head > text {
+  padding: 0 2px;
+  line-height: 2.5;
+  font-size: 4vw;
+}
+.add_head > text:nth-of-type(1) {
+  margin-left: 20.4vw;
+}
+.add_head > text:nth-of-type(2) {
+  margin-right: 20.4vw;
+}
+.count {
+  height: 13.06666667vw;
+}
+.count > input {
+  height: 100%;
+  padding: 0 9.33333333vw;
+  text-align: right;
+}
+.remarks > input {
+  height: 13.06666667vw;
+  padding-left: 5.33333333vw;
+}
+.title {
+  display: block;
+  height: 9.06666667vw;
+  background-color: #ededed;
+  padding-left: 5.33333333vw;
+  line-height: 3;
+}
+.select_icon {
+  background-color: #fff;
+  padding-bottom: 13.33333333vw;
+}
+.select_icon .selected {
+  flex-direction: column;
+  height: 26.13333333vw;
+  border-bottom: 1px solid #ededed;
+}
+.select_icon .selected image {
+  border: 1px solid #eb5d5a;
+}
+.select_icon image {
+  width: 8.4vw;
+  height: 8.4vw;
+  border-radius: 50%;
+}
+.select_icon .select {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4vw 6.33333333vw 4vw 6.33333333vw;
+}
+.select_icon .select image {
+  margin: 2.66666667vw 3vw;
+}
+.select_border {
+  border: 1px solid #eb5d5a;
+}
+.btn_wrap {
+  text-align: center;
+  margin: 20px 0;
+}
+.btn_wrap .btn {
+  width: 42.66666667vw;
+  height: 10.66666667vw;
+  font-size: 3.73333333vw;
+}
+/*# sourceMappingURL=sdAdd.wxss.map */

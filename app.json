@@ -7,7 +7,11 @@
     "pages/user/user",
     "pages/login/login",
     "pages/chat/chat",
-    "pages/achieve/achieve"
+    "pages/achieve/achieve",
+    "pages/sdAdd/sdAdd",
+    "pages/revise/revise",
+    "pages/manage/manage",
+    "pages/about/about"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -35,8 +39,8 @@
       {
         "pagePath":"pages/add/add",
         "text":"记一笔",
-        "iconPath":"/static/imgs/add1.png",
-        "selectedIconPath":"/static/imgs/add2.png"
+        "iconPath":"/static/imgs/add.png",
+        "selectedIconPath":"/static/imgs/add.png"
       },
       {
         "pagePath":"pages/billChart/billChart",

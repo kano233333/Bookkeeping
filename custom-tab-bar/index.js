@@ -20,8 +20,9 @@ Component({
       {
         "pagePath": "/pages/add/add",
         "text": "记一笔",
-        "iconPath": "/static/imgs/add1.png",
-        "selectedIconPath": "/static/imgs/add2.png"
+        "color": "#de4346",
+        "iconPath": "/static/imgs/add.png",
+        "selectedIconPath": "/static/imgs/add.png"
       },
       {
         "pagePath": "/pages/billChart/billChart",
@@ -56,6 +57,11 @@ Component({
           url:url
         })
       }
+    },
+    hideAdd(){
+      this.setData({
+        addShow:false
+      })
     }
   }
 })

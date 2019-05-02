@@ -20,9 +20,10 @@
   position:relative;
   .more {
     position:absolute;
-    bottom: -8px;
+    bottom: -8/@allWidth*100vw;
     right:-14/@allWidth*100vw;
     letter-spacing: 2px;
+    font-weight:800;
   }
 }
 
@@ -31,6 +32,10 @@
   position:relative;
   top: 10/@allWidth*100vw;
   color:#666;
+  >text:nth-of-type(1){
+    display: block;
+    margin: 15/@allWidth*100vw 0;
+  }
   .operation {
     text-align:right;
     color:#999999;
@@ -45,7 +50,7 @@
   height:1px;
   background-color: crimson;
   position:absolute;
-  top: -2/@allWidth*100vw;
+  top: -12/@allWidth*100vw;
 }
 
 
@@ -86,5 +91,9 @@
   }
   text:nth-of-type(1){
     color:#999;
+  }
+  text:nth-of-type(2){
+    color:#f25350;
+    .s(font-size,28);
   }
 }

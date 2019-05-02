@@ -16,10 +16,22 @@
   display: flex;
   align-items: center;
 }
+.jz_y_between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .nav_bg {
   height: 10.66666667vw;
   background-color: #d84642;
   color: #fff;
+}
+.bor_btm {
+  border-bottom: 3px solid #f25352;
+}
+.all {
+  min-height: 100vh;
+  background-color: #ededed;
 }
 @keyframes scale_show {
   0% {

@@ -1,0 +1,29 @@
+<view class="sd_add">
+  <view class="add_head">
+    <text class="{{type==0 ? 'bor_btm' :''}}" bindtap="shiftType" data-type="0">支出</text>
+    <text class="{{type==1 ? 'bor_btm' :''}}" bindtap="shiftType" data-type="1">收入</text>
+  </view>
+  <view class="count">
+    <input type="number" placeholder="输入金额" />
+  </view>
+  <view class="remarks">
+    <text class="title">备注</text>
+    <input />
+  </view>
+  <view class="icon">
+    <text class="title">选择标签</text>
+    <view class="select_icon">
+      <view class="selected jz">
+        <image src="{{icon[selectIndex].value}}" />
+        <text>{{icon[selectIndex].name}}</text>
+      </view>
+      <view class="select">
+        <image bindtap="selectIcon" class="{{selectIndex===index?'select_border':''}}" data-index="{{index}}" wx:key="{{index}}" src="{{item.value}}" wx:for="{{icon}}" />
+      </view>
+    </view>
+  </view>
+
+  <view class="btn_wrap">
+    <button class="btn">确定</button>
+  </view>
+</view>
