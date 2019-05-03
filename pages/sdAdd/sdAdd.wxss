@@ -54,24 +54,27 @@
   height: 26.13333333vw;
   border-bottom: 1px solid #ededed;
 }
-.select_icon .selected image {
-  border: 1px solid #eb5d5a;
-}
 .select_icon image {
   width: 8.4vw;
   height: 8.4vw;
+  padding: 5px;
   border-radius: 50%;
+  background-color: #ededed;
+}
+.select_icon .select_bg {
+  background-color: #fab8af;
 }
 .select_icon .select {
   display: flex;
   flex-wrap: wrap;
   padding: 4vw 6.33333333vw 4vw 6.33333333vw;
 }
-.select_icon .select image {
+.select_icon .select > view {
   margin: 2.66666667vw 3vw;
 }
-.select_border {
-  border: 1px solid #eb5d5a;
+.select_icon .select > view text {
+  display: block;
+  text-align: center;
 }
 .btn_wrap {
   text-align: center;

@@ -2,8 +2,8 @@
 <view class="user">
   <view class="user_head_wrap">
     <view class="user_head">
-      <image />
-      <text class="username">用户名字</text>
+      <image src="{{userData.avatarUrl}}" />
+      <text class="username">{{userData.nickName}}</text>
       <text class="designation">初出茅庐</text>
     </view>
   </view>

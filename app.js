@@ -23,7 +23,7 @@ App({
       success(res){
         if(res.authSetting['scope.userInfo']){
           console.log(res)
-          _this.isLogin();
+          _this.isLogin(_this.getUserInfo);
         }else{
           wx.navigateTo({
             url:"/pages/login/login"
@@ -32,7 +32,7 @@ App({
       }
     })
   },
-  isLogin() {
+  isLogin(codeback) {
     var sessionID = wx.getStorageSync('sessionID');
     console.log(sessionID)
     var timestamp = wx.getStorageSync('timestamp');
@@ -52,7 +52,7 @@ App({
           var data = res.data.replace(/'/g, '"');
           var _data = JSON.parse(data);
           if (_data.static == 1) {
-            _this.getUserInfo();
+            codeback(sessionID);
           }
         }
       })

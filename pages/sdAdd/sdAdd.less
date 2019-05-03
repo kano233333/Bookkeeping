@@ -64,26 +64,31 @@
     .s(height,196);
     border-bottom: 1px solid #ededed;
     image {
-      border:1px solid #eb5d5a;
+      //border:1px solid #fab8af;
     }
   }
   image {
     .s(width,63);
     .s(height,63);
+    padding:5px;
     border-radius:50%;
+    background-color: #ededed;
+  }
+  .select_bg {
+    background-color: #fab8af;
   }
   .select {
     display: flex;
     flex-wrap:wrap;
     padding:30/@allWidth*100vw (70-22.5)/@allWidth*100vw 30/@allWidth*100vw (70-22.5)/@allWidth*100vw;
-    image {
+    >view {
       margin:20/@allWidth*100vw 22.5/@allWidth*100vw;
+      text {
+        display: block;
+        text-align: center;
+      }
     }
   }
-}
-
-.select_border {
-  border:1px solid #eb5d5a;
 }
 
 .btn_wrap {

@@ -1,19 +1,19 @@
-<view class="bill_detail {{billClass}}" bindtap="showMore">
-  <view class="bill_upper">
+<view class="bill_detail {{billClass}}">
+  <view class="bill_upper" bindtap="showMore">
     <view class="bill_left">
       <text class="icon"></text>
-      <text class="text">{{billData.text}}</text>
+      <text class="text">{{billData.label}}</text>
     </view>
     <view class="bill_right">
       <text>{{billData.time}}</text>
-      <text>{{billData.money}}</text>
+      <text>{{billData.amount}}</text>
     </view>
     <text wx:if="{{!moreShow}}" class="more">...</text>
   </view>
   <view wx:if="{{moreShow}}" class="bz">
-    <text>备注:{{billData.more}}</text>
+    <text>备注:{{billData.remarks}}</text>
     <view class="operation">
-      <text>编辑</text>
+      <text bindtap="editBill">编辑</text>
       <text>删除</text>
     </view>
   </view>

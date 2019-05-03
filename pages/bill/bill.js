@@ -3,41 +3,12 @@
 const app = getApp()
 const selectH = 6.133
 let formatTime = require('../../utils/util').formatTime
-const billList = [
-  {
-    icon:'',
-    text:'火锅',
-    time:'2019-2-2',
-    money:'45',
-    type:1,
-    id:0,
-    more:'呵呵哈哈哈'
-  },
-  {
-    icon:'',
-    text:'火锅',
-    time:'2019-2-2',
-    money:'45',
-    type:1,
-    id:0,
-    more:'呵呵哈哈哈'
-  },
-  {
-    icon:'',
-    text:'火锅',
-    time:'2019-2-2',
-    money:'45',
-    type:1,
-    id:0,
-    more:'呵呵哈哈哈'
-  }
-]
 Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
     islogin:false,
-    billList:billList,
+    billList:[],
     timePick:formatTime(new Date,"month"),
     fields:'month',
     selectPickers:[
@@ -51,6 +22,7 @@ Page({
   onLoad: function () {
     app.isSq();
     this.setTabBar(0)
+    app.isLogin(this.getBillList.bind(this))
   },
   getPickerTimer(data){
     this.setData({
@@ -82,6 +54,29 @@ Page({
       selectPickers:selectPickers,
       fields:fields,
       timePick:formatTime(new Date,fields),
+    })
+  },
+  getBillList:function(sessionID){
+    let _this = this
+    wx.request({
+      header: {
+        cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
+      },
+      url:app.globalData.ip+'/getBill',
+      method:'get',
+      data:{
+        type:this.data.selectPickers[0].type=='day'?1:0,
+        time:this.data.timePick
+        // type:1,
+        // time:'2019-05-03'
+      },
+      success:function(res){
+        let data = res.data.replace(/'/g,'"');
+        let list = JSON.parse(data).data
+        _this.setData({
+          billList:list
+        })
+      }
     })
   }
 })

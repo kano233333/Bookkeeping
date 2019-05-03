@@ -22,6 +22,18 @@ Component({
           moreShow:0
         })
       }
+    },
+    editBill:function(){
+      wx.navigateTo({
+        url:'/pages/sdAdd/sdAdd?type='+this.data.billData.type+'&mode=edit&billData='+JSON.stringify(this.data.billData)
+      })
+    }
+  },
+  lifetimes:{
+    ready:function(){
+      if(this.data.billData.remarks==undefined){
+        this.data.moreShow
+      }
     }
   }
 });
