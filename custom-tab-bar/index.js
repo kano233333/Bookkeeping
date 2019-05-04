@@ -42,19 +42,27 @@ Component({
     switchTab(e) {
       const data = e.currentTarget.dataset
       var url = data.path
-      console.log(data.index)
       if (data.index == 2) {
+        console.log(this)
         this.setData({
           addShow: true,
-          // selected: 2
         })
+        try{
+          getCurrentPages()[0].setData({
+            canvasShow:false
+          })
+        }catch (e) {}
       } else {
         this.setData({
           addShow: false
         })
         var _this = this
         wx.switchTab({
-          url:url
+          url:url,
+          success:function(e){
+            var page = getCurrentPages().pop()
+            page.onLoad()
+          }
         })
       }
     },
@@ -62,6 +70,11 @@ Component({
       this.setData({
         addShow:false
       })
+      try{
+        getCurrentPages()[0].setData({
+          canvasShow:true
+        })
+      }catch (e) {}
     }
   }
 })

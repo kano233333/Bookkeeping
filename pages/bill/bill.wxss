@@ -26,7 +26,9 @@
   margin-left: 5.33333333vw;
 }
 .bill_detail_wrap {
-  margin: 10px 2.4vw;
+  height: 118.66666667vw;
+  margin: 10px auto;
+  width: 94.66666667vw;
 }
 .bill_detail_wrap .bill_detail {
   border: 1px solid #d4d4d4;

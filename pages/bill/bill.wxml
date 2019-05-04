@@ -1,18 +1,18 @@
 <!--pages/bill/bill.wxml-->
 <view class="bill">
   <view class="bill_select jz">
-    <view class="t_select" style="height:{{selectHeight}}">
-      <text bindtap="selectPicker" wx:for="{{selectPickers}}" wx:key="{{index}}" data-select="{{index}}">{{item.value}}</text>
+    <view class="t_select">
+      <text bindtap="selectPicker">{{selectPickers.value}}</text>
     </view>
     <time-picker wx:if="{{reload}}" class="time_picker" start="1999-09" end="2200-09" fields="{{fields}}" bind:pickerEvent="getPickerTimer">
       <text>{{timePick}}</text>
     </time-picker>
   </view>
   <view class="bill_total">
-    <view class="wrap">总收入:<text>{{1.11}}元</text></view>
-    <view class="wrap">总支出:<text>{{2.22}}元</text></view>
+    <view class="wrap">总收入:<text><text style="color:#67b098">{{allIncome}}</text>元</text></view>
+    <view class="wrap">总支出:<text><text style="color:#f25350">{{allPay}}</text>元</text></view>
   </view>
-  <view class="bill_detail_wrap">
-    <bill-bar wx:for="{{billList}}" billData="{{item}}" wx:key="{{index}}"></bill-bar>
-  </view>
+  <scroll-view class="bill_detail_wrap" scroll-y="true">
+    <bill-bar bind:refreshList="refreshList" wx:if="{{shiftBillBar}}" wx:for="{{billList}}" billData="{{item}}" wx:key="{{index}}"></bill-bar>
+  </scroll-view>
 </view>

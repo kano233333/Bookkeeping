@@ -7,7 +7,7 @@
   background: white;
   display: flex;
   padding-bottom: env(safe-area-inset-bottom);
-  z-index: 222;
+  z-index: 2222;
 }
 .tab-bar-border {
   background-color: rgba(0, 0, 0, 0.33);
@@ -36,7 +36,7 @@
 /*-------------------------------*/
 .add {
   position: fixed;
-  z-index: 111;
+  z-index: 1111;
   bottom: 48px;
   background-color: #fff;
   height: 45.06666667vw;

@@ -8,7 +8,7 @@ Page({
     icon:icon,
     selectIndex:'',
     remarks:'',
-    amount:0,
+    amount:'',
     label:"1",
     mode:''
   },
@@ -34,15 +34,15 @@ Page({
     })
   },
   selectIcon(e){
-    let index = e.target.dataset.index
+    let index = e.currentTarget.dataset.index
     this.setData({
       selectIndex:index
     })
   },
   addSubmit(){
-    app.isLogin(this.aaa.bind(this))
+    app.isLogin(this.sub.bind(this))
   },
-  aaa(sessionID){
+  sub(sessionID){
     let obj = {
       type:this.data.type,
       amount:this.data.amount,
@@ -58,7 +58,7 @@ Page({
       header: {
         cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
       },
-      url:app.globalData.ip+'/addBill',
+      url:app.globalData.ip+'/'+this.data.mode+'Bill',
       method:'get',
       data:obj,
       success:function(res){
@@ -66,10 +66,19 @@ Page({
         var _data = JSON.parse(data);
         if(_data.static==1){
           wx.showToast({
-            title: '添加成功',
+            title: '成功',
             duration: 1000,
             icon:"none"
           })
+          setTimeout(function(){
+            wx.switchTab({
+              url:'/pages/bill/bill',
+              success:function(e){
+                var page = getCurrentPages().pop()
+                page.onLoad()
+              }
+            })
+          },1000)
         }
       },
       fail:function(err){

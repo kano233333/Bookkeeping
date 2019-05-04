@@ -42,20 +42,7 @@ App({
 
     if (sessionID && (currenstamp - timestamp) < this.globalData.intervalTime) {
       console.log('未过期')
-      wx.request({
-        url: this.globalData.ip + '/auth',
-        header: {
-          cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
-        },
-        success: function (res) {
-          console.log(res)
-          var data = res.data.replace(/'/g, '"');
-          var _data = JSON.parse(data);
-          if (_data.static == 1) {
-            codeback(sessionID);
-          }
-        }
-      })
+      codeback(sessionID);
     } else if (sessionID == '' || (currenstamp - timestamp) >= this.globalData.intervalTime) {
       console.log('已过期')
       this.doLogin();
@@ -100,6 +87,5 @@ App({
         }
       }
     })
-  },
-//  -------------------------
+  }
 })
