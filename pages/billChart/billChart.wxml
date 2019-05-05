@@ -1,9 +1,15 @@
 <!--pages/billChart/billChart.wxml-->
 <view class="bill_chart">
   <view class="chart_head">
-    <text class="{{type==0 ? 'bor_btm' :''}}" bindtap="shiftType" data-type="0">本周</text>
-    <text class="{{type==1 ? 'bor_btm' :''}}" bindtap="shiftType" data-type="1">本月</text>
-    <text class="{{type==2 ? 'bor_btm' :''}}" bindtap="shiftType" data-type="2">本年</text>
+    <view class="select_time">
+      <text class="{{type==0 ? 'selected' :''}}" bindtap="shiftType" data-type="0">周</text>
+      <text class="{{type==1 ? 'selected' :''}}" bindtap="shiftType" data-type="1">月</text>
+      <text class="{{type==2 ? 'selected' :''}}" bindtap="shiftType" data-type="2">年</text>
+    </view>
+    <picker value="{{rangeArr[index]}}" bindchange="bindPickerChange" range="{{rangeArr}}">
+      {{selectTime}}
+      <text class="iconfont icon-jt"></text>
+    </picker>
   </view>
   <view class="chart">
     <ec-canvas wx:if="{{canvasShow}}" id="mychart-dom-bar" canvas-id="mychart-bar1" ec="{{ ec1 }}"></ec-canvas>
@@ -11,7 +17,6 @@
   <view class="chart_head2">
     <text class="{{type2==0 ? 'bor_btm' :''}}" bindtap="shiftType2" data-type="0">消费项柱状图</text>
     <text class="{{type2==1 ? 'bor_btm' :''}}" bindtap="shiftType2" data-type="1">支、收、余饼状图</text>
-    <text class="{{type2==2 ? 'bor_btm' :''}}" bindtap="shiftType2" data-type="2">月余额表</text>
   </view>
   <view class="chart" wx:if="{{shift2}}">
     <ec-canvas wx:if="{{canvasShow}}" id="mychart-dom" canvas-id="mychart-bar2" ec="{{ ec2 }}"></ec-canvas>

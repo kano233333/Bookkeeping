@@ -1,24 +1,47 @@
 import * as echarts from '../../components/ec-canvas/echarts'
 var app = getApp()
 const icon = require('../../utils/base64').icon
+const getWeek = require('../../utils/util').getWeek
+var data1 = [120, 132, 101, 134, 90, 230, 210]
+var data2 = [220, 182, 191, 234, 290, 330, 310]
 Page({
   data: {
     type:0,
     type2:0,
     ec1: {
-      onInit: setWeek
+      onInit: setLine
     },
     ec2:{
       onInit: setCol
     },
     shift2:true,
-    canvasShow:true
+    canvasShow:true,
+    timeArr:[['本周'],['本月'],['本年']],
+    selectTime:"本周",
+    rangeArr:[]
   },
   onLoad: function (options) {
     this.setTabBar(3)
     this.setData({
       canvasShow:true
     })
+    this.setTimePicker()
+    let _this = this
+    setTimeout(function(){
+      data1 = [220, 182, 191, 234, 290, 330, 310]
+      data2 = [220, 182, 191, 234, 290, 330, 310]
+      _this.setData({
+        ec1: {
+          onInit: setLine,
+        },
+        canvasShow:false
+      },()=> {
+        _this.setData({
+          canvasShow: true
+        })
+      })
+      console.log('set')
+    },5000)
   },
   setTabBar(index){
     if (typeof this.getTabBar === 'function' && this.getTabBar()) {
@@ -30,7 +53,9 @@ Page({
   shiftType(e){
     let type = e.target.dataset.type
     this.setData({
-      type:type
+      type:type,
+      selectTime:this.data.timeArr[type][0],
+      rangeArr:this.data.timeArr[type]
     })
   },
   shiftType2(e){
@@ -57,10 +82,51 @@ Page({
         shift2:true
       })
     })
+  },
+  setTimePicker(){
+    let dateT = new Date()
+    let weekNum = getWeek(dateT)
+    let monthNum = dateT.getMonth()+1
+    let pushTime = function(num,arr,str){
+      for(let i=num-1;i>0;i--){
+        arr.push('第'+i+str)
+      }
+      return arr
+    }
+    let weekArr = pushTime(weekNum,this.data.timeArr[0],'周')
+    let monthArr = pushTime(monthNum,this.data.timeArr[1],'月')
+    this.data.timeArr[0] = weekArr
+    this.data.timeArr[1] = monthArr
+    this.setData({
+      rangeArr:this.data.timeArr[0]
+    })
+  },
+  bindPickerChange(e){
+    let index = e.detail.value
+    this.setData({
+      selectTime:this.data.rangeArr[index]
+    })
+    console.log('当前选择时间：'+index)
+  },
+  getLineData(index){
+    let get = function(){
+      // wx.request({
+      //   url:app.globalData.ip+'/linerGraph',
+      //   data:{
+      //     category:'',
+      //     time:index
+      //   },
+      //   success:function(){
+          // data1
+          // data2
+        // }
+      // })
+    }
+
   }
 })
 
-function setWeek(canvas, width, height){
+function setLine(canvas, width, height){
   const chart = echarts.init(canvas, null , {
     width: width,
     height: height
@@ -69,10 +135,16 @@ function setWeek(canvas, width, height){
 
   var option = {
     legend: {
-      data:['支出','收入','余额']
+      data:['支出','收入'],
+      textStyle:{
+        fontSize:14
+      }
     },
     tooltip: {
-      trigger: 'axis'
+      trigger: 'axis',
+      textStyle:{
+        fontSize:18
+      }
     },
     // grid: {
     //   left: '3%',
@@ -88,26 +160,23 @@ function setWeek(canvas, width, height){
       }
     },
     yAxis: {
-      type: 'value'
+      type: 'value',
+      textStyle:{
+        fontSize:18
+      }
     },
     series: [
       {
         name:'支出',
         type:'line',
         stack: '总量',
-        data:[120, 132, 101, 134, 90, 230, 210]
+        data:data1
       },
       {
         name:'收入',
         type:'line',
         stack: '总量',
-        data:[220, 182, 191, 234, 290, 330, 310]
-      },
-      {
-        name:'余额',
-        type:'line',
-        stack: '总量',
-        data:[150, 232, 201, 154, 190, 330, 410]
+        data:data2
       }
     ]
   }

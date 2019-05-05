@@ -44,6 +44,7 @@
   background-color: #ededed;
 }
 
+
 @keyframes scale_show {
   0% {
     transform:scale(0)
@@ -60,5 +61,54 @@
   100% {
     transform:scaleX(1);
   }
+}
+
+@keyframes cha_rotate {
+  0%{
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(360deg);
+  }
+  12% {
+    transform: translateY(-5px);
+  }
+  13% {
+    transform: translateY(0);
+  }
+  14% {
+    transform: translateY(-2px);
+  }
+  15% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+@font-face {font-family: "iconfont";
+  src: url('./static/font/iconfont.eot?t=1557063562292'); /* IE9 */
+  src: url('./static/font/iconfont.eot?t=1557063562292#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAKcAAsAAAAABkgAAAJPAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcApQaQE2AiQDCAsGAAQgBYRtBzIbkQXIrjE2hlZPBFCjm80RtR7zt2gERgEHIqj2++zZt0cIkkACqpMQVCmf+jZhY8JCp87YCMU2/vZ/LnPEwub5Y3lqzLaY33L60nQg0empGTkhN+GWAbXMvQDip6i+6vMfcCCX5mwT5aPHiGPqEmgg+UBz7KKopKQA2o0HsgFGNtnGuGHsghe4nUC1flO1vYOzO+jK7H6BePoocKBbcMgyC1cK5Q1Ts3ivTGV6kca76Pfxz3JUkpQV7Kzj230ftn5yoird7yogcBLQ7DIUmAUycd4YONQQjNZQHWgaBsdKD34i0IujagT76+zUWtALg8FPXl8BEjxWUx1A36RXEx0oqH179b00Gdef+15Ox+3X17uaSi+f9/5uZePFK77fF3A/Sl1Zf9GgLXRclj4IBP9zZU3WVpLBj6RixB1monJHxuCH8AaWZUNg61LWeI21SceJcqpV4x62NPubqmw7eyRUapsgrtB5GQqVRomZOosyNVZRrtImqs04nF2jhWiIXIVpnwCh0ReSencoNPohZuovyrT7R7nGKFDtMlqWrDEej6p3n5Gj5KP7gpHHuXEN2o/TbyioUkfygoj+QFJGblzNL5bDh5STLDGifAzWqgaNcIYHYDdKU8ZCOCZP56FqsVks3DZ9aO5xBn27BHEo4kOuFyjiYTkT1Ff9yvdvkEAl5ZCOkjrnAyJKUetoZW45gHgozQeVPMotpUeBNaUMZAiWQQegE0mlGCqaO8WIR82FE3yFjYVTzQyVzreXZ3+3AarZqhRO+0Ll40dOrlytAAAAAAA=') format('woff2'),
+  url('./static/font/iconfont.woff?t=1557063562292') format('woff'),
+  url('./static/font/iconfont.ttf?t=1557063562292') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('./static/font/iconfont.svg?t=1557063562292#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 14px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jt:before {
+  content: "\e628";
 }
 

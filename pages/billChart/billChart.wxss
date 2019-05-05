@@ -1,18 +1,33 @@
 .chart_head {
   height: 10.66666667vw;
   border-bottom: 1px solid #ededed;
+  font-size: 3.2vw;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: #fff;
+  font-size: 4vw;
 }
-.chart_head > text {
+.chart_head > picker {
+  margin: 0 20px;
   padding: 0 2px;
   line-height: 3.2;
-  font-size: 3.2vw;
 }
-.chart_head > text:nth-of-type(2) {
-  margin: 0 20.53333333vw;
+.chart_head .select_time {
+  border: 1px solid #eb5d5a;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #eb5d5a;
+  box-shadow: 0 0 2px #c04c4a;
+  margin-left: 2.66666667vw;
+}
+.chart_head .select_time > text {
+  color: #fff;
+  padding: 0.66666667vw 2vw;
+  display: inline-block;
+}
+.chart_head .select_time .selected {
+  background-color: #fff;
+  color: #eb5d5a;
+  box-shadow: 0 0 2px #c04c4a inset;
 }
 .chart_head2 {
   height: 12.8vw;
@@ -26,8 +41,6 @@
   padding: 0 2px;
   line-height: 5;
   font-size: 2.4vw;
-}
-.chart_head2 > text:nth-of-type(2) {
   margin: 0 13.6vw;
 }
 .chart {

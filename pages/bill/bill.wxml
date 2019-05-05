@@ -5,7 +5,7 @@
       <text bindtap="selectPicker">{{selectPickers.value}}</text>
     </view>
     <time-picker wx:if="{{reload}}" class="time_picker" start="1999-09" end="2200-09" fields="{{fields}}" bind:pickerEvent="getPickerTimer">
-      <text>{{timePick}}</text>
+      <text>{{timePick}} <text class="iconfont icon-jt"></text></text>
     </time-picker>
   </view>
   <view class="bill_total">

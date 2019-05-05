@@ -24,6 +24,18 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+function getWeek(dt){
+  let d1 = new Date(dt);
+  let d2 = new Date(dt);
+  d2.setMonth(0);
+  d2.setDate(1);
+  let rq = d1-d2;
+  let days = Math.ceil(rq/(24*60*60*1000));
+  let num = Math.ceil(days/7);
+  return num;
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  getWeek: getWeek
 }
