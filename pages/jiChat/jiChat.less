@@ -3,16 +3,15 @@
     @{sx}:@x/@allWidth*100vw;
 }
 .ji_wrap {
-  //display: flex;
-  //flex-wrap:wrap;
   display: grid;
   grid-template-columns: 332/@allWidth*100vw 332/@allWidth*100vw;
   grid-template-rows: 332/@allWidth*100vw;
   grid-column-gap: 20/@allWidth*100vw;
   margin: 94/@allWidth*100vw 33/@allWidth*100vw 0 33/@allWidth*100vw;
   >navigator {
-    border-radius:5px;
-    box-shadow: 5px 5px 10px rgba(162, 162, 162, 0.8);
+    border-radius:10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(162, 162, 162, 0.8);
     position:relative;
     image {
       width:100%;

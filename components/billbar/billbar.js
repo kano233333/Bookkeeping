@@ -1,11 +1,14 @@
 const app = getApp()
+const icon = require('../../utils/base64').icon
+const barHeight = '8.67vw'
 Component({
   data: {
     moreShow:0,
-    billClass:'bill_height1',
+    billHeight:barHeight,
     typeBill:'day',
     moreText:'...',
-    textColor:'#f25350'
+    textColor:'#f25350',
+    icon:icon
   },
   properties: {
     billData: {
@@ -21,12 +24,12 @@ Component({
       }
       if(this.data.moreShow==0){
         this.setData({
-          billClass:'bill_height2',
+          billHeight:"23vw",
           moreShow:1
         })
       }else if(this.data.moreShow==1){
         this.setData({
-          billClass:'bill_height1',
+          billHeight:barHeight,
           moreShow:0
         })
       }

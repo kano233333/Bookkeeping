@@ -48,6 +48,7 @@
 }
 .add > .sd_add {
   margin: 0 14.13333333vw;
+  height: 16vw;
 }
 .add image {
   width: 16vw;

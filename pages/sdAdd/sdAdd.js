@@ -74,11 +74,12 @@ Page({
             wx.switchTab({
               url:'/pages/bill/bill',
               success:function(e){
-                var page = getCurrentPages().pop()
+                var page = getCurrentPages()[0]
+                console.log(page)
                 page.onLoad()
               }
             })
-          },1000)
+          },500)
         }
       },
       fail:function(err){

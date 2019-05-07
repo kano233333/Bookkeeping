@@ -6,8 +6,9 @@
   margin: 12.53333333vw 4.4vw 0 4.4vw;
 }
 .ji_wrap > navigator {
-  border-radius: 5px;
-  box-shadow: 5px 5px 10px rgba(162, 162, 162, 0.8);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px rgba(162, 162, 162, 0.8);
   position: relative;
 }
 .ji_wrap > navigator image {

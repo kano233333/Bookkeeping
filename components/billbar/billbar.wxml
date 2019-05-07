@@ -1,8 +1,8 @@
-<view class="bill_detail {{billClass}}">
+<view class="bill_detail" style="height:{{billHeight}};">
   <view class="bill_upper" bindtap="showMore">
     <view class="bill_left">
-      <text class="icon"></text>
-      <text class="text">{{billData.label}}</text>
+      <image class="icon" src="{{icon[billData.label].value}}"></image>
+      <text class="text">{{icon[billData.label].name}}</text>
     </view>
     <view class="bill_right">
       <text>{{billData.time}}</text>

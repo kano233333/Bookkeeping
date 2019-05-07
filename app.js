@@ -33,19 +33,28 @@ App({
     })
   },
   isLogin(codeback) {
+    // console.log(codeback)
     var sessionID = wx.getStorageSync('sessionID');
     console.log(sessionID)
     var timestamp = wx.getStorageSync('timestamp');
     var currenstamp = Date.parse(new Date());
-    console.log(currenstamp - timestamp)
     var _this = this;
 
     if (sessionID && (currenstamp - timestamp) < this.globalData.intervalTime) {
       console.log('未过期')
+      // wx.request({
+      //   url:'',
+      //   header:{},
+      //   data:{},
+      //   method:'',
+      //   success:function(res){
+      //
+      //   },
+      // })
       codeback(sessionID);
     } else if (sessionID == '' || (currenstamp - timestamp) >= this.globalData.intervalTime) {
       console.log('已过期')
-      this.doLogin();
+      this.doLogin(codeback);
     }
   }
   ,
@@ -54,11 +63,10 @@ App({
     wx.getUserInfo({
       success(res){
         _this.globalData.userInfo = res.userInfo;
-        console.log(res)
       }
     })
   },
-  doLogin(){
+  doLogin(codeback){
     var _this = this;
     console.log('login')
     wx.login({
@@ -70,14 +78,14 @@ App({
               code:res.code
             },
             success:function(res){
-              console.log(res)
               var data = res.data.replace(/'/g,'"');
               var _data = JSON.parse(data);
               if(_data.static==1){
-                console.log(res.cookies[0].value)
-                wx.setStorageSync('sessionID', res.cookies[0].value);
+                let value = (typeof res.cookies[0])=="object" ? res.cookies[0].value : res.cookies[0].split(';')[0].split('=')[1]
+                wx.setStorageSync('sessionID', value);
                 var timestamp = Date.parse(new Date())
                 wx.setStorageSync('timestamp',timestamp)
+                codeback(value);
                 _this.getUserInfo();
               }else{
                 _this.requestFail()

@@ -13,6 +13,5 @@ Page({
         selected: index
       })
     }
-    console.log(this.getTabBar())
   }
 })

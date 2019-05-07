@@ -2,8 +2,9 @@ import * as echarts from '../../components/ec-canvas/echarts'
 var app = getApp()
 const icon = require('../../utils/base64').icon
 const getWeek = require('../../utils/util').getWeek
-var data1 = [120, 132, 101, 134, 90, 230, 210]
-var data2 = [220, 182, 191, 234, 290, 330, 310]
+var lineData = [[],[]]
+var colData = [[],[]]
+const threeTime = ['week','month','year']
 Page({
   data: {
     type:0,
@@ -18,7 +19,9 @@ Page({
     canvasShow:true,
     timeArr:[['本周'],['本月'],['本年']],
     selectTime:"本周",
-    rangeArr:[]
+    rangeArr:[],
+    threeTime:0,
+    selectIndex:0
   },
   onLoad: function (options) {
     this.setTabBar(3)
@@ -27,21 +30,7 @@ Page({
     })
     this.setTimePicker()
     let _this = this
-    setTimeout(function(){
-      data1 = [220, 182, 191, 234, 290, 330, 310]
-      data2 = [220, 182, 191, 234, 290, 330, 310]
-      _this.setData({
-        ec1: {
-          onInit: setLine,
-        },
-        canvasShow:false
-      },()=> {
-        _this.setData({
-          canvasShow: true
-        })
-      })
-      console.log('set')
-    },5000)
+    this.getLineData()
   },
   setTabBar(index){
     if (typeof this.getTabBar === 'function' && this.getTabBar()) {
@@ -52,11 +41,13 @@ Page({
   },
   shiftType(e){
     let type = e.target.dataset.type
+    this.data.threeTime = type
     this.setData({
       type:type,
       selectTime:this.data.timeArr[type][0],
       rangeArr:this.data.timeArr[type]
     })
+    this.getLineData()
   },
   shiftType2(e){
     let type = e.target.dataset.type
@@ -103,26 +94,41 @@ Page({
   },
   bindPickerChange(e){
     let index = e.detail.value
+    this.data.selectIndex = index
     this.setData({
       selectTime:this.data.rangeArr[index]
     })
-    console.log('当前选择时间：'+index)
+    this.getLineData()
   },
-  getLineData(index){
-    let get = function(){
-      // wx.request({
-      //   url:app.globalData.ip+'/linerGraph',
-      //   data:{
-      //     category:'',
-      //     time:index
-      //   },
-      //   success:function(){
-          // data1
-          // data2
-        // }
-      // })
+  getLineData(){
+    let _this = this
+    let get = function(sessionID){
+      wx.request({
+        header: {
+          cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
+        },
+        url:app.globalData.ip+'/graph',
+        data:{
+          category:threeTime[this.data.threeTime],
+          offset:this.data.selectIndex*-1,
+          isLabel:false
+        },
+        success:function(res){
+          let data = res.data.replace(/'/g,'"')
+          data = JSON.parse(data).data
+          console.log(data)
+          // data1 = data.income
+          _this.setData({
+            canvasShow:false
+          },()=>{
+            _this.setData({
+              canvasShow:true
+            })
+          })
+        }
+      })
     }
-
+    app.isLogin(get.bind(this))
   }
 })
 
@@ -170,13 +176,13 @@ function setLine(canvas, width, height){
         name:'支出',
         type:'line',
         stack: '总量',
-        data:data1
+        data:lineData[0]
       },
       {
         name:'收入',
         type:'line',
         stack: '总量',
-        data:data2
+        data:lineData[1]
       }
     ]
   }
@@ -198,7 +204,6 @@ function setCol(canvas, width, height){
     data1.push((Math.sin(i / 5) * (i / 5 -10) + i / 6) * 5);
     data2.push((Math.cos(i / 5) * (i / 5 -10) + i / 6) * 5);
   }
-
   let option = {
     legend: {
       data: ['bar', 'bar2'],

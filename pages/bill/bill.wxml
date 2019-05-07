@@ -12,7 +12,7 @@
     <view class="wrap">总收入:<text><text style="color:#67b098">{{allIncome}}</text>元</text></view>
     <view class="wrap">总支出:<text><text style="color:#f25350">{{allPay}}</text>元</text></view>
   </view>
-  <scroll-view class="bill_detail_wrap" scroll-y="true">
+  <scroll-view bindscrolltoupper="bbb" class="bill_detail_wrap" scroll-y="true">
     <bill-bar bind:refreshList="refreshList" wx:if="{{shiftBillBar}}" wx:for="{{billList}}" billData="{{item}}" wx:key="{{index}}"></bill-bar>
   </scroll-view>
 </view>

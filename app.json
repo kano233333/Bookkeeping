@@ -32,7 +32,7 @@
       },
       {
         "pagePath":"pages/jiChat/jiChat",
-        "text":"小计",
+        "text":"小记",
         "iconPath":"/static/imgs/ji1.png",
         "selectedIconPath":"/static/imgs/ji2.png"
       },

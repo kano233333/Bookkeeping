@@ -1,13 +1,11 @@
 .bill_detail {
   font-size: 2.4vw;
-  height: 8.66666667vw;
   border: 1px solid #d4d4d4;
   margin: 1px 0;
   border-radius: 4px;
   padding: 2.4vw 5.6vw;
-  transition: 0.8s all;
+  transition: 0.5s all;
   background-color: #fff;
-  animation: 0.5s center_scale_show forwards;
 }
 .bill_upper {
   display: flex;
@@ -22,7 +20,6 @@
   font-weight: 800;
 }
 .bz {
-  animation: 0.5s center_scale_show forwards;
   position: relative;
   top: 1.33333333vw;
   color: #666;
@@ -42,20 +39,14 @@
   content: '';
   width: 100%;
   height: 1px;
-  background-color: crimson;
+  background-color: #d84642;
   position: absolute;
   top: -1.6vw;
-}
-.bill_height1 {
-  height: 8.66666667vw;
-}
-.bill_height2 {
-  height: auto;
+  animation: 0.5s center_scale_show forwards;
 }
 .bill_left .icon {
   width: 8.66666667vw;
   height: 8.66666667vw;
-  background-color: #eb5d5a;
   border-radius: 50%;
 }
 .bill_left > text {

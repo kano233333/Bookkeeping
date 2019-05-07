@@ -13,7 +13,7 @@ Component({
       },
       {
         "pagePath": "/pages/jiChat/jiChat",
-        "text": "小计",
+        "text": "小记",
         "iconPath": "/static/imgs/ji1.png",
         "selectedIconPath": "/static/imgs/ji2.png"
       },
@@ -43,7 +43,6 @@ Component({
       const data = e.currentTarget.dataset
       var url = data.path
       if (data.index == 2) {
-        console.log(this)
         this.setData({
           addShow: true,
         })
@@ -60,8 +59,12 @@ Component({
         wx.switchTab({
           url:url,
           success:function(e){
-            var page = getCurrentPages().pop()
-            page.onLoad()
+            setTimeout(function(){
+              var page = getCurrentPages()[0]
+              // console.log('switch')
+              // console.log(getCurrentPages())
+              page.onLoad()
+            },10)
           }
         })
       }
