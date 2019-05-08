@@ -6,6 +6,7 @@
   padding: 2.4vw 5.6vw;
   transition: 0.5s all;
   background-color: #fff;
+  animation: 0.5s center_scale_show forwards;
 }
 .bill_upper {
   display: flex;
@@ -47,7 +48,6 @@
 .bill_left .icon {
   width: 8.66666667vw;
   height: 8.66666667vw;
-  border-radius: 50%;
 }
 .bill_left > text {
   display: inline-block;

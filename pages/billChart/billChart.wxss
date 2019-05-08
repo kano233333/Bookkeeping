@@ -44,6 +44,7 @@
   margin: 0 13.6vw;
 }
 .chart {
+  width: 100vw;
   height: 57.33333333vw;
   border: 1px solid #ededed;
 }

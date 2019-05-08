@@ -61,7 +61,7 @@ Component({
           success:function(e){
             setTimeout(function(){
               var page = getCurrentPages()[0]
-              // console.log('switch')
+              console.log('switch')
               // console.log(getCurrentPages())
               page.onLoad()
             },10)
