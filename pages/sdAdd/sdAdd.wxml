@@ -14,13 +14,13 @@
     <text class="title">选择标签</text>
     <view class="select_icon">
       <view class="selected jz">
-        <image src="{{icon[selectIndex].value}}" />
-        <text>{{icon[selectIndex].name}}</text>
+        <image src="{{selectSrc}}" />
+        <text>{{selectText}}</text>
       </view>
       <view class="select">
-        <view  wx:for="{{icon}}"  bindtap="selectIcon" wx:key="{{index}}" data-index="{{index}}">
-          <image class="{{selectIndex===index?'select_bg':''}}" src="{{item.value}}" />
-          <text>{{item.name}}</text>
+        <view wx:for="{{icon}}" bindtap="selectIcon" wx:key="{{index}}" data-index="{{index}}">
+          <image class="{{selectIndex===index?'select_bg':''}}" src="{{iconAll[item.type][item.index].value}}" />
+          <text>{{iconAll[item.type][item.index].name}}</text>
         </view>
       </view>
     </view>

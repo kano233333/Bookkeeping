@@ -1,6 +1,6 @@
 {
   "pages":[
-    "pages/bill/bill",
+    "pages/index/index",
     "pages/add/add",
     "pages/billChart/billChart",
     "pages/jiChat/jiChat",
@@ -24,7 +24,7 @@
     "backgroundColor":"#f9f9f9",
     "list":[
       {
-        "pagePath":"pages/bill/bill",
+        "pagePath":"pages/index/index",
         "text":"细则",
         "iconPath":"/static/imgs/bill1.png",
         "selectedIconPath":"/static/imgs/bill2.png"

@@ -1,49 +1,60 @@
 // pages/sdAdd/sdAdd.js
-const icon = require("../../utils/base64").icon
+const icon = require("../../utils/base64")
+const aicon = [icon.outcome,icon.income]
 let formatTime = require('../../utils/util').formatTime
 let app = getApp()
 Page({
   data: {
     type:0,
-    icon:icon,
+    icon:aicon[0],
+    iconAll:icon.all,
     selectIndex:'',
     remarks:'',
     amount:'',
-    label:"1",
-    mode:''
+    mode:'',
+    selectSrc:'',
+    selectText:''
   },
   onLoad: function (options) {
     this.data.type = options.type || 0
     this.data.mode = options.mode || 'add'
     if(this.data.mode=='edit'){
       let billData = JSON.parse(options.billData)
+      let iconX = billData.label.split("-")
+      let iconAll = this.data.iconAll
       this.data.billData = billData
-      console.log(billData)
       this.setData({
         type:billData.type,
-        selectIndex:Number(billData.label),
         remarks:billData.remarks,
-        amount:billData.amount
+        amount:billData.amount,
+        selectSrc:iconAll[iconX[0]][iconX[1]].value,
+        selectText:iconAll[iconX[0]][iconX[1]].name
       })
     }
   },
   shiftType(e){
     let type = e.target.dataset.type
     this.setData({
-      type:type
+      type:type,
+      icon:aicon[type],
     })
   },
   selectIcon(e){
     let index = e.currentTarget.dataset.index
+    let iconc = this.data.icon
     this.setData({
-      selectIndex:index
+      selectIndex:index,
+      selectSrc:icon.all[iconc[index].type][iconc[index].index].value,
+      selectText:icon.all[iconc[index].type][iconc[index].index].name,
     })
   },
   addSubmit(){
+    let selectIndex = this.data.selectIndex
+    let icon = this.data.icon
     let obj = {
       type:this.data.type,
       amount:this.data.amount,
-      label:this.data.selectIndex,
+      label:icon[selectIndex].type+"-"+icon[selectIndex].index,
       time:formatTime(new Date,"detail"),
       remarks:this.data.remarks
     }
@@ -66,7 +77,7 @@ Page({
           let P = new Promise((res,req)=>{
             setTimeout(function(){
               wx.switchTab({
-                url:'/pages/bill/bill',
+                url:'/pages/index/index',
                 success:function(e){
                   res('ok')
                 }

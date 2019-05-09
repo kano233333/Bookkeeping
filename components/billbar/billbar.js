@@ -1,5 +1,5 @@
 const app = getApp()
-const icon = require('../../utils/base64').icon
+const icon = require('../../utils/base64')
 const barHeight = '8.67vw'
 Component({
   data: {
@@ -8,7 +8,11 @@ Component({
     typeBill:'day',
     moreText:'...',
     textColor:'#f25350',
-    icon:icon
+    icon:icon.outcome,
+    iconAll:icon.all,
+    iconX:["funny",0],
+    src:'',
+    text:''
   },
   properties: {
     billData: {
@@ -64,17 +68,36 @@ Component({
   },
   lifetimes:{
     ready:function(){
-      if(this.data.billData.remarks===undefined){
-        this.data.typeBill = "month"
-        this.setData({
-          moreText:''
-        })
-      }
-      if(this.data.billData.type==1){
+      let billData = this.data.billData
+      let src = '',text = ''
+      if(billData.type==1){
         this.setData({
           textColor:'#67b098'
         })
       }
+      if(billData.remarks===undefined){
+        this.data.typeBill = "month"
+        let date = billData.time.split('-')[2]
+        date = Number(date)-1
+        src = icon.month[date].value
+        text = icon.month[date].name
+        this.setData({
+          moreText:''
+        })
+      }else{
+        try{
+          let iconX = billData.label.split("-")
+          if(iconX.length>2){
+            switch(iconX[2]){}
+          }
+          src = icon.all[iconX[0]][iconX[1]].value
+          text = icon.all[iconX[0]][iconX[1]].name
+        }catch (e) {}
+      }
+      this.setData({
+        src:src,
+        text:text
+      })
     }
   }
 });

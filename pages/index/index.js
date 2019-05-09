@@ -68,8 +68,8 @@ Page({
         for(let i in res){
           if(res[i].type==0){
             allPay+=res[i].amount
-          }else if(res[i].type==1){
-            allIncome+=res[i].amount
+          }else if(res[i].type==1) {
+            allIncome += res[i].amount
           }
         }
         this.setData({

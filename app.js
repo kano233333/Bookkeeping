@@ -23,7 +23,7 @@ App({
       success(res){
         if(res.authSetting['scope.userInfo']){
           console.log(res)
-          _this.isLogin(_this.getUserInfo);
+          _this.isLogin();
         }else{
           wx.navigateTo({
             url:"/pages/login/login"
@@ -33,13 +33,12 @@ App({
     })
   },
   isLogin(obj) {
-    console.log(obj)
     var sessionID = wx.getStorageSync('sessionID');
     console.log(sessionID)
     var timestamp = wx.getStorageSync('timestamp');
     var currenstamp = Date.parse(new Date());
     var _this = this;
-    var codeback = function(sessionID) {
+    function codeback(sessionID) {
       wx.request({
         header: {
           cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
@@ -60,7 +59,10 @@ App({
 
     if (sessionID && (currenstamp - timestamp) < this.globalData.intervalTime) {
       console.log('未过期')
-      codeback(sessionID)
+      if(obj){
+        codeback(sessionID)
+      }
+      this.getUserInfo()
     } else if (sessionID == '' || (currenstamp - timestamp) >= this.globalData.intervalTime) {
       console.log('已过期')
       this.doLogin(codeback);
