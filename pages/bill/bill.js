@@ -25,23 +25,15 @@ Page({
   onLoad: function () {
     console.log('bill onload')
     app.isSq();
-    this.setTabBar(0)
-    app.isLogin(this.getBillList.bind(this))
+    this.getBillList()
   },
   getPickerTimer(data){
     let _this = this
     this.setData({
       timePick:data.detail.timeData
     },()=>{
-      app.isLogin(_this.getBillList.bind(_this))
+      _this.getBillList()
     })
-  },
-  setTabBar(index){
-    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
-      this.getTabBar().setData({
-        selected: index
-      })
-    }
   },
   selectPicker(){
     let fields = this.data.selectPickers.type
@@ -54,16 +46,13 @@ Page({
       fields:fields,
       timePick:formatTime(new Date,fields),
     },()=>{
-      app.isLogin(_this.getBillList.bind(_this))
+      _this.getBillList()
     })
   },
-  getBillList:function(sessionID){
+  getBillList:function(){
     let _this = this
-    wx.request({
-      header: {
-        cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
-      },
-      url:app.globalData.ip+'/getBill',
+    let obj = {
+      url:app.globalData.ip +'/getBill',
       method:'get',
       data:{
         type:this.data.selectPickers.type=='day'?1:0,
@@ -71,71 +60,33 @@ Page({
       },
       success:function(res){
         let allIncome = 0 , allPay = 0
-        let data = res.data.replace(/'/g,'"')
-        let list = JSON.parse(data).data
-        if(_this.data.selectPickers.type=='day'){
-          for(let i in list){
-            list[i].time = list[i].time.substring(0,16)
+        if(this.data.selectPickers.type=='day'){
+          for(let i in res){
+            res[i].time = res[i].time.substring(0,16)
           }
         }
-        for(let i in list){
-          if(list[i].type==0){
-            allPay+=list[i].amount
-          }else if(list[i].type==1){
-            allIncome+=list[i].amount
+        for(let i in res){
+          if(res[i].type==0){
+            allPay+=res[i].amount
+          }else if(res[i].type==1){
+            allIncome+=res[i].amount
           }
         }
-        _this.setData({
-          billList:list,
+        this.setData({
+          billList:res,
           shiftBillBar:false,
           allPay:allPay,
           allIncome:allIncome
         },()=>{
-          _this.setData({
+          this.setData({
             shiftBillBar:true
           })
         })
-      }
-    })
-  },
-  bbb(e){
-    console.log(e)
+      }.bind(_this)
+    }
+    app.isLogin(obj)
   },
   refreshList:function(){
-    // app.isLogin({
-    //   url:app.globalData.ip+'/getBill',
-    //   data:{
-    //     type:this.data.selectPickers.type=='day'?1:0,
-    //     time:this.data.timePick
-    //   },
-    //   success:function(res){
-    //     let allIncome = 0 , allPay = 0
-    //     let data = res.data.replace(/'/g,'"')
-    //     let list = JSON.parse(data).data
-    //     if(_this.data.selectPickers.type=='day'){
-    //       for(let i in list){
-    //         list[i].time = list[i].time.substring(0,16)
-    //       }
-    //     }
-    //     for(let i in list){
-    //       if(list[i].type==0){
-    //         allPay+=list[i].amount
-    //       }else if(list[i].type==1){
-    //         allIncome+=list[i].amount
-    //       }
-    //     }
-    //     _this.setData({
-    //       billList:list,
-    //       shiftBillBar:false,
-    //       allPay:allPay,
-    //       allIncome:allIncome
-    //     },()=>{
-    //       _this.setData({
-    //         shiftBillBar:true
-    //       })
-    //     })
-    //   }
-    // })
-    app.isLogin(this.getBillList.bind(this))
+    this.getBillList()
   }
 })

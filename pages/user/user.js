@@ -7,32 +7,22 @@ Page({
     totalAccount:0
   },
   onLoad: function (options) {
-    this.setTabBar(4)
     this.setData({
       userData:app.globalData.userInfo
     })
-    app.isLogin(this.getUser.bind(this))
+    this.getUser()
   },
-  setTabBar(index){
-    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
-      this.getTabBar().setData({
-        selected: index
-      })
-    }
-  },
-  getUser(sessionID){
+  getUser(){
     let _this = this
-    wx.request({
-      header: {
-        cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
-      },
+    let obj = {
       url:app.globalData.ip+'/info',
       success:function(res) {
         _this.setData({
           balance:res.balance,
           totalAccount:res.totalAccount
         })
-      }
-    })
+      }.bind(this)
+    }
+    app.isLogin(obj)
   }
 })

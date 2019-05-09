@@ -19,7 +19,6 @@
     "navigationBarTextStyle":"white"
   },
   "tabBar":{
-    "custom": true,
     "color":"#989898",
     "selectedColor":"#de4346",
     "backgroundColor":"#f9f9f9",

@@ -40,32 +40,26 @@ Component({
       })
     },
     deleteBill:function(){
-      app.isLogin(del.bind(this))
       let _this = this
-      function del(sessionID){
-        wx.request({
-          header: {
-            cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
-          },
-          url:app.globalData.ip+'/delBill',
-          method:'get',
-          data:{
-            bid:this.data.billData.bid
-          },
-          success:function(res){
-            let data = res.data.replace(/'/g,'"');
-            data = JSON.parse(data)
-            if(data.static == 1){
-              wx.showToast({
-                title: '删除成功',
-                duration: 1000,
-                icon:"none"
-              })
-              _this.triggerEvent("refreshList")
-            }
+      let delObj = {
+        url:app.globalData.ip+'/delBill',
+        method:'get',
+        data:{
+          bid:this.data.billData.bid
+        },
+        success:function(res){
+          let data = res
+          if(data.static == 1){
+            wx.showToast({
+              title: '删除成功',
+              duration: 1000,
+              icon:"none"
+            })
+            this.triggerEvent("refreshList")
           }
-        })
+        }.bind(this)
       }
+      app.isLogin(delObj)
     }
   },
   lifetimes:{

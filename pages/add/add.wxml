@@ -1,2 +1,20 @@
-<!--pages/add/add.wxml-->
-<text>pages/add/add.wxml</text>
+<view>
+  <view class="add-wrap">
+    <view class="add-bg" bindtap="hideAdd"></view>
+    <view class="add">
+      <view>
+        <image src="/static/imgs/add/1.png"/>
+        <text>扫一扫</text>
+      </view>
+      <navigator class="sd_add" url="/pages/sdAdd/sdAdd?type=0">
+        <image src="/static/imgs/add/2.png"/>
+        <text>手动添加</text>
+      </navigator>
+      <view>
+        <image src="/static/imgs/add/3.png"/>
+        <text>小计帮帮</text>
+      </view>
+      <image bindtap="hideAdd" class="cancel" src="/static/icon/cha.svg"></image>
+    </view>
+  </view>
+</view>

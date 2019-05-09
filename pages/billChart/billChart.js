@@ -28,20 +28,8 @@ Page({
     barData:[]
   },
   onLoad: function (options) {
-    this.setTabBar(3)
-    this.setData({
-      canvasShow: true
-    })
     this.setTimePicker()
-    let _this = this
     this.getLineData()
-  },
-  setTabBar(index) {
-    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
-      this.getTabBar().setData({
-        selected: index
-      })
-    }
   },
   shiftType(e) {
     let type = e.target.dataset.type
@@ -111,63 +99,55 @@ Page({
     this.getLineData()
   },
   getLineData() {
-    let _this = this
-    let get = function (sessionID) {
-      wx.request({
-        header: {
-          cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
-        },
-        url: app.globalData.ip + '/graph',
-        data: {
-          category: threeTime[this.data.threeTime],
-          offset: this.data.selectIndex * -1,
-          isLabel: false
-        },
-        success: function (res) {
-          let data = res.data.replace(/'/g, '"')
-          data = JSON.parse(data).data
-          console.log(data)
-          lineData = [[], []]
-          xAxisData = []
+    let barObj = {
+      url: app.globalData.ip + '/graph',
+      data: {
+        category: threeTime[this.data.threeTime],
+        offset: this.data.selectIndex * -1,
+        isLabel: true
+      },
+      success: function (res) {
+        console.log(res)
+        let data = res
+        barData = []
+        this.data.barData = data
+        try{
+          for(let i=0;i<data.income.length;i++){
+            barData.push({name:data.income[i].label,value:data.income[i].amount})
+          }
+        }catch (e) {}
+        this.setData({
+          canvasShow: false
+        }, () => {
+          this.setData({
+            canvasShow: true
+          })
+        })
+      }.bind(this)
+    }
+    let lineObj = {
+      url: app.globalData.ip + '/graph',
+      data: {
+        category: threeTime[this.data.threeTime],
+        offset: this.data.selectIndex * -1,
+        isLabel: false
+      },
+      success: function (res) {
+        let data = res
+        console.log(data)
+        lineData = [[], []]
+        xAxisData = []
+        try{
           for (let i = 0; i < data.income.length; i++) {
             lineData[0].push(data.income[i].amount)
             lineData[1].push(data.outcome[i].amount)
             xAxisData.push(i + 1)
           }
-          app.isLogin(get2.bind(_this))
-        }
-      })
+        }catch (e) {}
+        app.isLogin(barObj)
+      }.bind(this)
     }
-    let get2 = function (sessionID) {
-      wx.request({
-        header: {
-          cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
-        },
-        url: app.globalData.ip + '/graph',
-        data: {
-          category: threeTime[this.data.threeTime],
-          offset: this.data.selectIndex * -1,
-          isLabel: true
-        },
-        success: function (res) {
-          let data = res.data.replace(/'/g, '"')
-          data = JSON.parse(data).data
-          barData = []
-          _this.data.barData = data
-          for(let i=0;i<data.income.length;i++){
-            barData.push({name:data.income[i].label,value:data.income[i].amount})
-          }
-          _this.setData({
-            canvasShow: false
-          }, () => {
-            _this.setData({
-              canvasShow: true
-            })
-          })
-        }
-      })
-    }
-    app.isLogin(get.bind(this))
+    app.isLogin(lineObj)
   }
 })
 

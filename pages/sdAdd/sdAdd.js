@@ -40,9 +40,6 @@ Page({
     })
   },
   addSubmit(){
-    app.isLogin(this.sub.bind(this))
-  },
-  sub(sessionID){
     let obj = {
       type:this.data.type,
       amount:this.data.amount,
@@ -54,38 +51,35 @@ Page({
       obj.time = this.data.billData.time
       obj.bid = this.data.billData.bid
     }
-    wx.request({
-      header: {
-        cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
-      },
+    let reqObj = {
       url:app.globalData.ip+'/'+this.data.mode+'Bill',
       method:'get',
       data:obj,
       success:function(res){
-        var data = res.data.replace(/'/g,'"');
-        var _data = JSON.parse(data);
+        var _data = res;
         if(_data.static==1){
           wx.showToast({
             title: '成功',
             duration: 1000,
             icon:"none"
           })
-          setTimeout(function(){
-            wx.switchTab({
-              url:'/pages/bill/bill',
-              success:function(e){
-                var page = getCurrentPages()[0]
-                console.log(page)
-                page.onLoad()
-              }
-            })
-          },500)
+          let P = new Promise((res,req)=>{
+            setTimeout(function(){
+              wx.switchTab({
+                url:'/pages/bill/bill',
+                success:function(e){
+                  res('ok')
+                }
+              })
+            },500)
+          }).then(()=>{
+            var page = getCurrentPages()[0]
+            page.onLoad()
+          })
         }
-      },
-      fail:function(err){
-        console.log(err)
-      }
-    })
+      }.bind(this)
+    }
+    app.isLogin(reqObj)
   },
   setRemarks:function(e){
     let value = e.detail.value

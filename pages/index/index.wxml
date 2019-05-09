@@ -1,9 +1,0 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-  <time-picker start="1999-09" end="2200-09" fields="month" bind:pickerEvent="getPickerTimer">
-    <text>选择时间</text>
-  </time-picker>
-</view>

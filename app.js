@@ -32,26 +32,35 @@ App({
       }
     })
   },
-  isLogin(codeback) {
-    // console.log(codeback)
+  isLogin(obj) {
+    console.log(obj)
     var sessionID = wx.getStorageSync('sessionID');
     console.log(sessionID)
     var timestamp = wx.getStorageSync('timestamp');
     var currenstamp = Date.parse(new Date());
     var _this = this;
+    var codeback = function(sessionID) {
+      wx.request({
+        header: {
+          cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
+        },
+        url: obj.url,
+        data: obj.data,
+        method: obj.method | 'get',
+        success: function (res) {
+          var data = res.data
+          if((typeof data)=='string'){
+            data = data.replace(/'/g, '"')
+            data = JSON.parse(data).data==undefined ? JSON.parse(data) :JSON.parse(data).data
+          }
+          obj.success(data)
+        }
+      })
+    }
 
     if (sessionID && (currenstamp - timestamp) < this.globalData.intervalTime) {
       console.log('未过期')
-      // wx.request({
-      //   url:'',
-      //   header:{},
-      //   data:{},
-      //   method:'',
-      //   success:function(res){
-      //
-      //   },
-      // })
-      codeback(sessionID);
+      codeback(sessionID)
     } else if (sessionID == '' || (currenstamp - timestamp) >= this.globalData.intervalTime) {
       console.log('已过期')
       this.doLogin(codeback);
