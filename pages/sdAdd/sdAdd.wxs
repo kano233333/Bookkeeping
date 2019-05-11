@@ -1,0 +1,10 @@
+var setText = function(item,iconAll){
+  if(item.name!=undefined){
+    return item.name
+  }
+  return iconAll[item.type][item.index].name
+}
+
+module.exports = {
+  setText: setText
+}

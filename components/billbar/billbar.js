@@ -1,6 +1,7 @@
 const app = getApp()
 const icon = require('../../utils/base64')
 const barHeight = '8.67vw'
+const sicon = wx.getStorageSync('icon')
 Component({
   data: {
     moreShow:0,
@@ -87,11 +88,15 @@ Component({
       }else{
         try{
           let iconX = billData.label.split("-")
-          if(iconX.length>2){
-            switch(iconX[2]){}
-          }
           src = icon.all[iconX[0]][iconX[1]].value
-          text = icon.all[iconX[0]][iconX[1]].name
+          text = billData.name==undefined ? icon.all[iconX[0]][iconX[1]].name : billData.name
+          if(iconX.length>2){
+            for(let i=0;i<sicon.length;i++){
+              if(billData.label == sicon[i].label){
+                text = sicon[i].name
+              }
+            }
+          }
         }catch (e) {}
       }
       this.setData({

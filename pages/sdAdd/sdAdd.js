@@ -1,8 +1,20 @@
 // pages/sdAdd/sdAdd.js
 const icon = require("../../utils/base64")
-const aicon = [icon.outcome,icon.income]
+let aicon = [icon.outcome,icon.income]
+let sicon = wx.getStorageSync('icon')
 let formatTime = require('../../utils/util').formatTime
 let app = getApp()
+let setIcon = function(){
+  for(let i=0;i<sicon.length;i++){
+    let sp = sicon[i].label.split('-')
+    let type = 0
+    if(sp[2]=='#i'){
+      type = 1
+    }
+    aicon[type].push({type:sp[0],index:sp[1],name:sicon[i].name,from:sp[2]})
+  }
+}
+setIcon()
 Page({
   data: {
     type:0,
@@ -16,6 +28,11 @@ Page({
     selectText:''
   },
   onLoad: function (options) {
+    sicon = wx.getStorageSync('icon')
+    setIcon()
+    this.setData({
+      icon:aicon[0]
+    })
     this.data.type = options.type || 0
     this.data.mode = options.mode || 'add'
     if(this.data.mode=='edit'){
@@ -28,7 +45,8 @@ Page({
         remarks:billData.remarks,
         amount:billData.amount,
         selectSrc:iconAll[iconX[0]][iconX[1]].value,
-        selectText:iconAll[iconX[0]][iconX[1]].name
+        selectText:iconAll[iconX[0]][iconX[1]].name,
+        selectIndex:this.findIndex(iconX,billData.type)
       })
     }
   },
@@ -38,6 +56,8 @@ Page({
       type:type,
       icon:aicon[type],
     })
+    console.log(aicon[type])
+    console.log(aicon[type][0].name)
   },
   selectIcon(e){
     let index = e.currentTarget.dataset.index
@@ -51,10 +71,14 @@ Page({
   addSubmit(){
     let selectIndex = this.data.selectIndex
     let icon = this.data.icon
+    let label = icon[selectIndex].type+"-"+icon[selectIndex].index
+    if(icon[selectIndex].from!=undefined){
+      label = label+"-"+icon[selectIndex].from
+    }
     let obj = {
       type:this.data.type,
       amount:this.data.amount,
-      label:icon[selectIndex].type+"-"+icon[selectIndex].index,
+      label:label,
       time:formatTime(new Date,"detail"),
       remarks:this.data.remarks
     }
@@ -90,7 +114,7 @@ Page({
         }
       }.bind(this)
     }
-    app.isLogin(reqObj)
+     app.isLogin(reqObj)
   },
   setRemarks:function(e){
     let value = e.detail.value
@@ -99,5 +123,16 @@ Page({
   setAmount:function(e){
     let value = e.detail.value
     this.data.amount = value
+  },
+  findIndex:function(iconX,type){
+    for(let i=0;i<icon.outcome.length;i++){
+      if(aicon[type][i].type==iconX[0] && aicon[type][i].index==iconX[1]){
+        if(iconX.length==2){
+          return i
+        }else if(iconX.length==3 && aicon[type][i].from!=undefined){
+          return i
+        }
+      }
+    }
   }
 })

@@ -1,7 +1,24 @@
-.manage {
-  padding: 2.66666667vw 1.33333333vw;
+.add_head {
+  height: 10.66666667vw;
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.add_head > text {
+  padding: 0 2px;
+  line-height: 2.5;
+  font-size: 4vw;
+}
+.add_head > text:nth-of-type(1) {
+  margin-left: 20.4vw;
+}
+.add_head > text:nth-of-type(2) {
+  margin-right: 20.4vw;
 }
 .title {
+  margin: 2.66666667vw 1.33333333vw;
   height: 13.06666667vw;
   background-color: #fff;
   border-radius: 5px;
@@ -13,18 +30,19 @@
   font-size: 3.2vw;
 }
 .select {
+  margin: 0 1.33333333vw;
   background-color: #fff;
   border-radius: 5px;
-  margin-bottom: 1px;
   display: flex;
   flex-wrap: wrap;
+  font-size: 2.66666667vw;
   padding: 4vw 5vw 4vw 5vw;
 }
 .select image {
-  margin: 2.66666667vw 3vw;
-  width: 8.53333333vw;
-  height: 8.53333333vw;
-  background-color: #eb5d5a;
+  width: 8.4vw;
+  height: 8.4vw;
+  padding: 5px;
   border-radius: 50%;
+  background-color: #ededed;
 }
 /*# sourceMappingURL=manage.wxss.map */

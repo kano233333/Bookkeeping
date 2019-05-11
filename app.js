@@ -6,11 +6,11 @@ App({
   globalData: {
     userInfo: null,
     userStatus:'',
-    ip:'http://192.168.1.70:8080/wx',
+    // ip:'https://www.victorzuo.top/wx',
+    ip:'http://192.168.1.70:8080/wx/',
     intervalTime:60000
   },
   requestFail:function(xxx){
-    console.log(xxx)
     wx.showToast({
       title: '错误',
       duration: 1000,
@@ -41,6 +41,7 @@ App({
     function codeback(sessionID) {
       wx.request({
         header: {
+          // cookie: "JSESSIONID=" + sessionID + ";domain=victorzuo.com;path=/wx"
           cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
         },
         url: obj.url,
@@ -63,7 +64,8 @@ App({
         codeback(sessionID)
       }
       this.getUserInfo()
-    } else if (sessionID == '' || (currenstamp - timestamp) >= this.globalData.intervalTime) {
+    }
+    else if (sessionID == '' || (currenstamp - timestamp) >= this.globalData.intervalTime) {
       console.log('已过期')
       this.doLogin(codeback);
     }

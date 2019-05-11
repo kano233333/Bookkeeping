@@ -5,7 +5,7 @@ Page({
   bindgetuserinfo:function(){
     app.doLogin();
     wx.switchTab({
-      url:'/pages/bill/bill'
+      url:'/pages/index/index'
     })
   }
 })

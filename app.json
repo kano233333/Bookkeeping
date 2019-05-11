@@ -11,7 +11,8 @@
     "pages/sdAdd/sdAdd",
     "pages/revise/revise",
     "pages/manage/manage",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/icon/icon"
   ],
   "window":{
     "backgroundTextStyle":"light",

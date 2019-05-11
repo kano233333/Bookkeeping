@@ -299,5 +299,6 @@ module.exports = {
   income: income,
   outcome: outcome,
   month: month,
-  all:all
+  all:all,
+  corresp:corresp
 }

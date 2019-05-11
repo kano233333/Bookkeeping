@@ -33,6 +33,18 @@
   min-height: 100vh;
   background-color: #ededed;
 }
+.select {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4vw 6.33333333vw 4vw 6.33333333vw;
+}
+.select > view {
+  margin: 2.66666667vw 3vw;
+}
+.select > view text {
+  display: block;
+  text-align: center;
+}
 @keyframes scale_show {
   0% {
     transform: scale(0);

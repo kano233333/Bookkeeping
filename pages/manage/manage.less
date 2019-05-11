@@ -2,10 +2,33 @@
 .s(@sx,@x){
     @{sx}:@x/@allWidth*100vw;
 }
-.manage {
-  padding:20/@allWidth*100vw 10/@allWidth*100vw;
+//.manage {
+//  padding:20/@allWidth*100vw 10/@allWidth*100vw;
+//}
+
+.add_head {
+  .s(height,80);
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  >text {
+    padding: 0 2px;
+    line-height: 2.5;
+    .s(font-size,30);
+  }
+  >text:nth-of-type(1) {
+    .s(margin-left,153);
+  }
+  >text:nth-of-type(2) {
+    .s(margin-right,153);
+  }
 }
+
+
 .title {
+  margin:20/@allWidth*100vw 10/@allWidth*100vw;
   .s(height,98);
   background-color: #fff;
   border-radius:5px;
@@ -18,17 +41,18 @@
 }
 
 .select {
+  margin:0 10/@allWidth*100vw;
   background-color: #fff;
   border-radius:5px;
-  margin-bottom: 1px;
   display: flex;
   flex-wrap:wrap;
+  .s(font-size,20);
   padding:30/@allWidth*100vw (60-22.5)/@allWidth*100vw 30/@allWidth*100vw (60-22.5)/@allWidth*100vw;
   image {
-    margin:20/@allWidth*100vw 22.5/@allWidth*100vw;
-    .s(width,64);
-    .s(height,64);
-    background-color: #eb5d5a;
+    .s(width,63);
+    .s(height,63);
+    padding:5px;
     border-radius:50%;
+    background-color: #ededed;
   }
 }

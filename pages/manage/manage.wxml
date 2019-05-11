@@ -1,18 +1,18 @@
 <view class="all manage">
+  <view class="add_head">
+    <text class="{{type==0 ? 'bor_btm' :''}}" bindtap="shiftType" data-type="0">支出</text>
+    <text class="{{type==1 ? 'bor_btm' :''}}" bindtap="shiftType" data-type="1">收入</text>
+  </view>
+  <view bindtap="addIcon" class="title jz_y_between">
+    <text>添加标签</text>
+  </view>
   <view class="title jz_y_between">
-    <text>我的标签 <text class="label">(23)</text></text>
+    <text>我的标签 <text class="label">({{length}})</text></text>
   </view>
   <view class="select">
-    <image />
-    <image />
-    <image />
-    <image />
-    <image />
-    <image />
-    <image />
-    <image />
-  </view>
-  <view class="title jz_y_between">
-    <text>自定义标签</text>
+    <view wx:for="{{icons}}" wx:key="{{index}}">
+      <image data-localIndex="{{item.localIndex}}" data-label="{{item.label}}" bindlongpress="deleteShow" src="{{iconAll[item.type][item.index].value}}"/>
+      <text>{{item.name}}</text>
+    </view>
   </view>
 </view>

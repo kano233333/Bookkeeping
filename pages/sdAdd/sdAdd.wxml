@@ -1,4 +1,5 @@
 <view class="sd_add">
+  <wxs src="./sdAdd.wxs" module="tools" />
   <view class="add_head">
     <text class="{{type==0 ? 'bor_btm' :''}}" bindtap="shiftType" data-type="0">支出</text>
     <text class="{{type==1 ? 'bor_btm' :''}}" bindtap="shiftType" data-type="1">收入</text>
@@ -20,7 +21,7 @@
       <view class="select">
         <view wx:for="{{icon}}" bindtap="selectIcon" wx:key="{{index}}" data-index="{{index}}">
           <image class="{{selectIndex===index?'select_bg':''}}" src="{{iconAll[item.type][item.index].value}}" />
-          <text>{{iconAll[item.type][item.index].name}}</text>
+          <text>{{tools.setText(item,iconAll)}}</text>
         </view>
       </view>
     </view>

@@ -1,0 +1,51 @@
+.icon image {
+  width: 8.4vw;
+  height: 8.4vw;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #ededed;
+}
+.add_icon {
+  justify-content: space-around;
+  width: 100vw;
+  height: 13.33333333vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 0 5px #eb5d5a;
+  font-size: 3.73333333vw;
+}
+.add_icon input {
+  margin: 0 4vw;
+  width: 53.33333333vw;
+  transition: 0.5s all;
+}
+.add_icon image {
+  margin-left: 6.66666667vw;
+}
+.add_icon button {
+  width: 14.66666667vw;
+  height: 9.33333333vw;
+  font-size: 3.73333333vw;
+  padding: 0;
+}
+.wrap {
+  margin: 2.66666667vw 0;
+  text-align: center;
+}
+.wrap > text {
+  font-size: 4.53333333vw;
+}
+.wrap .icons {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.33333333vw 6.33333333vw;
+}
+.wrap image {
+  margin: 2.66666667vw 3vw;
+}
+.wrap .select_bg {
+  background-color: #fab8af;
+}
+/*# sourceMappingURL=icon.wxss.map */
