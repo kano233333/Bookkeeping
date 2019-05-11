@@ -24,25 +24,34 @@ Page({
   },
   sub:function(){
     let date = (new Date()).valueOf() +''
+    let label = this.data.selectStr+'-'+this.data.type+"-"+date.substring(date.length-4,date.length)
+    let _icon = {
+      label:label,
+      name:this.data.inputVal
+    }
     let subObj = {
       url:app.globalData.ip+'/iconOperation',
       data:{
         name:this.data.inputVal,
-        label:this.data.selectStr+'-'+this.data.type+"-"+date.substring(date.length-4,date.length),
+        label:label,
         operation:"set"
       },
       success:function(res){
-        console.log(res)
-      }
+        if(res.static==1){
+          this.addLocalIcon(_icon)
+          wx.showToast({
+            title: '成功',
+            duration: 1000,
+            icon:"none"
+          })
+          setTimeout(function(){
+            wx.navigateBack({
+              delta:1
+            })
+          },500)
+        }
+      }.bind(this)
     }
-    let icon = []
-    icon = wx.getStorageSync("icon")
-    console.log(icon)
-    icon.push({
-      name:this.data.inputVal,
-      label:this.data.selectStr+'-'+this.data.type
-    })
-    wx.setStorageSync('icon',icon)
     app.isLogin(subObj)
   },
   shiftBorder:function(e){
@@ -56,5 +65,11 @@ Page({
   },
   getName:function(e){
     this.data.inputVal = e.detail.value
+  },
+  addLocalIcon:function(label){
+    let deal = app.dealLabel(label)
+    console.log("deal:")
+    console.log(deal)
+    app.globalData.userIcon[deal.type].push(deal.obj)
   }
 })

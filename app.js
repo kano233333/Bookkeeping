@@ -1,7 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
-
+    this.getUserIcon()
   },
   globalData: {
     userInfo: null,
@@ -108,5 +108,35 @@ App({
         }
       }
     })
+  },
+  getUserIcon:function(){
+    let icons = [[],[]]
+    let icon
+    let obj = {
+      url:this.globalData.ip+'/getIcon',
+      success:function(res){
+        icon = res
+        for(let i=0;i<icon.length;i++){
+          let deal = this.dealLabel(icon[i])
+          icons[deal.type].push(deal.obj)
+        }
+        this.globalData.userIcon = icons
+      }.bind(this)
+    }
+    this.isLogin(obj)
+  },
+  dealLabel:function(icon){
+    let aicon = icon.label.split('-')
+    let type = 0
+    if(aicon[2]=='#i'){
+      type = 1
+    }
+    let obj = {
+      type:aicon[0],
+      index:aicon[1],
+      name:icon.name,
+      label:icon.label
+    }
+    return {type:type,obj:obj}
   }
 })

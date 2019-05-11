@@ -275,10 +275,12 @@ const outcome = [
   {type:'digital',index:0},
   {type:'eletrical',index:0}
 ]
-let income = []
-for(let i in all.income){
-  income.push({type:"income",index:i})
-}
+const income = [
+  {type:'income', index:0},
+  {type:'income',index:1},
+  {type:'income',index:2},
+  {type:'income',index:3}
+]
 const corresp = {
   "funny":"娱乐",
   "diet":"饮食",

@@ -1,24 +1,17 @@
 // pages/sdAdd/sdAdd.js
 const icon = require("../../utils/base64")
-let aicon = [icon.outcome,icon.income]
-let sicon = wx.getStorageSync('icon')
+let aicon , sicon
 let formatTime = require('../../utils/util').formatTime
 let app = getApp()
 let setIcon = function(){
-  for(let i=0;i<sicon.length;i++){
-    let sp = sicon[i].label.split('-')
-    let type = 0
-    if(sp[2]=='#i'){
-      type = 1
-    }
-    aicon[type].push({type:sp[0],index:sp[1],name:sicon[i].name,from:sp[2]})
-  }
+  sicon = app.globalData.userIcon
+  aicon = [[...icon.outcome,...sicon[0]],[...icon.income,...sicon[1]]]
 }
-setIcon()
+
 Page({
   data: {
     type:0,
-    icon:aicon[0],
+    icon:[],
     iconAll:icon.all,
     selectIndex:'',
     remarks:'',
@@ -28,7 +21,6 @@ Page({
     selectText:''
   },
   onLoad: function (options) {
-    sicon = wx.getStorageSync('icon')
     setIcon()
     this.setData({
       icon:aicon[0]
@@ -40,41 +32,48 @@ Page({
       let iconX = billData.label.split("-")
       let iconAll = this.data.iconAll
       this.data.billData = billData
+      let selectText = billData.iconName || iconAll[iconX[0]][iconX[1]].name
       this.setData({
         type:billData.type,
         remarks:billData.remarks,
         amount:billData.amount,
         selectSrc:iconAll[iconX[0]][iconX[1]].value,
-        selectText:iconAll[iconX[0]][iconX[1]].name,
-        selectIndex:this.findIndex(iconX,billData.type)
+        selectText:selectText,
+        selectIndex:this.findIndex(iconX,billData.type),
+        icon:aicon[billData.type]
       })
     }
   },
   shiftType(e){
     let type = e.target.dataset.type
+    console.log(icon.all[aicon[1][0].type][aicon[1][0].index].name)
     this.setData({
       type:type,
-      icon:aicon[type],
+      icon:aicon[type]
     })
-    console.log(aicon[type])
-    console.log(aicon[type][0].name)
+    this.setSelectIcon(this.data.selectIndex)
+  },
+  setSelectIcon(index){
+    try {
+      let iconc = this.data.icon
+      let selectText = iconc[index].name || icon.all[iconc[index].type][iconc[index].index].name
+      this.setData({
+        selectSrc:icon.all[iconc[index].type][iconc[index].index].value,
+        selectText:selectText,
+      })
+    }catch (e) {}
   },
   selectIcon(e){
     let index = e.currentTarget.dataset.index
-    let iconc = this.data.icon
     this.setData({
       selectIndex:index,
-      selectSrc:icon.all[iconc[index].type][iconc[index].index].value,
-      selectText:icon.all[iconc[index].type][iconc[index].index].name,
     })
+    this.setSelectIcon(index)
   },
   addSubmit(){
     let selectIndex = this.data.selectIndex
     let icon = this.data.icon
-    let label = icon[selectIndex].type+"-"+icon[selectIndex].index
-    if(icon[selectIndex].from!=undefined){
-      label = label+"-"+icon[selectIndex].from
-    }
+    let label = icon[selectIndex].label || icon[selectIndex].type+"-"+icon[selectIndex].index
     let obj = {
       type:this.data.type,
       amount:this.data.amount,
@@ -125,11 +124,15 @@ Page({
     this.data.amount = value
   },
   findIndex:function(iconX,type){
-    for(let i=0;i<icon.outcome.length;i++){
+    let iconType = 'outcome'
+    if(type==0){
+      iconType = 'income'
+    }
+    for(let i=0;i<icon[iconType].length;i++){
       if(aicon[type][i].type==iconX[0] && aicon[type][i].index==iconX[1]){
         if(iconX.length==2){
           return i
-        }else if(iconX.length==3 && aicon[type][i].from!=undefined){
+        }else if(iconX.length>2 && aicon[type][i].label!=undefined){
           return i
         }
       }

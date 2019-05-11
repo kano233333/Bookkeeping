@@ -40,6 +40,7 @@ Component({
       }
     },
     editBill:function(){
+      console.log(this.data.billData)
       wx.navigateTo({
         url:'/pages/sdAdd/sdAdd?type='+this.data.billData.type+'&mode=edit&billData='+JSON.stringify(this.data.billData)
       })
@@ -89,7 +90,7 @@ Component({
         try{
           let iconX = billData.label.split("-")
           src = icon.all[iconX[0]][iconX[1]].value
-          text = billData.name==undefined ? icon.all[iconX[0]][iconX[1]].name : billData.name
+          text = billData.iconName || icon.all[iconX[0]][iconX[1]].name
           if(iconX.length>2){
             for(let i=0;i<sicon.length;i++){
               if(billData.label == sicon[i].label){

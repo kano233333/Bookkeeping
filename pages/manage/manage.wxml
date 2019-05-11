@@ -10,8 +10,11 @@
     <text>我的标签 <text class="label">({{length}})</text></text>
   </view>
   <view class="select">
-    <view wx:for="{{icons}}" wx:key="{{index}}">
-      <image data-localIndex="{{item.localIndex}}" data-label="{{item.label}}" bindlongpress="deleteShow" src="{{iconAll[item.type][item.index].value}}"/>
+    <view class="delete_wrap" wx:for="{{icons}}" wx:key="{{index}}">
+      <image src="{{iconAll[item.type][item.index].value}}"/>
+      <view class="delete" bindtap="deleteShow">
+        <image src="/static/icon/cha2.svg" data-label="{{item.label}}" />
+      </view>
       <text>{{item.name}}</text>
     </view>
   </view>

@@ -3,7 +3,7 @@ var app = getApp()
 Page({
   data: {
     userData:{},
-    balance:0,
+    signInDays:0,
     totalAccount:0
   },
   onLoad: function (options) {
@@ -18,7 +18,7 @@ Page({
       url:app.globalData.ip+'/info',
       success:function(res) {
         _this.setData({
-          balance:res.balance,
+          signInDays:res.signInDays,
           totalAccount:res.totalAccount
         })
       }.bind(this)

@@ -9,14 +9,17 @@ Page({
     length:0
   },
   onLoad: function (options) {
-    this.getIcon()
+    this.setIcon()
+  },
+  onShow: function (options) {
+    this.setIcon()
   },
   shiftType(e){
     let type = e.target.dataset.type
     this.setData({
       type:type,
-      icons:this.data.aicons[type],
-      length:this.data.aicons[type].length
+      icons:this.data.userIcon[type],
+      length:this.data.userIcon[type].length
     })
   },
   addIcon(){
@@ -24,48 +27,48 @@ Page({
       url:'/pages/icon/icon?type='+this.data.type
     })
   },
-  getIcon:function(){
-    let icons = [[],[]]
-    let icon
-    console.log(icon)
+  setIcon:function(){
+    this.data.userIcon = app.globalData.userIcon
+    let icons = this.data.userIcon
+    this.setData({
+      icons:icons[this.data.type],
+      length:icons[this.data.type].length
+    })
+  },
+  deleteShow:function(e){
+    let label = e.target.dataset.label
     let obj = {
-      url:app.globalData.ip+'/getIcon',
+      url:app.globalData.ip+"/iconOperation",
+      data:{
+        label:label,
+        operation:'delete'
+      },
       success:function(res){
-        icon = res
-        for(let i=0;i<icon.length;i++){
-          let aicon = icon[i].label.split('-')
-          let type = 0
-          if(aicon[2]=='#i'){
-            type = 1
-          }
-          icons[type].push({
-            type:aicon[0],
-            index:aicon[1],
-            name:icon[i].name,
-            label:icon[i].label,
-            localIndex:i
+        if(res.static==1){
+          this.deleteLocalIcon(this.data.type,label)
+          wx.showToast({
+            title: '成功',
+            duration: 1000,
+            icon:"none"
           })
+          this.setIcon()
         }
-        this.data.aicons = icons
-        this.setData({
-          icons:icons[this.data.type],
-          length:icons[this.data.type].length
-        })
       }.bind(this)
     }
     app.isLogin(obj)
   },
-  deleteShow:function(e){
-    let obj = {
-      url:app.globalData.ip+"/iconOperation",
-      data:{
-        label:e.target.dataset.label,
-        operation:'delete'
-      },
-      success:function(res){
-        console.log(res)
+  deleteLocalIcon:function(type,label){
+    let userIcon = app.globalData.userIcon[type]
+    let bindex = -1
+    for(let i=0;i<userIcon.length;i++){
+      if(userIcon[i].label == label){
+        bindex = i
+        break;
       }
     }
-    app.isLogin(obj)
+    if(bindex>-1){
+      userIcon.splice(bindex,1)
+    }
+    app.globalData.userIcon[type] = userIcon
   }
 })
