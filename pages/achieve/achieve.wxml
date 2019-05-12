@@ -3,7 +3,7 @@
     <text>已获得成就</text>
   </view>
   <view class="achieve_main">
-    <view class="list_wrap" wx:for="{{achieveList}}">
+    <view class="list_wrap" wx:for="{{achieveList}}" wx:key="{{index}}">
       <view class="list_left">
         <text>{{item.text}}</text>
         <text>解锁条件：{{item.condition}}</text>

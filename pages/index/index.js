@@ -20,11 +20,15 @@ Page({
     reload:true,
     shiftBillBar:true,
     allIncome:0,
-    allPay:0
+    allPay:0,
+    isEmpty:false,
+    pullHeight:0
   },
   onLoad: function () {
-    console.log('bill onload')
-    app.isSq();
+    app.isSq()
+    this.onShow()
+  },
+  onShow:function(){
     this.getBillList()
   },
   getPickerTimer(data){
@@ -76,7 +80,8 @@ Page({
           billList:res,
           shiftBillBar:false,
           allPay:allPay,
-          allIncome:allIncome
+          allIncome:allIncome,
+          isEmpty:res.length==0 ? true : false
         },()=>{
           this.setData({
             shiftBillBar:true
@@ -88,5 +93,15 @@ Page({
   },
   refreshList:function(){
     this.getBillList()
+  },
+  onPageScroll:function(e){
+    if(e.scrollTop==0){
+      this.setData({
+        pullHeight:this.data.pullHeight++
+      })
+    }
+  },
+  scrollTop(e){
+    console.log(e)
   }
 })

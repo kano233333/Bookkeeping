@@ -15,12 +15,11 @@
     <ec-canvas wx:if="{{canvasShow}}" id="mychart-dom-bar" canvas-id="mychart-bar1" ec="{{ ec1 }}"></ec-canvas>
   </view>
   <view class="chart_head2">
-    <text class="{{type2==0 ? 'bor_btm' :''}}" bindtap="shiftType2" data-type="0">消费项柱状图</text>
-    <text class="{{type2==1 ? 'bor_btm' :''}}" bindtap="shiftType2" data-type="1">支、收、余饼状图</text>
+    <text class="{{type2==0 ? 'bor_btm' :''}}" bindtap="shiftType2" data-type="0">支出饼状图</text>
+    <text class="{{type2==1 ? 'bor_btm' :''}}" bindtap="shiftType2" data-type="1">收入饼状图</text>
   </view>
-  <movable-area class="chart" wx:if="{{shift2}}">
-    <movable-view style="width:100%;height:100%;">
+  <view class="chart" wx:if="{{shift2}}">
+    <empty wx:if="{{isEmpty}}"></empty>
       <ec-canvas wx:if="{{canvasShow}}" id="mychart-dom" canvas-id="mychart-bar2" ec="{{ ec2 }}"></ec-canvas>
-    </movable-view>
-  </movable-area>
+  </view>
 </view>

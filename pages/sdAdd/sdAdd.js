@@ -7,24 +7,45 @@ let setIcon = function(){
   sicon = app.globalData.userIcon
   aicon = [[...icon.outcome,...sicon[0]],[...icon.income,...sicon[1]]]
 }
+let setSwiperIcon = function(type){
+  let icon = [],a = 0
+  let num = 15
+  let b = []
+  for(let i=0;i<aicon[type].length;i++){
+    b.push(aicon[type][i])
+    num--
+    if(num==0 || i==aicon[type].length-1){
+      icon[a] = b
+      a++
+      num = 15
+      b = []
+    }
+  }
+  console.log(icon)
+  return icon
+}
 
 Page({
   data: {
     type:0,
     icon:[],
     iconAll:icon.all,
-    selectIndex:'',
+    selectIndex:0,
     remarks:'',
     amount:'',
     mode:'',
     selectSrc:'',
-    selectText:''
+    selectText:'',
+    current:0
   },
   onLoad: function (options) {
     setIcon()
+    let icon = setSwiperIcon(0)
+    this.data.icon = aicon[0]
     this.setData({
-      icon:aicon[0]
+      iconSwiper:icon
     })
+    this.setSelectIcon(0)
     this.data.type = options.type || 0
     this.data.mode = options.mode || 'add'
     if(this.data.mode=='edit'){
@@ -40,16 +61,16 @@ Page({
         selectSrc:iconAll[iconX[0]][iconX[1]].value,
         selectText:selectText,
         selectIndex:this.findIndex(iconX,billData.type),
-        icon:aicon[billData.type]
+        iconSwiper:setSwiperIcon(billData.type)
       })
     }
   },
   shiftType(e){
     let type = e.target.dataset.type
-    console.log(icon.all[aicon[1][0].type][aicon[1][0].index].name)
     this.setData({
       type:type,
-      icon:aicon[type]
+      iconSwiper:setSwiperIcon(type),
+      current:0
     })
     this.setSelectIcon(this.data.selectIndex)
   },
@@ -71,12 +92,15 @@ Page({
     this.setSelectIcon(index)
   },
   addSubmit(){
+    let amount = this.data.amount
+    if(app.yanz(amount,"请选择输入金额")==0){return}
     let selectIndex = this.data.selectIndex
+    if(app.yanz(selectIndex,"请选择图标")==0){return}
     let icon = this.data.icon
     let label = icon[selectIndex].label || icon[selectIndex].type+"-"+icon[selectIndex].index
     let obj = {
       type:this.data.type,
-      amount:this.data.amount,
+      amount:amount,
       label:label,
       time:formatTime(new Date,"detail"),
       remarks:this.data.remarks
@@ -92,6 +116,12 @@ Page({
       success:function(res){
         var _data = res;
         if(_data.static==1){
+          if(this.data.mode=='add'){
+            app.globalData.userNum.totalAccount++
+            if(res.isSign){
+              app.globalData.userNum.signInDays++
+            }
+          }
           wx.showToast({
             title: '成功',
             duration: 1000,
@@ -124,11 +154,7 @@ Page({
     this.data.amount = value
   },
   findIndex:function(iconX,type){
-    let iconType = 'outcome'
-    if(type==0){
-      iconType = 'income'
-    }
-    for(let i=0;i<icon[iconType].length;i++){
+    for(let i=0;i<aicon[type].length;i++){
       if(aicon[type][i].type==iconX[0] && aicon[type][i].index==iconX[1]){
         if(iconX.length==2){
           return i

@@ -53,5 +53,15 @@ Page({
         condition:'支出/收入>130%'
       },
     ]
+  },
+  onShareAppMessage:function(options){
+    console.log(options)
+    return {
+      title: '转发',
+      // path: '/pages/index/index',
+      success: function(res) {
+        console.log(res)
+      }
+    }
   }
 })

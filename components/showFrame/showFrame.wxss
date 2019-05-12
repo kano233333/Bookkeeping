@@ -1,0 +1,12 @@
+.box {
+    position:fixed;
+    top:5vh;
+    left:0;
+    right:0;
+    margin:0 auto;
+    width:60vw;
+    height:40vw;
+    background-color: #ffb6b5;
+    border-radius:10px;
+    z-index:9999;
+}

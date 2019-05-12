@@ -19,6 +19,7 @@
   padding: 0 2px;
   line-height: 2.5;
   font-size: 4vw;
+  position: relative;
 }
 .add_head > text:nth-of-type(1) {
   margin-left: 20.4vw;
@@ -72,5 +73,8 @@
   width: 42.66666667vw;
   height: 10.66666667vw;
   font-size: 3.73333333vw;
+}
+.swiper {
+  height: 66.66666667vw;
 }
 /*# sourceMappingURL=sdAdd.wxss.map */

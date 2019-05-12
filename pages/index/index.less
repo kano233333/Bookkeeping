@@ -5,18 +5,27 @@
 .bill {
   min-width:100vw;
   min-height:100vh;
+  border:1px solid transparent;
   background-color: #ededed;
 }
+.fixed_head {
+  position:fixed;
+  top:0;
+  z-index: 3333;
+  box-shadow: 0 0 2px #808280;
+}
 .bill_select {
+  width:100vw;
   .s(height,80);
+  border-bottom:1px solid #ededed;
   background-color: #fff;
   font-size:15px;
   position:relative;
 }
 
 .bill_total {
+  width:100vw;
   .s(height,98);
-  margin-top:1px;
   background-color: #fff;
   .s(font-size,30);
   letter-spacing:2px;
@@ -33,9 +42,8 @@
 }
 
 .bill_detail_wrap {
-  height: 890/@allWidth*100vw;
-  margin:10px auto;
-  .s(width,710);
+  margin:200/@allWidth*100vw auto 0 auto;
+  //.s(width,710);
   .bill_detail {
     border: 1px solid #d4d4d4;
     .s(height,98);

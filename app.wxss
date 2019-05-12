@@ -36,6 +36,7 @@
 .select {
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
   padding: 4vw 6.33333333vw 4vw 6.33333333vw;
 }
 .select > view {

@@ -4,7 +4,7 @@
 }
 
 .bill_detail {
-  .s(font-size,18);
+  .s(font-size,28);
   border: 1px solid #d4d4d4;
   margin:1px 0;
   border-radius:4px;
@@ -57,7 +57,8 @@
   .icon {
     .s(width,65);
     .s(height,65);
-    //border-radius:50%;
+    border-radius:50%;
+    background-color: #fab8af;
   }
   >text {
     display: inline-block;
@@ -76,12 +77,13 @@
   >text {
     display:block;
     text-align:right;
-    font-size:10px;
+    .s(font-size,18);
   }
   text:nth-of-type(1){
     color:#999;
   }
   text:nth-of-type(2){
-    .s(font-size,28);
+    .s(font-size,30);
+    font-weight:800;
   }
 }

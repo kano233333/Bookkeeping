@@ -7,7 +7,7 @@
   </view>
   <view class="add_icon jz_y">
     <image src="{{selectSrc}}" />
-    <input maxlength="2" style="border-bottom:{{border}}" bindfocus="shiftBorder" bindblur="shiftBorder" bindinput="getName" placeholder="请输入自定义标签名"/>
+    <input cursor-spacing="15" maxlength="2" style="border-bottom:{{border}}" bindfocus="shiftBorder" bindblur="shiftBorder" bindinput="getName" placeholder="请输入自定义标签名"/>
     <button bindtap="sub">确定</button>
   </view>
 </view>

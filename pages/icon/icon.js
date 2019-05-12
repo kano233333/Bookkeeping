@@ -23,11 +23,14 @@ Page({
     })
   },
   sub:function(){
+    let name =  this.data.inputVal
+    if(app.yanz(name,'请输入自定义名称')==0){return}
+    if(app.yanz(this.data.selectStr,'请选择图标')==0){return}
     let date = (new Date()).valueOf() +''
     let label = this.data.selectStr+'-'+this.data.type+"-"+date.substring(date.length-4,date.length)
     let _icon = {
       label:label,
-      name:this.data.inputVal
+      name:name
     }
     let subObj = {
       url:app.globalData.ip+'/iconOperation',

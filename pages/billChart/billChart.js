@@ -1,12 +1,12 @@
 import * as echarts from '../../components/ec-canvas/echarts'
 
 var app = getApp()
-const icon = require('../../utils/base64').icon
+const icon = require('../../utils/base64')
 const getWeek = require('../../utils/util').getWeek
 var lineData = [[], []]
 var colData = [[], []]
 var xAxisData = []
-var barData = []
+var barData = [],barLegend = []
 const threeTime = ['week', 'month', 'year']
 Page({
   data: {
@@ -25,10 +25,14 @@ Page({
     rangeArr: [],
     threeTime: 0,
     selectIndex: 0,
-    barData:[]
+    barData:[],
+    isEmpty:false
   },
   onLoad: function (options) {
     this.setTimePicker()
+    this.onShow()
+  },
+  onShow:function(){
     this.getLineData()
   },
   shiftType(e) {
@@ -45,24 +49,9 @@ Page({
   shiftType2(e) {
     let type = e.target.dataset.type
     let ec
-    // switch (type) {
-    //   case '0':
-    //     ec = {
-    //       onInit: setBar
-    //     }
-    //     break
-    //   case '1':
-    //     ec = {
-    //       onInit: setBar
-    //     }
-    // }
-
     let _this = this
     let data = this.data.barData.outcome
-    barData = []
-    for(let i=0;i<data.length;i++){
-      barData.push({name:data[i].label,value:data[i].amount})
-    }
+    this.setBarChart(type)
     this.setData({
       type2: type,
       shift2: false
@@ -107,20 +96,18 @@ Page({
         isLabel: true
       },
       success: function (res) {
-        console.log(res)
         let data = res
+        console.log(res)
         barData = []
         this.data.barData = data
-        try{
-          for(let i=0;i<data.income.length;i++){
-            barData.push({name:data.income[i].label,value:data.income[i].amount})
-          }
-        }catch (e) {}
+        let type = this.data.type==0 ? 'outcome' : 'income'
+        this.setBarChart(this.data.type)
         this.setData({
-          canvasShow: false
+          canvasShow: false,
+          isEmpty:res[type].length==0 ? true : false
         }, () => {
           this.setData({
-            canvasShow: true
+            canvasShow: true,
           })
         })
       }.bind(this)
@@ -134,7 +121,6 @@ Page({
       },
       success: function (res) {
         let data = res
-        console.log(data)
         lineData = [[], []]
         xAxisData = []
         try{
@@ -148,6 +134,21 @@ Page({
       }.bind(this)
     }
     app.isLogin(lineObj)
+  },
+  setBarChart:function(type){
+    type = type==1 ? 'income' :'outcome'
+    let barDataX = this.data.barData[type]
+    let arr = [],lArr = []
+    for(let i=0;i<barDataX.length;i++){
+      let name = getName(barDataX[i].label)
+      lArr.push(name)
+      arr.push({
+        value:barDataX[i].amount,
+        name:name
+      })
+    }
+    barData = arr
+    barLegend = lArr
   }
 })
 
@@ -159,13 +160,12 @@ function setLine(canvas, width, height) {
   canvas.setChart(chart);
 
   var option = {
-    // legend: {
-    //   data: ['支出', '收入'],
-    //   textStyle: {
-    //     fontSize: 14
-    //   },
-    //   orient:'vertical'
-    // },
+    legend: {
+      data: ['支出', '收入'],
+      textStyle: {
+        fontSize: 14
+      }
+    },
     tooltip: {
       trigger: 'axis',
       textStyle: {
@@ -209,86 +209,40 @@ function setLine(canvas, width, height) {
   return chart;
 }
 
-function setCol(canvas, width, height) {
-  const chart = echarts.init(canvas, null, {
-    width: width,
-    height: height
-  });
-  canvas.setChart(chart);
-  var xAxisData = [];
-  var data1 = [];
-  var data2 = [];
-  for (var i = 0; i < 100; i++) {
-    xAxisData.push('类目' + i);
-    data1.push((Math.sin(i / 5) * (i / 5 - 10) + i / 6) * 5);
-    data2.push((Math.cos(i / 5) * (i / 5 - 10) + i / 6) * 5);
-  }
-  let option = {
-    legend: {
-      data: ['bar', 'bar2'],
-      align: 'left'
-    },
-    tooltip: {},
-    xAxis: {
-      data: xAxisData,
-      silent: false,
-      splitLine: {
-        show: false
-      }
-    },
-    yAxis: {},
-    series: [{
-      name: 'bar',
-      type: 'bar',
-      data: data1,
-      animationDelay: function (idx) {
-        return idx * 10;
-      }
-    }, {
-      name: 'bar2',
-      type: 'bar',
-      data: data2,
-      animationDelay: function (idx) {
-        return idx * 10 + 100;
-      }
-    }],
-    animationEasing: 'elasticOut',
-    animationDelayUpdate: function (idx) {
-      return idx * 5;
-    }
-  }
-  chart.setOption(option);
-  return chart;
-}
-
 function setBar(canvas, width, height) {
-  const chart = echarts.init(canvas, null, {
+  const chart = echarts.init(canvas, 'light', {
     width: width,
     height: height
   });
   canvas.setChart(chart);
   let option = {
-    grid:{
-      x:0,
-      y:0,
-      x2:0,
-      y2:0
+    tooltip : {
+      trigger: 'item',
+      formatter: "{b}{c} ({d}%)",
+      textStyle: {
+        fontSize: 15
+      }
     },
     legend: {
-      type: 'scroll',
       orient: 'vertical',
-      right: 10,
-      top: 20,
-      bottom: 20
+      left: 'left',
+      data: barLegend
     },
-    series:[{
-      name:'哈哈',
-      type:'pie',
-      selectedMode: 'single',
-      radius:'90%',
-      // roseType:"angle",
-      data:barData
-    }]
+    series : [
+      {
+        type: 'pie',
+        radius : '80%',
+        center: ['50%', '60%'],
+        data:barData,
+        itemStyle: {
+          emphasis: {
+            shadowBlur: 10,
+            shadowOffsetX: 0,
+            shadowColor: 'rgba(0, 0, 0, 0.5)'
+          }
+        }
+      }
+    ]
   };
   chart.setOption(option);
   return chart;
@@ -432,4 +386,17 @@ function setSun(canvas, width, height) {
 
   chart.setOption(option);
   return chart;
+}
+
+function getName(label){
+  let sp = label.split('-')
+  if(sp.length>2){
+    let _userIcon = app.globalData
+    for(let i=0;i<_userIcon.length;i++){
+      if(_userIcon[i].label==label){
+        return _userIcon[i].name
+      }
+    }
+  }
+  return icon.all[sp[0]][sp[1]].name
 }

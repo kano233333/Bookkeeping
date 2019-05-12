@@ -18,12 +18,16 @@
         <image src="{{selectSrc}}" />
         <text>{{selectText}}</text>
       </view>
-      <view class="select">
-        <view wx:for="{{icon}}" bindtap="selectIcon" wx:key="{{index}}" data-index="{{index}}">
-          <image class="{{selectIndex===index?'select_bg':''}}" src="{{iconAll[item.type][item.index].value}}" />
-          <text>{{tools.setText(item,iconAll)}}</text>
-        </view>
-      </view>
+      <swiper current="{{current}}" indicator-dots="true" indicator-color="#333333" circular="true" indicator-active-color="#fab8af" class="swiper">
+        <block wx:for="{{iconSwiper}}" indicator-dots="{{true}}" wx:key="{{index}}" wx:for-item="wrapItem" wx:for-index="wrapIndex">
+          <swiper-item class="select">
+            <view wx:for="{{wrapItem}}" bindtap="selectIcon" wx:key="{{index}}" data-index="{{index+wrapIndex*15}}">
+              <image class="{{(selectIndex-wrapIndex*15)===index?'select_bg':''}}" src="{{iconAll[item.type][item.index].value}}" />
+              <text>{{tools.setText(item,iconAll)}}</text>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
     </view>
   </view>
 

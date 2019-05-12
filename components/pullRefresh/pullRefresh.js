@@ -1,0 +1,9 @@
+Component({
+  data:{},
+  properties:{
+    height:{
+      type:Number,
+      default:0
+    }
+  }
+})

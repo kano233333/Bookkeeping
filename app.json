@@ -3,10 +3,8 @@
     "pages/index/index",
     "pages/add/add",
     "pages/billChart/billChart",
-    "pages/jiChat/jiChat",
     "pages/user/user",
     "pages/login/login",
-    "pages/chat/chat",
     "pages/achieve/achieve",
     "pages/sdAdd/sdAdd",
     "pages/revise/revise",
@@ -31,7 +29,7 @@
         "selectedIconPath":"/static/imgs/bill2.png"
       },
       {
-        "pagePath":"pages/jiChat/jiChat",
+        "pagePath":"pages/achieve/achieve",
         "text":"小记",
         "iconPath":"/static/imgs/ji1.png",
         "selectedIconPath":"/static/imgs/ji2.png"

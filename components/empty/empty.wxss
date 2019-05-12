@@ -1,0 +1,12 @@
+.empty {
+    text-align: center;
+    font-size:15px;
+    color:#777;
+    animation: 0.8s scale_show forwards;
+}
+.empty image {
+    margin:15vw auto 0 auto;
+    width: 20vw;
+    height:20vw;
+    display: block;
+}

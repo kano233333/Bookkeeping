@@ -1,6 +1,10 @@
 {
   "usingComponents": {
     "bill-bar":"../../components/billbar/billbar",
-    "time-picker":"../../components/time/time"
-  }
+    "time-picker":"../../components/time/time",
+    "empty":"../../components/empty/empty",
+    "pull-refresh":"../../components/pullRefresh/pullRefresh",
+    "show-frame":"../../components/showFrame/showFrame"
+  },
+  "onReachBottomDistance":50
 }

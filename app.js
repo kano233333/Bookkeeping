@@ -1,13 +1,12 @@
 //app.js
 App({
   onLaunch: function () {
-    this.getUserIcon()
   },
   globalData: {
     userInfo: null,
     userStatus:'',
-    // ip:'https://www.victorzuo.top/wx',
-    ip:'http://192.168.1.70:8080/wx/',
+    ip:'https://www.victorzuo.top/wx',
+    // ip:'http://192.168.1.70:8080/wx/',
     intervalTime:60000
   },
   requestFail:function(xxx){
@@ -22,8 +21,8 @@ App({
     wx.getSetting({
       success(res){
         if(res.authSetting['scope.userInfo']){
-          console.log(res)
-          _this.isLogin();
+          _this.isLogin(_this.getUserNum());
+          _this.getUserIcon()
         }else{
           wx.navigateTo({
             url:"/pages/login/login"
@@ -33,37 +32,48 @@ App({
     })
   },
   isLogin(obj) {
+    wx.showNavigationBarLoading()
     var sessionID = wx.getStorageSync('sessionID');
     console.log(sessionID)
     var timestamp = wx.getStorageSync('timestamp');
     var currenstamp = Date.parse(new Date());
     var _this = this;
     function codeback(sessionID) {
-      wx.request({
-        header: {
-          // cookie: "JSESSIONID=" + sessionID + ";domain=victorzuo.com;path=/wx"
-          cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
-        },
-        url: obj.url,
-        data: obj.data,
-        method: obj.method | 'get',
-        success: function (res) {
-          var data = res.data
-          if((typeof data)=='string'){
-            data = data.replace(/'/g, '"')
-            data = JSON.parse(data).data==undefined ? JSON.parse(data) :JSON.parse(data).data
+      try{
+        wx.request({
+          header: {
+            cookie: "JSESSIONID=" + sessionID + ";domain=victorzuo.top;path=/wx"
+            // cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
+          },
+          url: obj.url,
+          data: obj.data,
+          method: obj.method || 'get',
+          success: function (res) {
+            var data = res.data
+            if(data.static && data.static==0){
+              _this.requestFail()
+              return
+            }
+            if((typeof data)=='string'){
+              data = data.replace(/'/g, '"')
+              data = JSON.parse(data).data==undefined ? JSON.parse(data) :JSON.parse(data).data
+            }
+            obj.success(data) || function(){}
+            wx.hideNavigationBarLoading()
+          },
+          fail:function(){
+            _this.requestFail()
           }
-          obj.success(data)
-        }
-      })
+        })
+      }catch (e) {}
     }
 
     if (sessionID && (currenstamp - timestamp) < this.globalData.intervalTime) {
       console.log('未过期')
+      this.getUserInfo()
       if(obj){
         codeback(sessionID)
       }
-      this.getUserInfo()
     }
     else if (sessionID == '' || (currenstamp - timestamp) >= this.globalData.intervalTime) {
       console.log('已过期')
@@ -81,7 +91,6 @@ App({
   },
   doLogin(codeback){
     var _this = this;
-    console.log('login')
     wx.login({
       success:function(res){
         if(res.code){
@@ -116,6 +125,7 @@ App({
       url:this.globalData.ip+'/getIcon',
       success:function(res){
         icon = res
+        this.globalData._userIcon = res
         for(let i=0;i<icon.length;i++){
           let deal = this.dealLabel(icon[i])
           icons[deal.type].push(deal.obj)
@@ -124,6 +134,15 @@ App({
       }.bind(this)
     }
     this.isLogin(obj)
+  },
+  getUserNum:function(){
+    let obj = {
+      url:this.globalData.ip+'/info',
+      success:function(res) {
+        this.globalData.userNum = res
+      }.bind(this)
+    }
+    return obj
   },
   dealLabel:function(icon){
     let aicon = icon.label.split('-')
@@ -138,5 +157,19 @@ App({
       label:icon.label
     }
     return {type:type,obj:obj}
+  },
+  yanz:function(x,y){
+    if(x===''){
+      wx.showToast({
+        title: y,
+        duration: 1000,
+        icon:"none"
+      })
+      return 0
+    }
+    return 1
+  },
+  onShareAppMessage:function(options){
+    console.log(options)
   }
 })

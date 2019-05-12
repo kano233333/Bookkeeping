@@ -7,22 +7,13 @@ Page({
     totalAccount:0
   },
   onLoad: function (options) {
+    this.onShow()
+  },
+  onShow: function (options) {
     this.setData({
+      signInDays:app.globalData.userNum.signInDays,
+      totalAccount:app.globalData.userNum.totalAccount,
       userData:app.globalData.userInfo
     })
-    this.getUser()
-  },
-  getUser(){
-    let _this = this
-    let obj = {
-      url:app.globalData.ip+'/info',
-      success:function(res) {
-        _this.setData({
-          signInDays:res.signInDays,
-          totalAccount:res.totalAccount
-        })
-      }.bind(this)
-    }
-    app.isLogin(obj)
   }
 })
