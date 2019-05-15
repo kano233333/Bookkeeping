@@ -14,12 +14,12 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#ef5351",
+    "navigationBarBackgroundColor": "#72b1eb",
     "navigationBarTextStyle":"white"
   },
   "tabBar":{
-    "color":"#989898",
-    "selectedColor":"#de4346",
+    "color":"#685a5a",
+    "selectedColor":"#67a2e1",
     "backgroundColor":"#f9f9f9",
     "list":[
       {

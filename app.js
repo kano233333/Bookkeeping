@@ -42,7 +42,7 @@ App({
       try{
         wx.request({
           header: {
-            cookie: "JSESSIONID=" + sessionID + ";domain=victorzuo.top;path=/wx"
+            cookie: "JSESSIONID=" + sessionID + ";domain=www.victorzuo.top;path=/wx"
             // cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
           },
           url: obj.url,
@@ -103,7 +103,7 @@ App({
               var data = res.data.replace(/'/g,'"');
               var _data = JSON.parse(data);
               if(_data.static==1){
-                let value = (typeof res.cookies[0])=="object" ? res.cookies[0].value : res.cookies[0].split(';')[0].split('=')[1]
+                let value = res.header['Set-Cookie'].split(';')[0].split('=')[1]
                 wx.setStorageSync('sessionID', value);
                 var timestamp = Date.parse(new Date())
                 wx.setStorageSync('timestamp',timestamp)

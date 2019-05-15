@@ -11,6 +11,7 @@ const threeTime = ['week', 'month', 'year']
 Page({
   data: {
     type: 0,
+    type1:0,
     type2: 0,
     ec1: {
       onInit: setLine
@@ -40,7 +41,7 @@ Page({
     this.data.threeTime = type
     this.data.selectIndex = 0
     this.setData({
-      type: type,
+      type1: type,
       selectTime: this.data.timeArr[type][0],
       rangeArr: this.data.timeArr[type]
     })
@@ -103,11 +104,10 @@ Page({
         let type = this.data.type==0 ? 'outcome' : 'income'
         this.setBarChart(this.data.type)
         this.setData({
-          canvasShow: false,
-          isEmpty:res[type].length==0 ? true : false
+          canvasShow: false
         }, () => {
           this.setData({
-            canvasShow: true,
+            canvasShow: true
           })
         })
       }.bind(this)
@@ -136,9 +136,13 @@ Page({
     app.isLogin(lineObj)
   },
   setBarChart:function(type){
-    type = type==1 ? 'income' :'outcome'
-    let barDataX = this.data.barData[type]
+    let typeX = type==1 ? 'income' :'outcome'
+    let barDataX = this.data.barData[typeX]
     let arr = [],lArr = []
+    this.setData({
+      isEmpty:barDataX.length==0 ? true : false,
+      type2:type
+    })
     for(let i=0;i<barDataX.length;i++){
       let name = getName(barDataX[i].label)
       lArr.push(name)
@@ -239,6 +243,16 @@ function setBar(canvas, width, height) {
             shadowBlur: 10,
             shadowOffsetX: 0,
             shadowColor: 'rgba(0, 0, 0, 0.5)'
+          }
+        },
+        label:{            //饼图图形上的文本标签
+          normal:{
+            show:true,
+            // position:'inner', //标签的位置
+            textStyle : {
+              fontWeight : 300 ,
+              fontSize : 16    //文字的字体大小
+            }
           }
         }
       }

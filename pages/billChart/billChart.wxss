@@ -12,11 +12,11 @@
   line-height: 3.2;
 }
 .chart_head .select_time {
-  border: 1px solid #eb5d5a;
+  border: 1px solid #6dabf1;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #eb5d5a;
-  box-shadow: 0 0 2px #c04c4a;
+  background-color: #6dabf1;
+  box-shadow: 0 0 2px #5180b4;
   margin-left: 2.66666667vw;
 }
 .chart_head .select_time > text {
@@ -26,8 +26,8 @@
 }
 .chart_head .select_time .selected {
   background-color: #fff;
-  color: #eb5d5a;
-  box-shadow: 0 0 2px #c04c4a inset;
+  color: #68a1df;
+  box-shadow: 0 0 2px #5180b4 inset;
 }
 .chart_head2 {
   height: 12.8vw;

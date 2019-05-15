@@ -2,9 +2,9 @@
 <view class="bill_chart">
   <view class="chart_head">
     <view class="select_time">
-      <text class="{{type==0 ? 'selected' :''}}" bindtap="shiftType" data-type="0">周</text>
-      <text class="{{type==1 ? 'selected' :''}}" bindtap="shiftType" data-type="1">月</text>
-      <text class="{{type==2 ? 'selected' :''}}" bindtap="shiftType" data-type="2">年</text>
+      <text class="{{type1==0 ? 'selected' :''}}" bindtap="shiftType" data-type="0">周</text>
+      <text class="{{type1==1 ? 'selected' :''}}" bindtap="shiftType" data-type="1">月</text>
+      <text class="{{type1==2 ? 'selected' :''}}" bindtap="shiftType" data-type="2">年</text>
     </view>
     <picker value="{{rangeArr[index]}}" bindchange="bindPickerChange" range="{{rangeArr}}">
       {{selectTime}}

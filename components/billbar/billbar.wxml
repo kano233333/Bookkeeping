@@ -1,16 +1,17 @@
 <view class="bill_detail" style="height:{{billHeight}};">
   <view class="bill_upper" bindtap="showMore">
     <view class="bill_left">
-      <image class="icon" src="{{src}}"></image>
+      <image style="background-color:{{textColor[1]}}" class="icon" src="{{src}}"></image>
       <text class="text">{{text}}</text>
     </view>
     <view class="bill_right">
       <text>{{billData.time}}</text>
-      <text style="color:{{textColor}}">{{billData.type==0?'-':'+'}}{{billData.amount}}</text>
+      <text style="color:{{textColor[0]}}">{{billData.type==0?'-':'+'}}{{billData.amount}}</text>
     </view>
     <text wx:if="{{!moreShow}}" class="more">{{moreText}}</text>
   </view>
   <view wx:if="{{moreShow}}" class="bz">
+    <view style="background-color:{{textColor[2]}}" class="before"></view>
     <text>备注:{{billData.remarks}}</text>
     <view class="operation">
       <text bindtap="editBill">编辑</text>

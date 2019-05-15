@@ -13,7 +13,7 @@
   bottom: 0;
   left: 0;
   background-color: #fff;
-  box-shadow: 0 0 5px #eb5d5a;
+  border-top: 1px solid #999;
   font-size: 3.73333333vw;
 }
 .add_icon input {

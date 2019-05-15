@@ -1,11 +1,13 @@
 <!--pages/user/user.wxml-->
 <view class="user">
   <view class="user_head_wrap">
-    <view class="user_head">
-      <image src="{{userData.avatarUrl}}" />
-      <text class="username">{{userData.nickName}}</text>
-      <text class="designation">初出茅庐</text>
-    </view>
+    <canvas canvas-id="line_canvas" id="line_canvas">
+      <view class="user_head">
+        <image src="{{userData.avatarUrl}}" />
+        <text class="username">{{userData.nickName}}</text>
+        <text class="designation">初出茅庐</text>
+      </view>
+    </canvas>
   </view>
   <view class="user_bill_wrap">
     <view class="user_bill_left jz">

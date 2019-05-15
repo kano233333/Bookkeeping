@@ -1,12 +1,15 @@
 .empty {
     text-align: center;
-    font-size:15px;
-    color:#777;
     animation: 0.8s scale_show forwards;
 }
 .empty image {
     margin:15vw auto 0 auto;
-    width: 20vw;
-    height:20vw;
+    width: 222px;
+    height:130px;
     display: block;
+}
+
+.empty text {
+    font-size:4vw;
+    color:#72b1eb;
 }

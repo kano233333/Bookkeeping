@@ -23,11 +23,12 @@
 }
 .nav_bg {
   height: 10.66666667vw;
-  background-color: #d84642;
+  background-color: #6dabf1;
   color: #fff;
 }
 .bor_btm {
-  border-bottom: 3px solid #f25352;
+  border-bottom: 3px solid #6dabf1;
+  color: #68a1df;
 }
 .all {
   min-height: 100vh;
@@ -49,16 +50,20 @@
 @keyframes scale_show {
   0% {
     transform: scale(0);
+    opacity: 0;
   }
   100% {
     transform: scale(1);
+    opacity: 1;
   }
 }
 @keyframes center_scale_show {
   0% {
     transform: scaleX(0);
+    opacity: 0;
   }
   100% {
+    opacity: 1;
     transform: scaleX(1);
   }
 }
@@ -83,6 +88,16 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+@keyframes upper_enter {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 @font-face {

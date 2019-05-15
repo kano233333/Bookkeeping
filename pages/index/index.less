@@ -12,7 +12,6 @@
   position:fixed;
   top:0;
   z-index: 3333;
-  box-shadow: 0 0 2px #808280;
 }
 .bill_select {
   width:100vw;
@@ -27,14 +26,28 @@
   width:100vw;
   .s(height,98);
   background-color: #fff;
-  .s(font-size,30);
+  .s(font-size,24);
   letter-spacing:2px;
   padding:0 30/@allWidth*100vw;
   display:flex;
   align-items: center;
   justify-content: space-around;
   >.wrap {
-    //flex:1;
+    position: relative;
+    >image {
+      position:absolute;
+      content:'\00A5';
+      color:#fff;
+      .s(font-size,24);
+      .s(width,35);
+      .s(height,35);
+      border-radius:50%;
+      .s(left,-40);
+      .s(top,-10);
+      text-align: center;
+      border:none;
+      padding:0;
+    }
     >text {
       .s(margin-left,40);
     }
@@ -45,7 +58,6 @@
   margin:200/@allWidth*100vw auto 0 auto;
   //.s(width,710);
   .bill_detail {
-    border: 1px solid #d4d4d4;
     .s(height,98);
     margin:1px 0;
     border-radius:4px;
@@ -59,7 +71,7 @@
   .s(width,122);
   position:absolute;
   .s(left,20);
-  .s(top,18);
+  .s(top,23);
   overflow: hidden;
   transition:0.2s height;
   color:#fff;
@@ -68,7 +80,7 @@
     .s(height,46);
     border-radius:20px;
     display:block;
-    background-color: #d84642;
+    background: linear-gradient(to left,#8cbef4,#4c91df);
     text-align:center;
     line-height:1.8;
   }

@@ -2,6 +2,12 @@
 .s(@sx,@x){
     @{sx}:@x/@allWidth*100vw;
 }
+
+.set_delay(@c){
+  .images image:nth-of-type(@{c}){
+    animation-delay: @c*0.1s;
+  }
+}
 .achieve {
   min-width:100vw;
   min-height:100vh;
@@ -75,3 +81,45 @@
     }
   }
 }
+
+
+
+
+.achieve_head {
+  .s(height,300);
+  image {
+    width:100%;
+    height:100%;
+  }
+}
+
+.title {
+  .s(height,40);
+  box-shadow: 0 0 5px #71746c;
+  .s(font-size,18);
+  line-height: 2;
+  color:#333;
+  .s(padding-left,42);
+  letter-spacing: 2px;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .s(margin-bottom,60);
+  image {
+    opacity: 0;
+    background-color: #eb5d5a;
+    .s(width,215);
+    .s(height,152);
+    margin:47/@allWidth*100vw 17/@allWidth*100vw 0;
+    animation:0.3s scale_show forwards;
+  }
+}
+
+.loop(@i) when (@i < 7){
+  .set_delay(@i);
+  .loop(@i+1);
+}
+.loop(1);

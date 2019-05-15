@@ -2,13 +2,17 @@ const app = getApp()
 const icon = require('../../utils/base64')
 const barHeight = '8.67vw'
 const sicon = wx.getStorageSync('icon')
+const color = {
+  in:['#f25350','#fff2f1','#ea908d'],
+  out:['#67a2df','#f1faff','#72b1eb']
+}
 Component({
   data: {
     moreShow:0,
     billHeight:barHeight,
     typeBill:'day',
     moreText:'...',
-    textColor:'#f25350',
+    textColor:color.in,
     icon:icon.outcome,
     iconAll:icon.all,
     iconX:["funny",0],
@@ -74,7 +78,7 @@ Component({
       let src = '',text = ''
       if(billData.type==1){
         this.setData({
-          textColor:'#67b098'
+          textColor:color.out
         })
       }
       if(billData.remarks===undefined){

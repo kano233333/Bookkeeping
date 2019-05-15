@@ -11,8 +11,14 @@
       </time-picker>
     </view>
     <view class="bill_total">
-      <view class="wrap">总收入:<text><text style="color:#67b098">{{allIncome}}</text>元</text></view>
-      <view class="wrap">总支出:<text><text style="color:#f25350">{{allPay}}</text>元</text></view>
+      <view class="wrap">
+        <image src="/static/icon/1.png" />
+        总收入:
+        <text><text style="color:#68a1e1">{{allIncome}}</text>元</text></view>
+      <view class="wrap">
+        <image src="/static/icon/2.png" />
+        总支出:
+        <text><text style="color:#f25350">{{allPay}}</text>元</text></view>
     </view>
   </view>
   <scroll-view class="bill_detail_wrap" scroll-y="true" bindscrolltoupper="scrollTop">

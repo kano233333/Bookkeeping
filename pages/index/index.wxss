@@ -8,7 +8,6 @@
   position: fixed;
   top: 0;
   z-index: 3333;
-  box-shadow: 0 0 2px #808280;
 }
 .bill_select {
   width: 100vw;
@@ -22,12 +21,29 @@
   width: 100vw;
   height: 13.06666667vw;
   background-color: #fff;
-  font-size: 4vw;
+  font-size: 3.2vw;
   letter-spacing: 2px;
   padding: 0 4vw;
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+.bill_total > .wrap {
+  position: relative;
+}
+.bill_total > .wrap > image {
+  position: absolute;
+  content: '\00A5';
+  color: #fff;
+  font-size: 3.2vw;
+  width: 4.66666667vw;
+  height: 4.66666667vw;
+  border-radius: 50%;
+  left: -5.33333333vw;
+  top: -1.33333333vw;
+  text-align: center;
+  border: none;
+  padding: 0;
 }
 .bill_total > .wrap > text {
   margin-left: 5.33333333vw;
@@ -36,7 +52,6 @@
   margin: 26.66666667vw auto 0 auto;
 }
 .bill_detail_wrap .bill_detail {
-  border: 1px solid #d4d4d4;
   height: 13.06666667vw;
   margin: 1px 0;
   border-radius: 4px;
@@ -49,7 +64,7 @@
   width: 16.26666667vw;
   position: absolute;
   left: 2.66666667vw;
-  top: 2.4vw;
+  top: 3.06666667vw;
   overflow: hidden;
   transition: 0.2s height;
   color: #fff;
@@ -59,7 +74,7 @@
   height: 6.13333333vw;
   border-radius: 20px;
   display: block;
-  background-color: #d84642;
+  background: linear-gradient(to left, #8cbef4, #4c91df);
   text-align: center;
   line-height: 1.8;
 }
