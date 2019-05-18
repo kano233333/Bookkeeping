@@ -1,6 +1,6 @@
 <!--pages/bill/bill.wxml-->
 <view class="bill">
-  <show-frame></show-frame>
+  <show-frame wx:if="{{isGet}}" imgUrl="{{imgUrl}}"></show-frame>
   <view class="fixed_head">
     <view class="bill_select jz">
       <view class="t_select">
@@ -24,6 +24,6 @@
   <scroll-view class="bill_detail_wrap" scroll-y="true" bindscrolltoupper="scrollTop">
     <empty wx:if="{{isEmpty}}"></empty>
     <pull-refresh height="{{pullHeight}}"></pull-refresh>
-    <bill-bar bind:refreshList="refreshList" wx:if="{{shiftBillBar}}" wx:for="{{billList}}" billData="{{item}}" wx:key="{{index}}"></bill-bar>
+    <bill-bar index="{{index}}" bind:refreshList="refreshList" wx:if="{{shiftBillBar}}" wx:for="{{billList}}" billData="{{item}}" wx:key="{{index}}"></bill-bar>
   </scroll-view>
 </view>

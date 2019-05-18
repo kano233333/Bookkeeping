@@ -4,7 +4,7 @@
 }
 .user_head_wrap {
   height: 53.33333333vw;
-  background: linear-gradient(to top right, #82b7ee, #5796dd);
+  background: linear-gradient(to top right, #98c5f7, #4387d3);
   overflow: hidden;
 }
 .user_head_wrap #line_canvas {

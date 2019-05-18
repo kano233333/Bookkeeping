@@ -1,11 +1,16 @@
 <view class="sd_add">
   <wxs src="./sdAdd.wxs" module="tools" />
+
+    <keyboard inputValue="{{amount}}" wx:if="{{isKey}}" bind:setValue="setValue" bind:setAmount="setAmount"> </keyboard>
+  <view  wx:if="{{isKey}}" bindtap="setAmount" class="key_wrap">
+  </view>
+
   <view class="add_head">
     <text class="{{type==0 ? 'bor_btm' :''}}" bindtap="shiftType" data-type="0">支出</text>
     <text class="{{type==1 ? 'bor_btm' :''}}" bindtap="shiftType" data-type="1">收入</text>
   </view>
   <view class="count">
-    <input type="number" value="{{amount}}" bindinput="setAmount" placeholder="输入金额" />
+    <input type="number" disabled="true" value="{{amount}}" bindtap="setAmount" placeholder="输入金额" />
   </view>
   <view class="remarks">
     <text class="title">备注</text>
@@ -21,8 +26,8 @@
       <swiper current="{{current}}" indicator-dots="true" indicator-color="#333333" circular="true" indicator-active-color="#fab8af" class="swiper">
         <block wx:for="{{iconSwiper}}" indicator-dots="{{true}}" wx:key="{{index}}" wx:for-item="wrapItem" wx:for-index="wrapIndex">
           <swiper-item class="select">
-            <view wx:for="{{wrapItem}}" bindtap="selectIcon" wx:key="{{index}}" data-index="{{index+wrapIndex*15}}">
-              <image class="{{(selectIndex-wrapIndex*15)===index?'select_bg':''}}" src="{{iconAll[item.type][item.index].value}}" />
+            <view wx:for="{{wrapItem}}" bindtap="selectIcon" wx:key="{{index}}" data-index="{{index+wrapIndex*10}}">
+              <image class="{{(selectIndex-wrapIndex*10)===index?'select_bg':''}}" src="{{iconAll[item.type][item.index].value}}" />
               <text>{{tools.setText(item,iconAll)}}</text>
             </view>
           </swiper-item>
@@ -31,7 +36,6 @@
     </view>
   </view>
 
-  <view class="btn_wrap">
-    <button class="btn" bindtap="addSubmit">确定</button>
-  </view>
+  <button class="btn" bindtap="addSubmit">确定</button>
+
 </view>

@@ -4,71 +4,6 @@
   padding-bottom: 6vw;
   background-color: #ededed;
 }
-.achieve_upper {
-  height: 40vw;
-  background-color: #ff6a69;
-  color: #fff;
-  text-align: center;
-  overflow: hidden;
-}
-.achieve_upper text:nth-of-type(1) {
-  margin: 15.46666667vw 0 auto;
-  display: block;
-  text-align: center;
-  font-size: 4.8vw;
-}
-.achieve_main {
-  margin-top: -9.33333333vw;
-}
-.list_wrap {
-  width: 88vw;
-  height: 21.33333333vw;
-  background-color: #fff;
-  margin: 0 auto 6vw auto;
-  border-radius: 5px;
-  box-shadow: 2px 2px 1.06666667vw rgba(255, 36, 36, 0.45);
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-}
-.list_wrap .list_left {
-  padding-top: 2.93333333vw;
-  padding-left: 4vw;
-  position: relative;
-}
-.list_wrap .list_left > text {
-  margin-left: 8vw;
-  display: block;
-  flex: 0.67272727;
-}
-.list_wrap .list_left > text:nth-of-type(1) {
-  font-size: 3.2vw;
-}
-.list_wrap .list_left > text:nth-of-type(2) {
-  line-height: 5;
-  font-size: 2.4vw;
-}
-.list_wrap .list_left:before {
-  position: absolute;
-  top: 2.93333333vw;
-  left: 4vw;
-  width: 3.2vw;
-  height: 3.2vw;
-  content: '';
-  border: 0.8vw solid #f8504a;
-  border-radius: 50%;
-}
-.list_wrap .list_right {
-  padding-top: 2vw;
-  padding-right: 2.66666667vw;
-  font-size: 2.4vw;
-}
-.list_wrap .list_right > image {
-  width: 13.33333333vw;
-  height: 9.6vw;
-  display: block;
-  flex: 0.16969697;
-}
 .achieve_head {
   height: 40vw;
 }
@@ -93,11 +28,16 @@
 }
 .images image {
   opacity: 0;
-  background-color: #eb5d5a;
-  width: 28.66666667vw;
-  height: 20.26666667vw;
-  margin: 6.26666667vw 2.26666667vw 0;
+  margin: 6.26666667vw 5.33333333vw 0;
   animation: 0.3s scale_show forwards;
+}
+.achieve_con:nth-of-type(1) .images image {
+  width: 19.2vw;
+  height: 17.33333333vw;
+}
+.achieve_con:nth-of-type(2) .images image {
+  width: 19.2vw;
+  height: 14.93333333vw;
 }
 .images image:nth-of-type(1) {
   animation-delay: 0.1s;
@@ -116,5 +56,35 @@
 }
 .images image:nth-of-type(6) {
   animation-delay: 0.6s;
+}
+.show_badge {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.show_badge .box {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 60vw;
+  height: 40vh;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5vw;
+  box-shadow: 1px 1px 10px #b9b9b9;
+}
+.show_badge .box image {
+  width: 34vw;
+  height: 32vw;
+}
+.show_badge .box text {
+  display: block;
+  text-align: center;
 }
 /*# sourceMappingURL=achieve.wxss.map */

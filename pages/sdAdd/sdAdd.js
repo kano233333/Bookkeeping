@@ -1,15 +1,18 @@
-// pages/sdAdd/sdAdd.js
+let calCommonExp = require("../../utils/cal").calCommonExp
 const icon = require("../../utils/base64")
 let aicon , sicon
 let formatTime = require('../../utils/util').formatTime
 let app = getApp()
+const day = app.globalData.day
+const bill = app.globalData.bill
 let setIcon = function(){
   sicon = app.globalData.userIcon
   aicon = [[...icon.outcome,...sicon[0]],[...icon.income,...sicon[1]]]
 }
+let SELECT = [0,0]
 let setSwiperIcon = function(type){
   let icon = [],a = 0
-  let num = 15
+  let num = 10
   let b = []
   for(let i=0;i<aicon[type].length;i++){
     b.push(aicon[type][i])
@@ -17,11 +20,10 @@ let setSwiperIcon = function(type){
     if(num==0 || i==aicon[type].length-1){
       icon[a] = b
       a++
-      num = 15
+      num = 10
       b = []
     }
   }
-  console.log(icon)
   return icon
 }
 
@@ -29,6 +31,7 @@ Page({
   data: {
     type:0,
     icon:[],
+    iconSwiper:[],
     iconAll:icon.all,
     selectIndex:0,
     remarks:'',
@@ -36,7 +39,8 @@ Page({
     mode:'',
     selectSrc:'',
     selectText:'',
-    current:0
+    current:0,
+    isKey:false
   },
   onLoad: function (options) {
     setIcon()
@@ -49,19 +53,23 @@ Page({
     this.data.type = options.type || 0
     this.data.mode = options.mode || 'add'
     if(this.data.mode=='edit'){
+      console.log(options)
       let billData = JSON.parse(options.billData)
       let iconX = billData.label.split("-")
       let iconAll = this.data.iconAll
       this.data.billData = billData
       let selectText = billData.iconName || iconAll[iconX[0]][iconX[1]].name
+      let type = billData.type
+      SELECT[type] = this.findIndex(iconX,type)
+      console.log(this.findIndex(iconX,type))
       this.setData({
         type:billData.type,
         remarks:billData.remarks,
         amount:billData.amount,
         selectSrc:iconAll[iconX[0]][iconX[1]].value,
         selectText:selectText,
-        selectIndex:this.findIndex(iconX,billData.type),
-        iconSwiper:setSwiperIcon(billData.type)
+        selectIndex: SELECT[type],
+        iconSwiper:setSwiperIcon(type)
       })
     }
   },
@@ -70,9 +78,12 @@ Page({
     this.setData({
       type:type,
       iconSwiper:setSwiperIcon(type),
-      current:0
+      current:0,
+      selectIndex: SELECT[type]
+    },()=>{
+      this.data.icon = aicon[type]
+      this.setSelectIcon(SELECT[type])
     })
-    this.setSelectIcon(this.data.selectIndex)
   },
   setSelectIcon(index){
     try {
@@ -86,13 +97,30 @@ Page({
   },
   selectIcon(e){
     let index = e.currentTarget.dataset.index
+    SELECT[this.data.type] = index
     this.setData({
       selectIndex:index,
     })
     this.setSelectIcon(index)
   },
   addSubmit(){
-    let amount = this.data.amount
+    let amount = calCommonExp(this.data.amount)
+    if(amount<0){
+      wx.showToast({
+        title:'金额表达式金额小于0',
+        icon:'none',
+        duration: 1000,
+      })
+      return
+    }else if(isNaN(amount)){
+      wx.showToast({
+        title:'金额表达式错误',
+        icon:'none',
+        duration: 1000,
+      })
+      return
+    }
+
     if(app.yanz(amount,"请选择输入金额")==0){return}
     let selectIndex = this.data.selectIndex
     if(app.yanz(selectIndex,"请选择图标")==0){return}
@@ -115,11 +143,22 @@ Page({
       data:obj,
       success:function(res){
         var _data = res;
+        var isGet = ''
         if(_data.static==1){
           if(this.data.mode=='add'){
             app.globalData.userNum.totalAccount++
+            let index = bill.indexOf(app.globalData.userNum.totalAccount)
+            if(index!=-1){
+              isGet = 'bg'+bill[index]
+              this.userBadge({type:'bill',badge:'bg'+bill[index]})
+            }
             if(res.isSign){
               app.globalData.userNum.signInDays++
+              let index = day.indexOf(app.globalData.userNum.signInDays)
+              if(index!=-1){
+                isGet = 'dg'+bill[index]
+                this.userBadge({type:'day',badge:'dg'+bill[index]})
+              }
             }
           }
           wx.showToast({
@@ -128,9 +167,10 @@ Page({
             icon:"none"
           })
           let P = new Promise((res,req)=>{
+            let url = isGet=='' ? '/pages/index/index' :'/pages/index/index?badge='+isGet
             setTimeout(function(){
               wx.switchTab({
-                url:'/pages/index/index',
+                url:url,
                 success:function(e){
                   res('ok')
                 }
@@ -145,13 +185,31 @@ Page({
     }
      app.isLogin(reqObj)
   },
+  userBadge:function(badge){
+    let obj = {
+      url:app.globalData.ip +'/addBadge',
+      data:badge,
+      method:'get',
+      success:function(res) {
+        console.log(res)
+      }
+    }
+    app.isLogin(obj)
+  },
   setRemarks:function(e){
     let value = e.detail.value
     this.data.remarks = value
   },
-  setAmount:function(e){
-    let value = e.detail.value
-    this.data.amount = value
+  setAmount:function(){
+    var arr = ["+","-","*","/","."]
+    var amount = this.data.amount
+    if(arr.indexOf(amount[amount.length-1])!==-1){
+      amount = amount.substring(0,amount.length-1)
+    }
+    this.setData({
+      isKey:!this.data.isKey,
+      amount:amount
+    })
   },
   findIndex:function(iconX,type){
     for(let i=0;i<aicon[type].length;i++){
@@ -163,5 +221,10 @@ Page({
         }
       }
     }
+  },
+  setValue:function(e){
+    this.setData({
+      amount:e.detail.value
+    })
   }
 })

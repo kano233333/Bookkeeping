@@ -23,6 +23,10 @@ Component({
     billData: {
       type: Object,
       value: {}
+    },
+    index:{
+      type:Number,
+      value:0
     }
   },
   methods: {
@@ -65,7 +69,7 @@ Component({
               duration: 1000,
               icon:"none"
             })
-            this.triggerEvent("refreshList")
+            this.triggerEvent("refreshList",{index:this.data.index})
           }
         }.bind(this)
       }

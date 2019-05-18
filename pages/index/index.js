@@ -22,14 +22,22 @@ Page({
     allIncome:0,
     allPay:0,
     isEmpty:false,
-    pullHeight:0
+    pullHeight:0,
+    isGet:false,
+    imgUrl:''
   },
   onLoad: function () {
     app.isSq()
     this.onShow()
   },
-  onShow:function(){
+  onShow:function(options){
     this.getBillList()
+    if(options && options.isGet) {
+      this.setData({
+        isGet:true,
+        imgUrl:options.isGet
+      })
+    }
   },
   getPickerTimer(data){
     let _this = this
@@ -63,12 +71,12 @@ Page({
         time:this.data.timePick
       },
       success:function(res){
-        let allIncome = 0 , allPay = 0
         if(this.data.selectPickers.type=='day'){
           for(let i in res){
             res[i].time = res[i].time.substring(0,16)
           }
         }
+        let allIncome = 0 , allPay = 0
         for(let i in res){
           if(res[i].type==0){
             allPay+=res[i].amount
@@ -79,8 +87,8 @@ Page({
         this.setData({
           billList:res,
           shiftBillBar:false,
-          allPay:allPay,
-          allIncome:allIncome,
+          allPay:allPay.toFixed(2),
+          allIncome:allIncome.toFixed(2),
           isEmpty:res.length==0 ? true : false
         },()=>{
           this.setData({
@@ -91,8 +99,23 @@ Page({
     }
     app.isLogin(obj)
   },
-  refreshList:function(){
-    this.getBillList()
+  refreshList:function(e){
+    // this.getBillList()
+    console.log(this.data.billList)
+    let billList = this.data.billList
+    billList.splice(e.index+1,1)
+    console.log(billList)
+    this.setData({
+      billList:billList,
+      shiftBillBar:false,
+      // allPay:allPay.toFixed(2),
+      // allIncome:allIncome.toFixed(2),
+      // isEmpty:res.length==0 ? true : false
+    },()=>{
+      this.setData({
+        shiftBillBar:true
+      })
+    })
   },
   onPageScroll:function(e){
     if(e.scrollTop==0){

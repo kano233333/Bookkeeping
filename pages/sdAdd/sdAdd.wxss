@@ -1,5 +1,5 @@
 .sd_add {
-  min-height: 100vh;
+  max-height: 100vh;
   background-color: #ededed;
   padding-bottom: 6.4vw;
   font-size: 3.2vw;
@@ -52,7 +52,7 @@
 }
 .select_icon .selected {
   flex-direction: column;
-  height: 26.13333333vw;
+  height: 22.13333333vw;
   border-bottom: 1px solid #ededed;
 }
 .select_icon image {
@@ -65,16 +65,27 @@
 .select_icon .select_bg {
   background-color: #fab8af;
 }
-.btn_wrap {
-  text-align: center;
-  margin: 20px 0;
-}
-.btn_wrap .btn {
-  width: 42.66666667vw;
+.btn {
+  width: 100vw;
   height: 10.66666667vw;
   font-size: 3.73333333vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #97cbfb;
+  color: #fff;
+  border: none;
+  border-radius: 0;
 }
 .swiper {
-  height: 66.66666667vw;
+  height: 60vw;
+}
+.key_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
 }
 /*# sourceMappingURL=sdAdd.wxss.map */

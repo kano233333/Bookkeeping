@@ -1,45 +1,27 @@
 <view class="achieve">
-  <!--<view class="achieve_upper">-->
-    <!--<text>已获得成就</text>-->
-  <!--</view>-->
-  <!--<view class="achieve_main">-->
-    <!--<view class="list_wrap" wx:for="{{achieveList}}" wx:key="{{index}}">-->
-      <!--<view class="list_left">-->
-        <!--<text>{{item.text}}</text>-->
-        <!--<text>解锁条件：{{item.condition}}</text>-->
-      <!--</view>-->
-      <!--<view class="list_right">-->
-        <!--<text>2019-1-2</text>-->
-        <!--<image src="{{item.image}}" />-->
-      <!--</view>-->
-    <!--</view>-->
-  <!--</view>-->
   <view class="achieve_head">
     <image src="/static/imgs/other/achieve.png" />
   </view>
   <view class="content">
     <view class="achieve_con">
-      <view class="title">累积记账天数（）</view>
+      <view class="title">累积记账天数（{{dgNum}} / 6）</view>
       <view class="images">
-        <image src="" />
-        <image src="" />
-        <image src="" />
-        <image src="" />
-        <image src="" />
-        <image src="" />
+        <image wx:key="{{index}}" wx:for="{{dayImgs}}" src="{{path+item+'.png'}}" />
       </view>
     </view>
 
     <view class="achieve_con">
-      <view class="title">累积记账笔数（）</view>
+      <view class="title">累积记账笔数（{{bgNum}} / 6）</view>
       <view class="images">
-        <image src="" />
-        <image src="" />
-        <image src="" />
-        <image src="" />
-        <image src="" />
-        <image src="" />
+        <image wx:key="{{index}}" wx:for="{{billImgs}}" src="{{path+item+'.png'}}" />
       </view>
     </view>
   </view>
+
+  <!--<view class="show_badge">-->
+    <!--<view class="box">-->
+      <!--<image src="/static/imgs/ji/1.png" />-->
+      <!--<text class="text_s">累计记账x天</text>-->
+    <!--</view>-->
+  <!--</view>-->
 </view>

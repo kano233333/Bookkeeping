@@ -5,9 +5,11 @@ App({
   globalData: {
     userInfo: null,
     userStatus:'',
-    ip:'https://www.victorzuo.top/wx',
-    // ip:'http://192.168.1.70:8080/wx/',
-    intervalTime:60000
+    // ip:'https://www.victorzuo.top/wx',
+    ip:'http://192.168.1.70:8080/wx/',
+    intervalTime:60000,
+    day : [1,30,99,199,299,365],
+    bill : [1,49,99,199,299,399]
   },
   requestFail:function(xxx){
     wx.showToast({
@@ -42,8 +44,8 @@ App({
       try{
         wx.request({
           header: {
-            cookie: "JSESSIONID=" + sessionID + ";domain=www.victorzuo.top;path=/wx"
-            // cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
+            // cookie: "JSESSIONID=" + sessionID + ";domain=www.victorzuo.top;path=/wx"
+            cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
           },
           url: obj.url,
           data: obj.data,
@@ -79,8 +81,7 @@ App({
       console.log('已过期')
       this.doLogin(codeback);
     }
-  }
-  ,
+  },
   getUserInfo(){
     var _this = this;
     wx.getUserInfo({
@@ -140,6 +141,7 @@ App({
       url:this.globalData.ip+'/info',
       success:function(res) {
         this.globalData.userNum = res
+        this.getBadge()
       }.bind(this)
     }
     return obj
@@ -171,5 +173,15 @@ App({
   },
   onShareAppMessage:function(options){
     console.log(options)
+  },
+  getBadge:function(){
+    let obj = {
+      url:this.globalData.ip +'/getBadge',
+      method:'get',
+      success:function(res){
+        this.globalData.badge = res
+      }.bind(this)
+    }
+    this.isLogin(obj)
   }
 })

@@ -1,6 +1,6 @@
 <view class="frame">
   <view class="box">
-    <image src="/static/imgs/ji/1.png" />
+    <image src="{{path+imgUrl+'.png'}}" />
     <text>成就达成</text>
   </view>
 </view>

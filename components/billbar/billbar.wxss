@@ -5,7 +5,7 @@
   padding: 2.4vw 5.6vw 3.33333333vw;
   transition: 0.5s all;
   background-color: #fff;
-  animation: 0.5s center_scale_show forwards;
+  opacity: 0;
 }
 .bill_upper {
   display: flex;

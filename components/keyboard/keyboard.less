@@ -1,0 +1,37 @@
+@allWidth:750;
+.s(@sx,@x){
+    @{sx}:@x/@allWidth*100vw;
+}
+.key{
+  position: fixed;
+  bottom: 0;
+  z-index:3;
+  background-color: #f6f6f7;
+}
+.keyboard {
+  display: flex;
+  .keyboard-left {
+    flex: 0.8;
+    display: flex;
+    flex-wrap: wrap;
+    button {
+      width: 100/4%;
+      display: block;
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+  .keyboard-right {
+    flex: 0.2;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #cccccc;
+    position: relative;
+    button {
+      height:50%;
+      line-height: 5;
+    }
+    button:nth-of-type(2) {
+      background-color: #108ee9;
+      color: #fff;
+    }
+  }
+}

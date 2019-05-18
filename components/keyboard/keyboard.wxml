@@ -1,0 +1,14 @@
+<view class="key">
+  <picker mode="date" fields="day">
+    <text>2019</text>
+  </picker>
+  <view class="keyboard">
+    <view class="keyboard-left">
+      <button wx:key="{{index}}" wx:for="{{keyArr}}" bindtap="setValue" data-value="{{item.key}}">{{item.name}}</button>
+    </view>
+    <view class="keyboard-right">
+      <button bindtap="deleteOne">删除</button>
+      <button bindtap="keyBack">确定</button>
+    </view>
+  </view>
+</view>

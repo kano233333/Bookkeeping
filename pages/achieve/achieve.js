@@ -1,58 +1,13 @@
-// pages/achieve/achieve.js
+var app = getApp()
+const day = app.globalData.day
+const bill = app.globalData.bill
 Page({
   data: {
-    achieveList:[
-      {
-        text:'初出茅庐',
-        image:'/static/imgs/ji/1.png',
-        condition:'记账7天'
-      },
-      {
-        text:'有条有理',
-        image:'/static/imgs/ji/2.png',
-        condition:'记账7天且支出/收入>15%'
-      },
-      {
-        text:'稍有成就',
-        image:'/static/imgs/ji/3.png',
-        condition:'记账7天且支出/收入>30%'
-      },
-      {
-        text:'中华小当家',
-        image:'/static/imgs/ji/4.png',
-        condition:'记账21天且支出/收入>15%'
-      },
-      {
-        text:'家里没矿',
-        image:'/static/imgs/ji/5.png',
-        condition:'记账21天且支出/收入>30%'
-      },
-      {
-        text:'理财达人',
-        image:'/static/imgs/ji/6.png',
-        condition:'记账45天且支出/收入>15%'
-      },
-      {
-        text:'聚宝大亨',
-        image:'/static/imgs/ji/7.png',
-        condition:'记账45天且支出/收入>30%'
-      },
-      {
-        text:'勒紧腰带',
-        image:'/static/imgs/ji/8.png',
-        condition:'收入=支出'
-      },
-      {
-        text:'入不敷出',
-        image:'/static/imgs/ji/9.png',
-        condition:'100%<支出/收入<130%'
-      },
-      {
-        text:'家里有矿',
-        image:'/static/imgs/ji/10.png',
-        condition:'支出/收入>130%'
-      },
-    ]
+    path:app.globalData.ip+'/images/',
+    billImgs:[],
+    dayImgs:[],
+    bgNum:0,
+    dgNum:0
   },
   onShareAppMessage:function(options){
     console.log(options)
@@ -63,5 +18,33 @@ Page({
         console.log(res)
       }
     }
+  },
+  onShow:function(){
+    this.getBadge()
+  },
+  getBadge:function(){
+    let set = function(con,str,res){
+      let imgs = [],gnum = 0
+      let num = parseInt(res.split(str)[1])
+      let index = con.indexOf(num)
+      for(let i=0;i<con.length;i++){
+        if(i<index+1){
+          imgs[i] = str+con[i]
+          gnum++
+        }else {
+          imgs[i] = str[0]+con[i]
+        }
+      }
+      return {imgs:imgs,num:gnum}
+    }
+    let res = app.globalData.badge
+    let billImgs = set(bill,"bg",res.bill)
+    let dayImgs = set(day,"dg",res.day)
+    this.setData({
+      billImgs:billImgs.imgs,
+      dayImgs:dayImgs.imgs,
+      bgNum:billImgs.num,
+      dgNum:dayImgs.num
+    })
   }
 })

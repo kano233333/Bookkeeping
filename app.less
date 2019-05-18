@@ -59,6 +59,27 @@
   }
 }
 
+.text_s {
+  font-size:18px;
+  background:linear-gradient(110deg, #bc994e 0%, #bc994e 33%, #d8c498 44%, #775f2d 55%, #bc994e 67%, #bc994e 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:5s text_animate infinite;
+  background-size:300%;
+}
+
+@keyframes text_animate {
+  0% {
+    background-position-x: 0;
+  }
+  50% {
+    background-position-x: -150%;
+  }
+  100% {
+    background-position-x: 0;
+  }
+}
+
 
 @keyframes scale_show {
   0% {
@@ -116,6 +137,18 @@
     opacity: 1;
   }
 }
+
+@keyframes left_enter {
+  0% {
+    transform: translateX(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 
 
 

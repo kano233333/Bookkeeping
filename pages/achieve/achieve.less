@@ -14,76 +14,6 @@
   padding-bottom: 45/@allWidth*100vw;
   background-color: #ededed;
 }
-.achieve_upper {
-  .s(height,300);
-  background-color: #ff6a69;
-  color:#fff;
-  text-align:center;
-  overflow: hidden;
-  text:nth-of-type(1){
-    margin:116/@allWidth*100vw 0 auto;
-    display: block;
-    text-align:center;
-    font-size:36/@allWidth*100vw;
-  }
-}
-
-.achieve_main {
-  .s(margin-top,-70);
-}
-
-.list_wrap {
-  .s(width,660);
-  .s(height,160);
-  background-color: #fff;
-  margin:0 auto 45/@allWidth*100vw auto;
-  border-radius:5px;
-  box-shadow: 2px 2px 8/@allWidth*100vw rgba(255,36,36,0.45);
-  display: flex;
-  justify-content: space-between;
-  font-size:12px;
-  .list_left {
-    .s(padding-top,22);
-    .s(padding-left,30);
-    position:relative;
-    >text {
-      .s(margin-left,60);
-      display:block;
-      flex:444/660;
-    }
-    >text:nth-of-type(1){
-      font-size:24/@allWidth*100vw;
-    }
-    >text:nth-of-type(2){
-      line-height:5;
-      font-size:18/@allWidth*100vw;
-    }
-  }
-  .list_left:before{
-    position:absolute;
-    .s(top,22);
-    .s(left,30);
-    .s(width,24);
-    .s(height,24);
-    content:'';
-    border:6/@allWidth*100vw solid #f8504a;
-    border-radius:50%;
-  }
-  .list_right {
-    .s(padding-top,15);
-    .s(padding-right,20);
-    font-size:18/@allWidth*100vw;
-    >image {
-      .s(width,100);
-      .s(height,72);
-      display:block;
-      flex:112/660;
-    }
-  }
-}
-
-
-
 
 .achieve_head {
   .s(height,300);
@@ -110,11 +40,20 @@
   .s(margin-bottom,60);
   image {
     opacity: 0;
-    background-color: #eb5d5a;
-    .s(width,215);
-    .s(height,152);
-    margin:47/@allWidth*100vw 17/@allWidth*100vw 0;
+    margin:47/@allWidth*100vw 40/@allWidth*100vw 0;
     animation:0.3s scale_show forwards;
+  }
+}
+.achieve_con:nth-of-type(1) .images{
+  image {
+    .s(width,144);
+    .s(height,130);
+  }
+}
+.achieve_con:nth-of-type(2) .images{
+  image {
+    .s(width,144);
+    .s(height,112);
   }
 }
 
@@ -123,3 +62,34 @@
   .loop(@i+1);
 }
 .loop(1);
+
+.show_badge {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100vw;;
+  height:100vh;
+  .box {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    width:60vw;
+    height:40vh;
+    text-align: center;
+    background-color: #fff;
+    border-radius:10px;
+    padding:5vw;
+    box-shadow: 1px 1px 10px #b9b9b9;
+    image {
+      width:34vw;
+      height:32vw;
+    }
+    text {
+      display: block;
+      text-align: center;
+    }
+  }
+}
