@@ -1,3 +1,4 @@
+let formatTime = require('../../utils/util').formatTime
 Component({
   data:{
     keyArr:[
@@ -17,7 +18,9 @@ Component({
       {key:0,name:0},
       {key:".",name:"."},
       {key:"/",name:"/"}
-      ]
+      ],
+    timePick:formatTime(new Date,'day'),
+    fields:'day'
   },
   properties:{
     inputValue:{
@@ -49,6 +52,12 @@ Component({
       let value = this.data.inputValue
       this.data.inputValue = value.substring(0,value.length-1)
       this.triggerEvent('setValue', { value:this.data.inputValue});
+    },
+    bindDateChange:function(e){
+      this.setData({
+        timePick:e.detail.value
+      })
+      this.triggerEvent('pickerEvent',{timeData:e.detail.value})
     }
   }
 })

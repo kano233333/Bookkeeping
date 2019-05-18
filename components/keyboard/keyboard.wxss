@@ -4,6 +4,14 @@
   z-index: 3;
   background-color: #f6f6f7;
 }
+.key picker {
+  padding: 10px;
+  box-shadow: 0 -2px 5px -1px #a19f9a;
+  font-size: 3.73333333vw;
+}
+.key button {
+  border-radius: 0;
+}
 .keyboard {
   display: flex;
 }
@@ -20,7 +28,6 @@
 .keyboard .keyboard-right {
   flex: 0.2;
   background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #cccccc;
   position: relative;
 }
 .keyboard .keyboard-right button {

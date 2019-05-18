@@ -40,7 +40,10 @@ Page({
     selectSrc:'',
     selectText:'',
     current:0,
-    isKey:false
+    isKey:false,
+    timePick:formatTime(new Date,'day'),
+    smallTime:'',
+    calAcmount:''
   },
   onLoad: function (options) {
     setIcon()
@@ -53,7 +56,6 @@ Page({
     this.data.type = options.type || 0
     this.data.mode = options.mode || 'add'
     if(this.data.mode=='edit'){
-      console.log(options)
       let billData = JSON.parse(options.billData)
       let iconX = billData.label.split("-")
       let iconAll = this.data.iconAll
@@ -61,7 +63,6 @@ Page({
       let selectText = billData.iconName || iconAll[iconX[0]][iconX[1]].name
       let type = billData.type
       SELECT[type] = this.findIndex(iconX,type)
-      console.log(this.findIndex(iconX,type))
       this.setData({
         type:billData.type,
         remarks:billData.remarks,
@@ -69,7 +70,9 @@ Page({
         selectSrc:iconAll[iconX[0]][iconX[1]].value,
         selectText:selectText,
         selectIndex: SELECT[type],
-        iconSwiper:setSwiperIcon(type)
+        iconSwiper:setSwiperIcon(type),
+        timePick:billData.time.split(" ")[0],
+        smallTime:billData.time.split(" ")[1]
       })
     }
   },
@@ -104,7 +107,11 @@ Page({
     this.setSelectIcon(index)
   },
   addSubmit(){
-    let amount = calCommonExp(this.data.amount)
+    let amount = this.data.amount+''
+    if(app.yanz(amount,"请选择输入金额")==0){return}
+    let selectIndex = this.data.selectIndex
+    if(app.yanz(selectIndex,"请选择图标")==0){return}
+    amount = calCommonExp(amount)
     if(amount<0){
       wx.showToast({
         title:'金额表达式金额小于0',
@@ -120,21 +127,17 @@ Page({
       })
       return
     }
-
-    if(app.yanz(amount,"请选择输入金额")==0){return}
-    let selectIndex = this.data.selectIndex
-    if(app.yanz(selectIndex,"请选择图标")==0){return}
+    let smallTime = this.data.smallTime || formatTime(new Date,"detail").split(" ")[1]
     let icon = this.data.icon
     let label = icon[selectIndex].label || icon[selectIndex].type+"-"+icon[selectIndex].index
     let obj = {
       type:this.data.type,
       amount:amount,
       label:label,
-      time:formatTime(new Date,"detail"),
+      time:this.data.timePick+" "+smallTime,
       remarks:this.data.remarks
     }
     if(this.data.mode=='edit'){
-      obj.time = this.data.billData.time
       obj.bid = this.data.billData.bid
     }
     let reqObj = {
@@ -208,7 +211,7 @@ Page({
     }
     this.setData({
       isKey:!this.data.isKey,
-      amount:amount
+      amount:amount,
     })
   },
   findIndex:function(iconX,type){
@@ -223,8 +226,14 @@ Page({
     }
   },
   setValue:function(e){
+    let value = e.detail.value
+    let calAcmount = isNaN(calCommonExp(value)) ? 0 : calCommonExp(value)
     this.setData({
-      amount:e.detail.value
+      amount:value,
+      calAcmount: " (="+calAcmount+")"
     })
+  },
+  pickerEvent:function(e){
+    this.data.timePick = e.detail.timeData
   }
 })

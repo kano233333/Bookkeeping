@@ -1,5 +1,5 @@
 .sd_add {
-  max-height: 100vh;
+  height: 100vh;
   background-color: #ededed;
   padding-bottom: 6.4vw;
   font-size: 3.2vw;
@@ -87,5 +87,8 @@
   width: 100vw;
   height: 100vh;
   z-index: 2;
+}
+.keyboard {
+  text-align: center;
 }
 /*# sourceMappingURL=sdAdd.wxss.map */

@@ -2,57 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee387a40-08af-493c-962d-dc5cdf3d3ef5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/components/keyboard/keyboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/keyboard/keyboard.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/keyboard/keyboard.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/keyboard/keyboard.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/cal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.less" beforeDir="false" afterPath="$PROJECT_DIR$/app.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/app.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.wxss.map" beforeDir="false" afterPath="$PROJECT_DIR$/app.wxss.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/billbar/billbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/billbar/billbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/billbar/billbar.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/billbar/billbar.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/billbar/billbar.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/components/billbar/billbar.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/billbar/billbar.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/components/billbar/billbar.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/billbar/billbar.wxss.map" beforeDir="false" afterPath="$PROJECT_DIR$/components/billbar/billbar.wxss.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/showFrame/showFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/showFrame/showFrame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/showFrame/showFrame.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/components/showFrame/showFrame.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/showFrame/showFrame.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/components/showFrame/showFrame.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/achieve/achieve.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/achieve/achieve.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/achieve/achieve.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/achieve/achieve.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/achieve/achieve.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/achieve/achieve.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/achieve/achieve.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/achieve/achieve.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/achieve/achieve.wxss.map" beforeDir="false" afterPath="$PROJECT_DIR$/pages/achieve/achieve.wxss.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/keyboard/keyboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/keyboard/keyboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/keyboard/keyboard.json" beforeDir="false" afterPath="$PROJECT_DIR$/components/keyboard/keyboard.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/keyboard/keyboard.less" beforeDir="false" afterPath="$PROJECT_DIR$/components/keyboard/keyboard.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/keyboard/keyboard.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/components/keyboard/keyboard.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/keyboard/keyboard.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/components/keyboard/keyboard.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/keyboard/keyboard.wxss.map" beforeDir="false" afterPath="$PROJECT_DIR$/components/keyboard/keyboard.wxss.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/sdAdd/sdAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sdAdd/sdAdd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sdAdd/sdAdd.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sdAdd/sdAdd.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/sdAdd/sdAdd.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sdAdd/sdAdd.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/sdAdd/sdAdd.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sdAdd/sdAdd.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/sdAdd/sdAdd.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sdAdd/sdAdd.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/sdAdd/sdAdd.wxss.map" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sdAdd/sdAdd.wxss.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/user/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/user/user.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/user.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/user/user.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/user.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgAll/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgAll/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgAll/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgAll/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgAll/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/ji/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/imgs/ji/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/ji/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/ji/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/ji/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/ji/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/ji/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/ji/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/ji/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/ji/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/ji/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/ji/cj.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/ji/lt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cal.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cal.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -80,38 +45,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="keyboard.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/keyboard/keyboard.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="keyboard.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/keyboard/keyboard.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="8" column="112" selection-start-line="8" selection-start-column="112" selection-end-line="8" selection-end-column="112" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="keyboard.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/keyboard/keyboard.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
+            <state relative-caret-position="133">
+              <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -119,17 +66,44 @@
       <file leaf-file-name="billbar.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/billbar/billbar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
+            <state relative-caret-position="1170">
+              <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sdAdd.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-145">
+              <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="-798">
               <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sdAdd.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="228" column="20" selection-start-line="228" selection-start-column="20" selection-end-line="228" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sdAdd.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="99" column="11" lean-forward="true" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -145,13 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getLineData</find>
-      <find>user_head_wrap</find>
-      <find>icon</find>
-      <find>bz</find>
-      <find>textColor</find>
-      <find>wrap</find>
-      <find>border</find>
       <find>border:</find>
       <find>bill_right</find>
       <find>more</find>
@@ -172,9 +139,16 @@
       <find>show</find>
       <find>set</find>
       <find>app</find>
-      <find>keyboard</find>
-      <find>de</find>
+      <find>exp.</find>
+      <find>amount</find>
+      <find>form</find>
       <find>refreshList</find>
+      <find>border</find>
+      <find>de</find>
+      <find>button</find>
+      <find>key_wrap</find>
+      <find>keyboard</find>
+      <find>setAmount</find>
     </findStrings>
     <replaceStrings>
       <replace>setLine</replace>
@@ -253,23 +227,23 @@
         <option value="$PROJECT_DIR$/../../js233/laboratory/git/wallet-code/css/transfer-accounts.less" />
         <option value="$PROJECT_DIR$/components/showFrame/showFrame.wxss" />
         <option value="$PROJECT_DIR$/app.less" />
-        <option value="$PROJECT_DIR$/components/keyboard/keyboard.js" />
-        <option value="$PROJECT_DIR$/pages/sdAdd/sdAdd.wxml" />
-        <option value="$PROJECT_DIR$/pages/sdAdd/sdAdd.less" />
-        <option value="$PROJECT_DIR$/utils/cal.js" />
         <option value="$PROJECT_DIR$/pages/achieve/achieve.less" />
         <option value="$PROJECT_DIR$/pages/achieve/achieve.wxml" />
-        <option value="$PROJECT_DIR$/components/keyboard/keyboard.less" />
-        <option value="$PROJECT_DIR$/components/keyboard/keyboard.wxml" />
         <option value="$PROJECT_DIR$/pages/achieve/achieve.js" />
         <option value="$PROJECT_DIR$/pages/index/index.wxml" />
-        <option value="$PROJECT_DIR$/pages/sdAdd/sdAdd.js" />
         <option value="$PROJECT_DIR$/components/showFrame/showFrame.js" />
         <option value="$PROJECT_DIR$/components/showFrame/showFrame.wxml" />
-        <option value="$PROJECT_DIR$/components/keyboard/keyboard.json" />
         <option value="$PROJECT_DIR$/components/billbar/billbar.js" />
         <option value="$PROJECT_DIR$/pages/index/index.js" />
+        <option value="$PROJECT_DIR$/components/keyboard/keyboard.json" />
+        <option value="$PROJECT_DIR$/components/keyboard/keyboard.js" />
+        <option value="$PROJECT_DIR$/components/keyboard/keyboard.less" />
+        <option value="$PROJECT_DIR$/components/keyboard/keyboard.wxml" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/pages/sdAdd/sdAdd.less" />
+        <option value="$PROJECT_DIR$/pages/sdAdd/sdAdd.wxml" />
+        <option value="$PROJECT_DIR$/pages/sdAdd/sdAdd.js" />
+        <option value="$PROJECT_DIR$/utils/cal.js" />
       </list>
     </option>
   </component>
@@ -513,12 +487,12 @@
       <workItem from="1557994483251" duration="8741000" />
       <workItem from="1558012678413" duration="218000" />
       <workItem from="1558155984233" duration="1863000" />
-      <workItem from="1558166480698" duration="8978000" />
+      <workItem from="1558166480698" duration="14141000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="417797000" />
+    <option name="totallyTimeSpent" value="422960000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -539,7 +513,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.34582624" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49701047" weight="0.13117547" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49701047" weight="0.14991482" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20403588" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" show_stripe_button="false" />
@@ -574,20 +548,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/components/pullRefresh/pullRefresh.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/add/add.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/add/add.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -710,13 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../js233/laboratory/git/wallet-code/css/transfer-accounts.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -752,34 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/keyboard/keyboard.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/cal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1995">
-          <caret line="105" column="12" selection-start-line="105" selection-start-column="12" selection-end-line="105" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/user/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
@@ -787,38 +712,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/time/time.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/time/time.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/keyboard/keyboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/achieve/achieve.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
           <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/keyboard/keyboard.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="6" column="120" lean-forward="true" selection-start-line="6" selection-start-column="120" selection-end-line="6" selection-end-column="120" />
         </state>
       </provider>
     </entry>
@@ -833,13 +730,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="158" column="26" selection-start-line="158" selection-start-column="26" selection-end-line="158" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -867,45 +757,125 @@
     <entry file="file://$PROJECT_DIR$/utils/canvas.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/keyboard/keyboard.less">
+    <entry file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        <state relative-caret-position="38">
+          <caret line="2" column="46" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/keyboard/keyboard.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/time/time.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="11" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="3" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="8" column="112" selection-start-line="8" selection-start-column="112" selection-end-line="8" selection-end-column="112" />
+          <caret line="8" column="133" selection-start-line="8" selection-start-column="133" selection-end-line="8" selection-end-column="133" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/keyboard/keyboard.json">
+    <entry file="file://$PROJECT_DIR$/components/time/time.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="304">
+          <caret line="16" column="64" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/billbar/billbar.js">
+    <entry file="file://$PROJECT_DIR$/components/keyboard/keyboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
+        <state relative-caret-position="326">
+          <caret line="59" column="36" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
+        <state relative-caret-position="57">
+          <caret line="4" column="55" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/keyboard/keyboard.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/time/time.wxss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/billbar/billbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/keyboard/keyboard.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/keyboard/keyboard.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="99" column="11" lean-forward="true" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/cal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="-798">
           <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-145">
+          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="228" column="20" selection-start-line="228" selection-start-column="20" selection-end-line="228" selection-end-column="20" />
         </state>
       </provider>
     </entry>

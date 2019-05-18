@@ -1,6 +1,6 @@
 <view class="key">
-  <picker mode="date" fields="day">
-    <text>2019</text>
+  <picker mode="date" fields="day" start="" end="" bindchange="bindDateChange">
+    <text>{{timePick}}</text>
   </picker>
   <view class="keyboard">
     <view class="keyboard-left">

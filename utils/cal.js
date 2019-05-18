@@ -18,6 +18,7 @@ function prioraty(v1, v2) {
 }
 
 function outputRpn(exp) {
+  console.log(exp)
   var inputStack = [];
   var outputStack = [];
   var outputQueue = [];
@@ -66,9 +67,6 @@ function calRpnExp(rpnArr) {
     } else {
       var num1 = stack.pop();
       var num2 = stack.pop();
-      if(dianNum(num1)>1 || dianNum(num2)>1){
-        return false
-      }
       if(rpnArr[i] == '-') {
         var num = num2 - num1;
       } else if(rpnArr[i] == '+') {
@@ -87,16 +85,6 @@ function calRpnExp(rpnArr) {
 function calCommonExp(exp) {
   var rpnArr = outputRpn(exp);
   return calRpnExp(rpnArr)
-}
-
-function dianNum(str){
-  let num = 0
-  for(var i=0;str.length;i++){
-    if(str[i]=='.'){
-      num++
-    }
-  }
-  return num
 }
 
 //已经添加完export，在外面直接调用

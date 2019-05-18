@@ -76,46 +76,38 @@ Page({
             res[i].time = res[i].time.substring(0,16)
           }
         }
-        let allIncome = 0 , allPay = 0
-        for(let i in res){
-          if(res[i].type==0){
-            allPay+=res[i].amount
-          }else if(res[i].type==1) {
-            allIncome += res[i].amount
-          }
-        }
-        this.setData({
-          billList:res,
-          shiftBillBar:false,
-          allPay:allPay.toFixed(2),
-          allIncome:allIncome.toFixed(2),
-          isEmpty:res.length==0 ? true : false
-        },()=>{
-          this.setData({
-            shiftBillBar:true
-          })
-        })
+        this.setBillList(res)
       }.bind(_this)
     }
     app.isLogin(obj)
   },
-  refreshList:function(e){
-    // this.getBillList()
-    console.log(this.data.billList)
-    let billList = this.data.billList
-    billList.splice(e.index+1,1)
-    console.log(billList)
+  setBillList:function(res){
+    let allIncome = 0 , allPay = 0
+    for(let i in res){
+      if(res[i].type==0){
+        allPay+=res[i].amount
+      }else if(res[i].type==1) {
+        allIncome += res[i].amount
+      }
+    }
     this.setData({
-      billList:billList,
+      billList:res,
       shiftBillBar:false,
-      // allPay:allPay.toFixed(2),
-      // allIncome:allIncome.toFixed(2),
-      // isEmpty:res.length==0 ? true : false
+      allPay:allPay.toFixed(2),
+      allIncome:allIncome.toFixed(2),
+      isEmpty:res.length==0 ? true : false
     },()=>{
       this.setData({
         shiftBillBar:true
       })
     })
+  },
+  refreshList:function(e){
+    // this.getBillList()
+
+    let billList = this.data.billList
+    billList.splice(e.detail.index,1)
+    this.setBillList(billList)
   },
   onPageScroll:function(e){
     if(e.scrollTop==0){
