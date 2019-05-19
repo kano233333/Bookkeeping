@@ -1,6 +1,6 @@
 <view class="sd_add">
   <wxs src="./sdAdd.wxs" module="tools" />
-  <keyboard class="keyboard" inputValue="{{amount}}" wx:if="{{isKey}}" bind:setValue="setValue" bind:setAmount="setAmount" bind:pickerEvent="pickerEvent">
+  <keyboard class="keyboard" inputValue="{{amount}}" wx:if="{{isKey}}" bind:setValue="setValue" bind:setAmount="setAmount" bind:pickerEvent="pickerEvent" timePick="{{timePick}}">
   </keyboard>
   <view  wx:if="{{isKey}}" bindtap="setAmount" class="key_wrap">
   </view>

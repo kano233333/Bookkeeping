@@ -153,7 +153,10 @@ Page({
             let index = bill.indexOf(app.globalData.userNum.totalAccount)
             if(index!=-1){
               isGet = 'bg'+bill[index]
+            // isGet = 'bg49'
+              console.log(isGet)
               this.userBadge({type:'bill',badge:'bg'+bill[index]})
+            // this.userBadge({type:'bill',badge:'bg49'})
             }
             if(res.isSign){
               app.globalData.userNum.signInDays++
@@ -170,10 +173,10 @@ Page({
             icon:"none"
           })
           let P = new Promise((res,req)=>{
-            let url = isGet=='' ? '/pages/index/index' :'/pages/index/index?badge='+isGet
+            app.globalData.badgeGet = isGet
             setTimeout(function(){
               wx.switchTab({
-                url:url,
+                url:'/pages/index/index',
                 success:function(e){
                   res('ok')
                 }
@@ -234,6 +237,8 @@ Page({
     })
   },
   pickerEvent:function(e){
-    this.data.timePick = e.detail.timeData
+    this.setData({
+      timePick:e.detail.timeData
+    })
   }
 })

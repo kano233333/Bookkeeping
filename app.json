@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/add/add",
     "pages/billChart/billChart",
@@ -12,46 +12,47 @@
     "pages/about/about",
     "pages/icon/icon"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#72b1eb",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
-  "tabBar":{
-    "color":"#685a5a",
-    "selectedColor":"#67a2e1",
-    "backgroundColor":"#f9f9f9",
-    "list":[
+  "tabBar": {
+    "color": "#685a5a",
+    "selectedColor": "#67a2e1",
+    "backgroundColor": "#f9f9f9",
+    "list": [
       {
-        "pagePath":"pages/index/index",
-        "text":"细则",
-        "iconPath":"/static/imgs/bill1.png",
-        "selectedIconPath":"/static/imgs/bill2.png"
+        "pagePath": "pages/index/index",
+        "text": "细则",
+        "iconPath": "/static/imgs/bill1.png",
+        "selectedIconPath": "/static/imgs/bill2.png"
       },
       {
-        "pagePath":"pages/achieve/achieve",
-        "text":"小记",
-        "iconPath":"/static/imgs/ji1.png",
-        "selectedIconPath":"/static/imgs/ji2.png"
+        "pagePath": "pages/achieve/achieve",
+        "text": "小记",
+        "iconPath": "/static/imgs/ji1.png",
+        "selectedIconPath": "/static/imgs/ji2.png"
       },
       {
-        "pagePath":"pages/add/add",
-        "text":"记一笔",
-        "iconPath":"/static/imgs/add.png",
-        "selectedIconPath":"/static/imgs/add.png"
+        "pagePath": "pages/add/add",
+        "text": "记一笔",
+        "iconPath": "/static/imgs/add.png",
+        "selectedIconPath": "/static/imgs/add.png"
       },
       {
-        "pagePath":"pages/billChart/billChart",
-        "text":"账池",
-        "iconPath":"/static/imgs/chart1.png",
-        "selectedIconPath":"/static/imgs/chart2.png"
+        "pagePath": "pages/billChart/billChart",
+        "text": "账池",
+        "iconPath": "/static/imgs/chart1.png",
+        "selectedIconPath": "/static/imgs/chart2.png"
       },
       {
-        "pagePath":"pages/user/user",
-        "text":"我的",
-        "iconPath":"/static/imgs/user1.png",
-        "selectedIconPath":"/static/imgs/user2.png"
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/static/imgs/user1.png",
+        "selectedIconPath": "/static/imgs/user2.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

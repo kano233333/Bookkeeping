@@ -14,8 +14,8 @@
 }
 
 .box image {
-    width:34vw;
-    height:32vw;
+    max-width:34vw;
+    max-height:30vw;
     position: absolute;
     left:0;
     right: 0;

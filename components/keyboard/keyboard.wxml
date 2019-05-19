@@ -1,5 +1,5 @@
 <view class="key">
-  <picker mode="date" fields="day" start="" end="" bindchange="bindDateChange">
+  <picker mode="date" fields="day" value="{{timePick}}" bindchange="bindDateChange">
     <text>{{timePick}}</text>
   </picker>
   <view class="keyboard">

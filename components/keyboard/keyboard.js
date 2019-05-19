@@ -19,13 +19,16 @@ Component({
       {key:".",name:"."},
       {key:"/",name:"/"}
       ],
-    timePick:formatTime(new Date,'day'),
     fields:'day'
   },
   properties:{
     inputValue:{
       type:String,
       default:''
+    },
+    timePick:{
+      type:String,
+      default:formatTime(new Date,'day')
     }
   },
   methods:{

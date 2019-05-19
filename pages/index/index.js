@@ -30,12 +30,14 @@ Page({
     app.isSq()
     this.onShow()
   },
-  onShow:function(options){
+  onShow:function(){
     this.getBillList()
-    if(options && options.isGet) {
+    if(app.globalData.badgeGet) {
       this.setData({
         isGet:true,
-        imgUrl:options.isGet
+        imgUrl:app.globalData.badgeGet
+      },()=>{
+        app.globalData.badgeGet = ''
       })
     }
   },
