@@ -64,12 +64,13 @@ Component({
         success:function(res){
           let data = res
           if(data.static == 1){
+            app.globalData.billIsChange = 1
+            app.globalData.chartIsChange = 1
             wx.showToast({
               title: '删除成功',
               duration: 1000,
               icon:"none"
             })
-            console.log("sssssss"+this.data.index)
             this.triggerEvent("refreshList",{index:this.data.index})
           }
         }.bind(this)

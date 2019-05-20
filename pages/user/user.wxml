@@ -5,7 +5,6 @@
       <view class="user_head">
         <image src="{{userData.avatarUrl}}" />
         <text class="username">{{userData.nickName}}</text>
-        <text class="designation">初出茅庐</text>
       </view>
     </canvas>
   </view>
@@ -20,10 +19,6 @@
     </view>
   </view>
   <view class="user_func_wrap">
-    <navigator url="/pages/revise/revise" class="user_func jz_y">
-      <image src="/static/imgs/user/xg.png" />
-      <text>修改小金库</text>
-    </navigator>
     <navigator url="/pages/manage/manage" class="user_func jz_y">
       <image src="/static/imgs/user/gl.png" />
       <text>图标管理</text>

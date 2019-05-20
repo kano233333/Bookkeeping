@@ -63,6 +63,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .show_badge .box {
   position: fixed;
@@ -71,20 +72,9 @@
   left: 0;
   right: 0;
   margin: auto;
-  width: 60vw;
-  height: 40vh;
+  width: 600rpx;
+  height: 900rpx;
   text-align: center;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 5vw;
   box-shadow: 1px 1px 10px #b9b9b9;
-}
-.show_badge .box image {
-  width: 34vw;
-  height: 32vw;
-}
-.show_badge .box text {
-  display: block;
-  text-align: center;
 }
 /*# sourceMappingURL=achieve.wxss.map */

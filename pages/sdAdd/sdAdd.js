@@ -158,7 +158,7 @@ Page({
               this.userBadge({type:'bill',badge:'bg'+bill[index]})
             // this.userBadge({type:'bill',badge:'bg49'})
             }
-            if(res.isSign){
+            if(res.isSignIn){
               app.globalData.userNum.signInDays++
               let index = day.indexOf(app.globalData.userNum.signInDays)
               if(index!=-1){
@@ -174,6 +174,8 @@ Page({
           })
           let P = new Promise((res,req)=>{
             app.globalData.badgeGet = isGet
+            app.globalData.billIsChange = 1
+            app.globalData.chartIsChange = 1
             setTimeout(function(){
               wx.switchTab({
                 url:'/pages/index/index',

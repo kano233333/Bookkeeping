@@ -6,22 +6,19 @@
     <view class="achieve_con">
       <view class="title">累积记账天数（{{dgNum}} / 6）</view>
       <view class="images">
-        <image wx:key="{{index}}" wx:for="{{dayImgs}}" src="{{path+item+'.png'}}" />
+        <image bindtap="showShare" data-src="{{item}}" wx:key="{{index}}" wx:for="{{dayImgs}}" src="{{path+item+'.png'}}" />
       </view>
     </view>
 
     <view class="achieve_con">
       <view class="title">累积记账笔数（{{bgNum}} / 6）</view>
       <view class="images">
-        <image wx:key="{{index}}" wx:for="{{billImgs}}" src="{{path+item+'.png'}}" />
+        <image bindtap="showShare" data-src="{{item}}" wx:key="{{index}}" wx:for="{{billImgs}}" src="{{path+item+'.png'}}" />
       </view>
     </view>
   </view>
 
-  <!--<view class="show_badge">-->
-    <!--<view class="box">-->
-      <!--<image src="/static/imgs/ji/1.png" />-->
-      <!--<text class="text_s">累计记账x天</text>-->
-    <!--</view>-->
-  <!--</view>-->
+  <view class="show_badge" bindtap="showShare" wx:if="{{share}}">
+    <canvas class="box" canvas-id="share"></canvas>
+  </view>
 </view>

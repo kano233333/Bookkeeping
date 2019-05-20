@@ -28,10 +28,13 @@ Page({
   },
   onLoad: function () {
     app.isSq()
-    this.onShow()
+    this.getBillList()
   },
   onShow:function(){
-    this.getBillList()
+    if(app.globalData.billIsChange){
+      this.getBillList()
+      app.globalData.billIsChange = 0
+    }
     if(app.globalData.badgeGet) {
       this.setData({
         isGet:true,

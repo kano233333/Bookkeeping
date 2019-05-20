@@ -31,10 +31,13 @@ Page({
   },
   onLoad: function (options) {
     this.setTimePicker()
-    this.onShow()
+    this.getLineData()
   },
   onShow:function(){
-    this.getLineData()
+    if(app.globalData.chartIsChange){
+      this.getLineData()
+      app.globalData.chartIsChange = 0
+    }
   },
   shiftType(e) {
     let type = e.target.dataset.type
