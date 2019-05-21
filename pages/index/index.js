@@ -27,8 +27,11 @@ Page({
     imgUrl:''
   },
   onLoad: function () {
+    let _this = this
     app.isSq()
-    this.getBillList()
+    setTimeout(function(){
+      _this.getBillList()
+    },1000)
   },
   onShow:function(){
     if(app.globalData.billIsChange){

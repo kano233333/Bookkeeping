@@ -18,7 +18,6 @@ function prioraty(v1, v2) {
 }
 
 function outputRpn(exp) {
-  console.log(exp)
   var inputStack = [];
   var outputStack = [];
   var outputQueue = [];

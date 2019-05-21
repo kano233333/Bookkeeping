@@ -160,6 +160,7 @@ Page({
             }
             if(res.isSignIn){
               app.globalData.userNum.signInDays++
+              console.log(app.globalData.userNum.signInDays)
               let index = day.indexOf(app.globalData.userNum.signInDays)
               if(index!=-1){
                 isGet = 'dg'+bill[index]

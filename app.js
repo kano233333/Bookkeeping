@@ -5,8 +5,8 @@ App({
   globalData: {
     userInfo: null,
     userStatus:'',
-    ip:'https://www.victorzuo.top/wx',
-    // ip:'http://192.168.1.70:8080/wx/',
+    // ip:'https://www.victorzuo.top/wx',
+    ip:'http://192.168.1.70:8080/wx',
     intervalTime:60000,
     day : [1,30,99,199,299,365],
     bill : [1,49,99,199,299,399]
@@ -24,7 +24,6 @@ App({
       success(res){
         if(res.authSetting['scope.userInfo']){
           _this.isLogin(_this.getUserNum());
-          _this.getUserIcon()
         }else{
           wx.navigateTo({
             url:"/pages/login/login"
@@ -44,8 +43,8 @@ App({
       try{
         wx.request({
           header: {
-            cookie: "JSESSIONID=" + sessionID + ";domain=www.victorzuo.top;path=/wx"
-            // cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
+            // cookie: "JSESSIONID=" + sessionID + ";domain=www.victorzuo.top;path=/wx"
+            cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
           },
           url: obj.url,
           data: obj.data,
@@ -142,6 +141,7 @@ App({
       success:function(res) {
         this.globalData.userNum = res
         this.getBadge()
+        this.getUserIcon()
       }.bind(this)
     }
     return obj

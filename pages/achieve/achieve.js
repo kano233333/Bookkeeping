@@ -63,28 +63,38 @@ Page({
       dgNum:dayImgs.num
     })
   },
+  save:function(){
+    wx.canvasToTempFilePath({
+      canvasId: 'share',
+      success: function(res) {
+        wx.saveImageToPhotosAlbum({
+          filePath: res.tempFilePath,
+          success(res) {
+            wx.showToast({
+              title:'成功',
+              icon:"none",
+              duration: 1000
+            })
+          },
+          fail(res) {
+            wx.showToast({
+              title:'失败',
+              icon:"none",
+              duration: 1000
+            })
+          }
+        })
+      }
+    })
+  },
   showShare:function(e){
     if(this.data.share){
-      wx.canvasToTempFilePath({
-        canvasId: 'share',
-        success: function(res) {
-          wx.saveImageToPhotosAlbum({
-            filePath: res.tempFilePath,
-            success(res) {
-              console.log(res.errMsg)
-            },
-            fail(res) {
-              console.log(res.errMsg)
-            }
-          })
-        }
-      })
-
       this.setData({
         share:false
       })
       return
     }
+    wx.showLoading()
     let src = e.target.dataset.src
     let colorX = color[0]
     if(src[1]=='g'){
@@ -104,14 +114,13 @@ Page({
 
     function setImg(url){
       setBadgeImage()
-
       function setHeader(){
-        getImageInfo({
-          src:url
-        }).then((res)=>{
-          let imgInfo = res
-          ctx.beginPath()
-          circleImg(ctx,imgInfo.path,width/2-25,40,25)
+        // getImageInfo({
+        //   src:url
+        // }).then((res)=>{
+        //   let imgInfo = res
+        //   ctx.beginPath()
+        //   circleImg(ctx,url,width/2-25,40,25)
           text({
             textAligin:'center',
             color:'#333',
@@ -123,7 +132,8 @@ Page({
           ctx.drawImage('/static/logo/logo.png',0,0,144,144,10,height-50,40,40)
           ctx.drawImage('/static/logo/er.jpg',0,0,258,258,width-50,height-50,40,40)
           ctx.draw()
-        })
+        wx.hideLoading()
+        // })
       }
 
 
