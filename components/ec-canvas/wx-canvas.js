@@ -54,7 +54,7 @@ export default class WxCanvas {
     styles.forEach(style => {
       Object.defineProperty(ctx, style, {
         set: value => {
-          if (style !== 'fillStyle' && style !== 'strokeStyle' 
+          if (style !== 'fillStyle' && style !== 'strokeStyle'
             || value !== 'none' && value !== null
           ) {
             ctx['set' + style.charAt(0).toUpperCase() + style.slice(1)](value);

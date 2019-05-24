@@ -1,0 +1,42 @@
+.head {
+    height:15vw;
+    background-color: #72b1eb;
+    border:1px solid transparent;
+}
+
+.head image {
+    width:20vw;
+    height:20vw;
+    border-radius:50%;
+    box-shadow: 1px 1px 4px #82837c;
+    margin:5vw auto 0 auto;
+    display: block;
+}
+.main {
+    text-align: center;
+    margin-top:30vw;
+}
+.main text {
+    font-size:6vw;
+    display: block;
+    margin:10vw 0 20vw 0;
+}
+.main button {
+    display: block;
+    margin:5vw auto;
+    font-size:5vw;
+    width:70%;
+    border:none;
+    color:#fff;
+}
+
+.main button:nth-of-type(1){
+    background-color: #72b1eb;
+    box-shadow: 1px 1px 3px #72b1eb;
+}
+
+.main button:nth-of-type(2){
+    background-color: #ccc;
+    box-shadow: 1px 1px 3px #ccc;
+}
+

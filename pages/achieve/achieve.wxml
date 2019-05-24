@@ -17,9 +17,4 @@
       </view>
     </view>
   </view>
-
-  <view class="show_badge" bindtap="showShare" wx:if="{{share}}">
-    <canvas class="box" canvas-id="share"></canvas>
-    <button bindtap="save" class="save">保存</button>
-  </view>
 </view>

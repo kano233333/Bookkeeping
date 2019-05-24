@@ -1,0 +1,12 @@
+<view class="accept">
+  <view class="head">
+    <image src="/static/logo/logo.png" />
+  </view>
+  <view class="main">
+    <text>{{team.useName}}邀请你加入{{team.tname}}团队</text>
+    <button bindtap="selectJoin" data-accept="1">接受</button>
+    <button bindtap="selectJoin" data-accept="0">拒绝</button>
+  </view>
+
+  <login bind:userLogin="userLogin" wx:if="{{isUserInfo}}"></login>
+</view>

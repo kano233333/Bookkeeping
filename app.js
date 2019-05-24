@@ -1,12 +1,15 @@
 //app.js
 App({
   onLaunch: function () {
+    wx.showLoading({
+      mask:true
+    })
   },
   globalData: {
     userInfo: null,
     userStatus:'',
-    // ip:'https://www.victorzuo.top/wx',
-    ip:'http://192.168.1.70:8080/wx',
+    ip:'https://www.victorzuo.top/wx',
+    // ip:'http://192.168.1.70:8080/wx',
     intervalTime:60000,
     day : [1,30,99,199,299,365],
     bill : [1,49,99,199,299,399]
@@ -18,18 +21,19 @@ App({
       icon:"none"
     })
   },
-  isSq(){
+  isSq() {
     var _this = this;
-    wx.getSetting({
-      success(res){
-        if(res.authSetting['scope.userInfo']){
-          _this.isLogin(_this.getUserNum());
-        }else{
-          wx.navigateTo({
-            url:"/pages/login/login"
-          })
+    return new Promise((response, req) => {
+      wx.getSetting({
+        success(res) {
+          if (res.authSetting['scope.userInfo']) {
+            _this.isLogin(_this.getUserNum());
+            response({isLogin:true})
+          } else {
+            response({isLogin:false})
+          }
         }
-      }
+      })
     })
   },
   isLogin(obj) {
@@ -43,8 +47,8 @@ App({
       try{
         wx.request({
           header: {
-            // cookie: "JSESSIONID=" + sessionID + ";domain=www.victorzuo.top;path=/wx"
-            cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
+            cookie: "JSESSIONID=" + sessionID + ";domain=www.victorzuo.top;path=/wx"
+            // cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
           },
           url: obj.url,
           data: obj.data,
@@ -61,6 +65,7 @@ App({
             }
             obj.success(data) || function(){}
             wx.hideNavigationBarLoading()
+            wx.hideLoading()
           },
           fail:function(){
             _this.requestFail()

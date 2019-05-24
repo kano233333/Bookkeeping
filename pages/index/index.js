@@ -24,14 +24,18 @@ Page({
     isEmpty:false,
     pullHeight:0,
     isGet:false,
-    imgUrl:''
+    imgUrl:'',
+    isUserInfo:false
   },
   onLoad: function () {
     let _this = this
-    app.isSq()
-    setTimeout(function(){
-      _this.getBillList()
-    },1000)
+    app.isSq().then(res=>{
+      this.setData({
+        isUserInfo:!res.isLogin
+      },()=>{
+        _this.getBillList()
+      })
+    })
   },
   onShow:function(){
     if(app.globalData.billIsChange){
@@ -46,6 +50,15 @@ Page({
         app.globalData.badgeGet = ''
       })
     }
+  },
+  userLogin:function(){
+    let _this = this
+    this.setData({
+      isUserInfo:false
+    },()=>{
+      app.isLogin(app.getUserNum())
+      _this.getBillList()
+    })
   },
   getPickerTimer(data){
     let _this = this
@@ -123,8 +136,5 @@ Page({
         pullHeight:this.data.pullHeight++
       })
     }
-  },
-  scrollTop(e){
-    console.log(e)
   }
 })

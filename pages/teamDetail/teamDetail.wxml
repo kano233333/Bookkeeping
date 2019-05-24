@@ -1,0 +1,104 @@
+<view class="all">
+  <view class="chart_head">
+    <view class="select_time">
+      <text class="{{type1==0 ? 'selected' :''}}" bindtap="shiftType" data-type="0">账单</text>
+      <text class="{{type1==1 ? 'selected' :''}}" bindtap="shiftType" data-type="1">成员</text>
+      <text class="{{type1==2 ? 'selected' :''}}" bindtap="shiftType" data-type="2">通知</text>
+    </view>
+    <text>xxx团队</text>
+  </view>
+
+  <view class="main">
+    <view class="bill" wx:if="{{type1==0}}">
+      <view class="bill_bar"><bill-bar billData="{{xxx}}"></bill-bar></view>
+      <view class="bill_bar"><bill-bar billData="{{xxx}}"></bill-bar></view>
+      <view class="bill_bar"><bill-bar billData="{{xxx}}"></bill-bar></view>
+      <view class="bill_bar"><bill-bar billData="{{xxx}}"></bill-bar></view>
+      <view class="bill_bar"><bill-bar billData="{{xxx}}"></bill-bar></view>
+
+      <navigator url="/pages/sdAdd/sdAdd" class="addX">
+        <image wx:if="{{!styleStr}}" src="/static/icon/add.svg" />
+      </navigator>
+    </view>
+
+    <view class="member" wx:if="{{type1==1}}">
+      <view class="jz_y_between">
+        <view class="m_left jz_y">
+          <image />
+          <text>xxx</text>
+          <text class="gly">管理员</text>
+        </view>
+        <view class="m_right">
+          <image src="/static/icon/cha2.svg" />
+        </view>
+      </view>
+      <view class="jz_y_between">
+        <view class="m_left jz_y">
+          <image />
+          <text>xxx</text>
+        </view>
+        <view class="m_right">
+          <image src="/static/icon/cha2.svg" />
+        </view>
+      </view>
+      <view class="jz_y_between">
+        <view class="m_left jz_y">
+          <image />
+          <text>xxx</text>
+        </view>
+        <view class="m_right">
+          <image src="/static/icon/cha2.svg" />
+        </view>
+      </view>
+      <view class="jz_y_between">
+        <view class="m_left jz_y">
+          <image />
+          <text>xxx</text>
+        </view>
+        <view class="m_right">
+          <image src="/static/icon/cha2.svg" />
+        </view>
+      </view>
+
+      <button open-type="share" class="addX">
+        <image wx:if="{{!styleStr}}" src="/static/icon/add.svg" />
+      </button>
+    </view>
+
+    <view class="notice" wx:if="{{type1==2}}">
+      <view class="jz_y_between">
+        <view class="m_left jz_y">
+          <image />
+          <view>
+            <text>xxx</text>
+          </view>
+        </view>
+        <view class="m_right">
+          <text>2019-4-4</text>
+        </view>
+      </view>
+      <view class="jz_y_between">
+        <view class="m_left jz_y">
+          <image />
+          <view>
+            <text>xxx</text>
+          </view>
+        </view>
+        <view class="m_right">
+          <text>2019-4-4</text>
+        </view>
+      </view>
+      <view class="jz_y_between">
+        <view class="m_left jz_y">
+          <image />
+          <view>
+            <text>xxx</text>
+          </view>
+        </view>
+        <view class="m_right">
+          <text>2019-4-4</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

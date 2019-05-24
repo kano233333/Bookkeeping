@@ -151,20 +151,18 @@ Page({
           if(this.data.mode=='add'){
             app.globalData.userNum.totalAccount++
             let index = bill.indexOf(app.globalData.userNum.totalAccount)
-            if(index!=-1){
+            let num = app.globalData.badge.bill.split('g')[1]
+            if(index!=-1 && bill[index]>num){
               isGet = 'bg'+bill[index]
-            // isGet = 'bg49'
-              console.log(isGet)
               this.userBadge({type:'bill',badge:'bg'+bill[index]})
-            // this.userBadge({type:'bill',badge:'bg49'})
             }
             if(res.isSignIn){
               app.globalData.userNum.signInDays++
-              console.log(app.globalData.userNum.signInDays)
               let index = day.indexOf(app.globalData.userNum.signInDays)
-              if(index!=-1){
-                isGet = 'dg'+bill[index]
-                this.userBadge({type:'day',badge:'dg'+bill[index]})
+              let num = app.globalData.badge.day.split('g')[1]
+              if(index!=-1 && day[index]>num){
+                isGet = 'dg'+day[index]
+                this.userBadge({type:'day',badge:'dg'+day[index]})
               }
             }
           }

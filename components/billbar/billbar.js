@@ -66,6 +66,7 @@ Component({
           if(data.static == 1){
             app.globalData.billIsChange = 1
             app.globalData.chartIsChange = 1
+            app.globalData.userNum.totalAccount--
             wx.showToast({
               title: '删除成功',
               duration: 1000,

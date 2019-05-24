@@ -6,6 +6,8 @@
 }
 .sd_add input {
   background-color: #fff;
+  font-size: 4vw;
+  color: #070063;
 }
 .add_head {
   height: 10.66666667vw;

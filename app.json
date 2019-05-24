@@ -1,15 +1,20 @@
 {
+  "usingComponents":{
+    "login":"/components/login/login"
+  },
   "pages": [
     "pages/index/index",
     "pages/add/add",
     "pages/billChart/billChart",
     "pages/user/user",
-    "pages/login/login",
     "pages/achieve/achieve",
     "pages/sdAdd/sdAdd",
     "pages/manage/manage",
     "pages/about/about",
-    "pages/icon/icon"
+    "pages/icon/icon",
+    "pages/team/team",
+    "pages/teamDetail/teamDetail",
+    "pages/accept/accept"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,7 +33,7 @@
         "selectedIconPath": "/static/imgs/bill2.png"
       },
       {
-        "pagePath": "pages/achieve/achieve",
+        "pagePath": "pages/team/team",
         "text": "小记",
         "iconPath": "/static/imgs/ji1.png",
         "selectedIconPath": "/static/imgs/ji2.png"

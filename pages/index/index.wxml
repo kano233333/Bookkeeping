@@ -21,9 +21,10 @@
         <text><text style="color:#f25350">{{allPay}}</text>元</text></view>
     </view>
   </view>
-  <scroll-view class="bill_detail_wrap" scroll-y="true" bindscrolltoupper="scrollTop">
+  <scroll-view scroll-x="false" enable-back-to-top="true" style="-webkit-overflow-scrolling: touch;" class="bill_detail_wrap" scroll-y="true" bindscrolltoupper="scrollTop">
     <empty wx:if="{{isEmpty}}"></empty>
     <pull-refresh height="{{pullHeight}}"></pull-refresh>
     <bill-bar index="{{index}}" bind:refreshList="refreshList" wx:if="{{shiftBillBar}}" wx:for="{{billList}}" billData="{{item}}" wx:key="{{index}}"></bill-bar>
   </scroll-view>
+  <login bind:userLogin="userLogin" wx:if="{{isUserInfo}}"></login>
 </view>

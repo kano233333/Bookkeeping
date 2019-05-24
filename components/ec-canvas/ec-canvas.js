@@ -44,7 +44,7 @@ Component({
       }
 
       ctx = wx.createCanvasContext(this.data.canvasId, this);
-
+      console.log(ctx)
       const canvas = new WxCanvas(ctx, this.data.canvasId);
 
       echarts.setCanvasCreator(() => {
@@ -53,16 +53,17 @@ Component({
 
       var query = wx.createSelectorQuery().in(this);
       query.select('.ec-canvas').boundingClientRect(res => {
+        let width = res.width==null ? 0 : res.width
         if (typeof callback === 'function') {
-          this.chart = callback(canvas, res.width, res.height);
+          this.chart = callback(canvas, width, res.height);
         }
         else if (this.data.ec && typeof this.data.ec.onInit === 'function') {
-          this.chart = this.data.ec.onInit(canvas, res.width, res.height);
+          this.chart = this.data.ec.onInit(canvas,width || 0, res.height);
         }
         else {
           this.triggerEvent('init', {
             canvas: canvas,
-            width: res.width,
+            width: width,
             height: res.height
           });
         }

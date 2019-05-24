@@ -13,7 +13,7 @@
 }
 .title {
   height: 5.33333333vw;
-  box-shadow: 0 0 5px #71746c;
+  box-shadow: 0 5px 8px -5px #787878;
   font-size: 2.4vw;
   line-height: 2;
   color: #333;
@@ -76,17 +76,5 @@
   height: 900rpx;
   text-align: center;
   box-shadow: 1px 1px 10px #b9b9b9;
-}
-.show_badge .save {
-  position: fixed;
-  bottom: 25px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 100px;
-  border-radius: 0;
-  box-shadow: 0 0 5px #494949;
-  background-color: #4c91df;
-  color: #fff;
 }
 /*# sourceMappingURL=achieve.wxss.map */

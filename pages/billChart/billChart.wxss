@@ -1,34 +1,3 @@
-.chart_head {
-  height: 10.66666667vw;
-  border-bottom: 1px solid #ededed;
-  font-size: 3.2vw;
-  display: flex;
-  align-items: center;
-  font-size: 4vw;
-}
-.chart_head > picker {
-  margin: 0 20px;
-  padding: 0 2px;
-  line-height: 3.2;
-}
-.chart_head .select_time {
-  border: 1px solid #6dabf1;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #6dabf1;
-  box-shadow: 0 0 2px #5180b4;
-  margin-left: 2.66666667vw;
-}
-.chart_head .select_time > text {
-  color: #fff;
-  padding: 0.66666667vw 2vw;
-  display: inline-block;
-}
-.chart_head .select_time .selected {
-  background-color: #fff;
-  color: #68a1df;
-  box-shadow: 0 0 2px #5180b4 inset;
-}
 .chart_head2 {
   height: 12.8vw;
   border-bottom: 1px solid #ededed;
