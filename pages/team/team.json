@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText":"团队记账",
+  "navigationBarTextStyle":"white"
 }

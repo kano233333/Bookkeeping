@@ -1,102 +1,58 @@
 <view class="all">
+  <wxs src="./teamDetail.wxs" module="tools" />
   <view class="chart_head">
     <view class="select_time">
-      <text class="{{type1==0 ? 'selected' :''}}" bindtap="shiftType" data-type="0">账单</text>
-      <text class="{{type1==1 ? 'selected' :''}}" bindtap="shiftType" data-type="1">成员</text>
-      <text class="{{type1==2 ? 'selected' :''}}" bindtap="shiftType" data-type="2">通知</text>
+      <text class="{{type==0 ? 'selected' :''}}" bindtap="shiftType" data-type="0">账单</text>
+      <text class="{{type==1 ? 'selected' :''}}" bindtap="shiftType" data-type="1">成员</text>
+      <text class="{{type==2 ? 'selected' :''}}" bindtap="shiftType" data-type="2">通知</text>
     </view>
-    <text>xxx团队</text>
+    <text>{{teamData.name}}</text>
+
+    <view wx:if="{{styleStr}}" class="{{styleStr=='' ? '' : 'add_wrap'}}" bindtap="hideAdd"></view>
+    <view bindtap="showAdd" class="head_img" style="{{styleStr}}">
+      <image wx:if="{{!styleStr}}" src="/static/icon/{{teamData.isAdmin==1?'gl':'td'}}.svg" />
+      <text wx:if="{{styleStr}}" class="text" style="background-color:{{teamData.isAdmin==1?'#6dabf1':'#F4BD6D'}}">{{teamData.isAdmin==1?'解散团队':'退出团队'}}</text>
+    </view>
   </view>
 
   <view class="main">
-    <view class="bill" wx:if="{{type1==0}}">
-      <view class="bill_bar"><bill-bar billData="{{xxx}}"></bill-bar></view>
-      <view class="bill_bar"><bill-bar billData="{{xxx}}"></bill-bar></view>
-      <view class="bill_bar"><bill-bar billData="{{xxx}}"></bill-bar></view>
-      <view class="bill_bar"><bill-bar billData="{{xxx}}"></bill-bar></view>
-      <view class="bill_bar"><bill-bar billData="{{xxx}}"></bill-bar></view>
-
-      <navigator url="/pages/sdAdd/sdAdd" class="addX">
-        <image wx:if="{{!styleStr}}" src="/static/icon/add.svg" />
+    <view class="bill" wx:if="{{type==0}}">
+      <view wx:if="{{isrefresh}}" class="bill_bar" wx:for="{{bill}}" wx:key="{{index}}">
+        <bill-bar bind:refreshList="refreshList" index="{{index}}" tid="{{teamData.tid}}" isTeam="{{1}}" isAdmin="{{tools.isAdmin(teamData.isAdmin,item.isSelf)}}" billData="{{item}}"></bill-bar>
+      </view>
+      <navigator url="/pages/sdAdd/sdAdd?tid={{teamData.tid}}&isTeam=1" class="addX">
+        <image src="/static/icon/add.svg" />
       </navigator>
     </view>
 
-    <view class="member" wx:if="{{type1==1}}">
-      <view class="jz_y_between">
+    <view class="member" wx:if="{{type==1}}">
+      <view class="jz_y_between" wx:for="{{member}}" wx:key="{{index}}">
         <view class="m_left jz_y">
-          <image />
-          <text>xxx</text>
-          <text class="gly">管理员</text>
+          <image src="/static/icon/member.svg" />
+          <text>{{item.nickName}}</text>
+          <text class="gly" wx:if="{{item.isAdministrator}}">管理员</text>
         </view>
-        <view class="m_right">
-          <image src="/static/icon/cha2.svg" />
-        </view>
-      </view>
-      <view class="jz_y_between">
-        <view class="m_left jz_y">
-          <image />
-          <text>xxx</text>
-        </view>
-        <view class="m_right">
-          <image src="/static/icon/cha2.svg" />
-        </view>
-      </view>
-      <view class="jz_y_between">
-        <view class="m_left jz_y">
-          <image />
-          <text>xxx</text>
-        </view>
-        <view class="m_right">
-          <image src="/static/icon/cha2.svg" />
-        </view>
-      </view>
-      <view class="jz_y_between">
-        <view class="m_left jz_y">
-          <image />
-          <text>xxx</text>
-        </view>
-        <view class="m_right">
-          <image src="/static/icon/cha2.svg" />
+        <view wx:if="{{teamData.isAdmin}}" class="m_right">
+          <image bindtap="deleteMember" data-uid="{{item.uid}}" data-index="{{index}}" src="/static/icon/cha2.svg" />
         </view>
       </view>
 
       <button open-type="share" class="addX">
-        <image wx:if="{{!styleStr}}" src="/static/icon/add.svg" />
+        <image src="/static/icon/add.svg" />
       </button>
     </view>
 
-    <view class="notice" wx:if="{{type1==2}}">
-      <view class="jz_y_between">
+    <view class="notice" wx:if="{{type==2}}">
+      <view bindtap="tdDetail" url="/pages/tbDetail/tbDetail" wx:for="{{notice}}" wx:key="{{index}}" class="jz_y_between" data-data="{{item}}">
         <view class="m_left jz_y">
-          <image />
+          <image src="{{noticeEvent[item.event].icon}}" />
           <view>
-            <text>xxx</text>
+            <text wx:if="{{item.event==2}}">{{item.operator}}将{{item.name}}移除了团队</text>
+            <text wx:if="{{item.event!=2}}">{{item.name + noticeEvent[item.event].event}}</text>
           </view>
         </view>
         <view class="m_right">
-          <text>2019-4-4</text>
-        </view>
-      </view>
-      <view class="jz_y_between">
-        <view class="m_left jz_y">
-          <image />
-          <view>
-            <text>xxx</text>
-          </view>
-        </view>
-        <view class="m_right">
-          <text>2019-4-4</text>
-        </view>
-      </view>
-      <view class="jz_y_between">
-        <view class="m_left jz_y">
-          <image />
-          <view>
-            <text>xxx</text>
-          </view>
-        </view>
-        <view class="m_right">
-          <text>2019-4-4</text>
+          <text>{{item.operationTime}}</text>
         </view>
       </view>
     </view>

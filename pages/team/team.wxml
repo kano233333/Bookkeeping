@@ -1,15 +1,18 @@
 <view class="all">
+  <view class="head">
+    <image src="/static/icon/td2.svg" />
+  </view>
   <view wx:if="{{styleStr}}" class="{{styleStr=='' ? '' : 'add_wrap'}}" bindtap="hideAdd"></view>
   <view class="addX" bindtap="showAdd" style="{{styleStr}}">
     <image wx:if="{{!styleStr}}" src="/static/icon/add.svg" />
     <view wx:if="{{styleStr}}">
-      <input cursor-spacing="60" placeholder="请输入团队名" />
-      <button>确定</button>
+      <input value="{{setName}}" bindinput="setTeamName" cursor-spacing="60" placeholder="请输入团队名" />
+      <button bindtap="setTeam">确定</button>
     </view>
   </view>
 
   <view class="list">
-    <navigator wx:for="{{teams}}" wx:key="{{index}}" url="/pages/teamDetail/teamDetail?tid={{item.tid}}&name={{item.name}}" class="bar jz_y">
+    <navigator wx:for="{{teams}}" wx:key="{{index}}" url="/pages/teamDetail/teamDetail?tid={{item.tid}}&name={{item.name}}&isAdmin={{item.isAdministrator}}" style="animation:0.5s left_enter forwards;" class="bar jz_y">
       <image src="/static/icon/{{item.isAdministrator==0?'td.svg':'gl.svg'}}" />
       <text>{{item.name}}</text>
     </navigator>

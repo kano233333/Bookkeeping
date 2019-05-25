@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee387a40-08af-493c-962d-dc5cdf3d3ef5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/static/icon/add.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/icon/gl.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/icon/td.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/teamDetail/teamDetail.wxs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icon/bj.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icon/join.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icon/member.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icon/out.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icon/sc.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icon/tc.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/icon/td2.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
@@ -12,28 +17,16 @@
       <change beforePath="$PROJECT_DIR$/app.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/app.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.wxss.map" beforeDir="false" afterPath="$PROJECT_DIR$/app.wxss.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/billbar/billbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/billbar/billbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ec-canvas/ec-canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ec-canvas/ec-canvas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ec-canvas/echarts.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ec-canvas/echarts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ec-canvas/wx-canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ec-canvas/wx-canvas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/achieve/achieve.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/achieve/achieve.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/achieve/achieve.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/achieve/achieve.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/achieve/achieve.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/achieve/achieve.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/achieve/achieve.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/achieve/achieve.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/achieve/achieve.wxss.map" beforeDir="false" afterPath="$PROJECT_DIR$/pages/achieve/achieve.wxss.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/billChart/billChart.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/billChart/billChart.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/billChart/billChart.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/billChart/billChart.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/billChart/billChart.wxss.map" beforeDir="false" afterPath="$PROJECT_DIR$/pages/billChart/billChart.wxss.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/login/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login/login.json" beforeDir="false" afterPath="$PROJECT_DIR$/components/login/login.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login/login.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/components/login/login.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login/login.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/components/login/login.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/billbar/billbar.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/components/billbar/billbar.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/icon/icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/icon/icon.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/sdAdd/sdAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sdAdd/sdAdd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sdAdd/sdAdd.less" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sdAdd/sdAdd.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sdAdd/sdAdd.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sdAdd/sdAdd.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sdAdd/sdAdd.wxss.map" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sdAdd/sdAdd.wxss.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/user/user.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/user/user.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/team/team.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/team/team.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/team/team.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/team/team.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/team/team.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/team/team.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/team/team.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/team/team.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/teamDetail/teamDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/teamDetail/teamDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/teamDetail/teamDetail.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/teamDetail/teamDetail.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/teamDetail/teamDetail.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/teamDetail/teamDetail.wxss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,63 +54,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="team.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/team/team.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="teamDetail.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/teamDetail/teamDetail.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="team.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="team.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/team/team.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="33" column="44" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="44" />
+            <state relative-caret-position="304">
+              <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="team.wxss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/team/team.wxss">
+      <file leaf-file-name="tbDetail.wxss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/tbDetail/tbDetail.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="57">
+              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index/index.less">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="72" column="11" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="11" />
+            <state relative-caret-position="323">
+              <caret line="62" column="44" lean-forward="true" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gl.svg" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/icon/gl.svg">
-          <provider selected="true" editor-type-id="images" />
+      <file leaf-file-name="teamDetail.wxss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/teamDetail/teamDetail.wxss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="56" column="30" lean-forward="true" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -131,36 +101,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>for</find>
-      <find>bill</find>
-      <find>drawBg</find>
-      <find>text</find>
-      <find>dg</find>
-      <find>notGet</find>
-      <find>show_badge</find>
-      <find>isS</find>
-      <find>getUserIcon</find>
-      <find>box-s</find>
-      <find>onInit</find>
-      <find>createCanvasContext.setLineCap</find>
-      <find>setLineCap</find>
-      <find>_initStyle</find>
-      <find>WxCanvas</find>
-      <find>28</find>
-      <find>createCanvasContext</find>
-      <find>strokeStyle</find>
-      <find>setInterval</find>
-      <find>setTimeout</find>
-      <find>width</find>
-      <find>font-size</find>
-      <find>appp</find>
-      <find>shiftBorder</find>
-      <find>select_time</find>
-      <find>member</find>
       <find>.add</find>
       <find>add</find>
       <find>getUserNum</find>
       <find>userLogin</find>
+      <find>width</find>
+      <find>left_enter</find>
+      <find>type1</find>
+      <find>bar</find>
+      <find>add_wrap</find>
+      <find>hideAdd</find>
+      <find>_options</find>
+      <find>hideLoading</find>
+      <find>addX</find>
+      <find>this.data[data]</find>
+      <find>aaa</find>
+      <find>refreshList</find>
+      <find>dataType</find>
+      <find>getData</find>
+      <find>deleteMember</find>
+      <find>chart_head</find>
+      <find>isTeam</find>
+      <find>sho</find>
+      <find>notice</find>
+      <find>head</find>
+      <find>font-size</find>
+      <find>xxxx</find>
+      <find>spli</find>
+      <find>tools</find>
+      <find>split</find>
+      <find>m_left</find>
     </findStrings>
     <replaceStrings>
       <replace>setLine</replace>
@@ -168,6 +138,8 @@
       <replace>app.threeTime</replace>
       <replace>view</replace>
       <replace>setTimeout</replace>
+      <replace>type</replace>
+      <replace>data</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -179,6 +151,7 @@
     <setting file="file://$PROJECT_DIR$/utils/promisify.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/components/empty/empty.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pages/tbDetail/tbDetail.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/pages/index/index.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/project.config.json" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/pages/index/index.wxml" root0="SKIP_INSPECTION" />
@@ -200,6 +173,7 @@
     <setting file="file://$PROJECT_DIR$/utils/cal.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/pages/teamDetail/teamDetail.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/components/login/login.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pages/teamDetail/teamDetail.wxs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/pages/accept/accept.wxml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/pages/icon/icon.wxml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/components/time/time.wxml" root0="SKIP_INSPECTION" />
@@ -213,14 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/components/billbar/billbar.wxml" />
-        <option value="$PROJECT_DIR$/pages/user/user.less" />
-        <option value="$PROJECT_DIR$/components/keyboard/keyborad.wxml" />
-        <option value="$PROJECT_DIR$/components/keyboard/keyborad.wxss" />
-        <option value="$PROJECT_DIR$/pages/sdAdd/sdAdd.json" />
-        <option value="$PROJECT_DIR$/components/keyboard/keyboard.wxss" />
-        <option value="$PROJECT_DIR$/../../js233/laboratory/git/wallet-code/css/transfer-accounts.less" />
-        <option value="$PROJECT_DIR$/components/showFrame/showFrame.js" />
         <option value="$PROJECT_DIR$/components/keyboard/keyboard.json" />
         <option value="$PROJECT_DIR$/components/keyboard/keyboard.less" />
         <option value="$PROJECT_DIR$/components/showFrame/showFrame.wxml" />
@@ -240,30 +206,38 @@
         <option value="$PROJECT_DIR$/components/ec-canvas/echarts.js" />
         <option value="$PROJECT_DIR$/components/ec-canvas/ec-canvas.js" />
         <option value="$PROJECT_DIR$/pages/sdAdd/sdAdd.less" />
-        <option value="$PROJECT_DIR$/components/billbar/billbar.js" />
-        <option value="$PROJECT_DIR$/pages/sdAdd/sdAdd.js" />
         <option value="$PROJECT_DIR$/pages/user/user.wxml" />
         <option value="$PROJECT_DIR$/pages/billChart/billChart.less" />
         <option value="$PROJECT_DIR$/pages/billChart/billChart.wxml" />
         <option value="$PROJECT_DIR$/pages/teamDetail/teamDetail.json" />
-        <option value="$PROJECT_DIR$/app.less" />
-        <option value="$PROJECT_DIR$/pages/teamDetail/teamDetail.wxml" />
-        <option value="$PROJECT_DIR$/pages/teamDetail/teamDetail.wxss" />
         <option value="$PROJECT_DIR$/app.json" />
         <option value="$PROJECT_DIR$/components/login/login.json" />
         <option value="$PROJECT_DIR$/pages/index/index.wxml" />
         <option value="$PROJECT_DIR$/components/login/login.wxss" />
         <option value="$PROJECT_DIR$/components/login/login.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/pages/accept/accept.wxss" />
         <option value="$PROJECT_DIR$/pages/accept/accept.wxml" />
         <option value="$PROJECT_DIR$/pages/accept/accept.js" />
-        <option value="$PROJECT_DIR$/pages/team/team.js" />
-        <option value="$PROJECT_DIR$/pages/teamDetail/teamDetail.js" />
-        <option value="$PROJECT_DIR$/pages/team/team.wxml" />
         <option value="$PROJECT_DIR$/pages/index/index.js" />
-        <option value="$PROJECT_DIR$/pages/team/team.wxss" />
         <option value="$PROJECT_DIR$/static/icon/gl.svg" />
+        <option value="$PROJECT_DIR$/components/billbar/billbar.wxml" />
+        <option value="$PROJECT_DIR$/pages/icon/icon.js" />
+        <option value="$PROJECT_DIR$/components/billbar/billbar.js" />
+        <option value="$PROJECT_DIR$/pages/sdAdd/sdAdd.js" />
+        <option value="$PROJECT_DIR$/app.less" />
+        <option value="$PROJECT_DIR$/pages/team/team.json" />
+        <option value="$PROJECT_DIR$/pages/team/team.wxml" />
+        <option value="$PROJECT_DIR$/pages/team/team.wxss" />
+        <option value="$PROJECT_DIR$/../../vue/TchainSystem/dist/package.json" />
+        <option value="$PROJECT_DIR$/pages/tbDetail/tbDetail.wxss" />
+        <option value="$PROJECT_DIR$/pages/teamDetail/teamDetail.wxs" />
+        <option value="$PROJECT_DIR$/pages/teamDetail/teamDetail.wxml" />
+        <option value="$PROJECT_DIR$/pages/teamDetail/teamDetail.js" />
+        <option value="$PROJECT_DIR$/pages/tbDetail/tbDetail.js" />
+        <option value="$PROJECT_DIR$/pages/tbDetail/tbDetail.wxml" />
+        <option value="$PROJECT_DIR$/pages/team/team.js" />
+        <option value="$PROJECT_DIR$/pages/teamDetail/teamDetail.wxss" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -288,7 +262,7 @@
     <packageJsonPaths />
   </component>
   <component name="PhpDebugGeneral" listening_started="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="94" />
     <option name="width" value="900" />
     <option name="height" value="735" />
@@ -298,6 +272,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -313,6 +288,12 @@
             <path>
               <item name="Bookkeeping" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bookkeeping" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="billbar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bookkeeping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bookkeeping" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -320,6 +301,18 @@
               <item name="Bookkeeping" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bookkeeping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bookkeeping" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="sdAdd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bookkeeping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bookkeeping" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="tbDetail" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Bookkeeping" type="b2602c69:ProjectViewProjectNode" />
@@ -341,19 +334,12 @@
             <path>
               <item name="Bookkeeping" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bookkeeping" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="icon" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bookkeeping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bookkeeping" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -374,18 +360,18 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\components" />
+      <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\static\imgs\user" />
+      <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\static\imgs\other" />
+      <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\static\imgs" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\static\icon" />
       <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\static\logo" />
       <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\components\keyboard" />
       <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\static\imgs\ji" />
       <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\components\showFrame" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\components" />
-      <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\static\imgs\user" />
-      <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\static\imgs\other" />
-      <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\static\imgs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -497,12 +483,13 @@
       <workItem from="1558521226498" duration="2833000" />
       <workItem from="1558580519766" duration="9129000" />
       <workItem from="1558597664062" duration="8150000" />
-      <workItem from="1558673006532" duration="7298000" />
+      <workItem from="1558673006532" duration="31784000" />
+      <workItem from="1558755201365" duration="17982000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="498893000" />
+    <option name="totallyTimeSpent" value="541361000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -514,7 +501,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" show_stripe_button="false" />
@@ -523,7 +510,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.34582624" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4962631" weight="0.14821124" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4962631" weight="0.5451448" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21001495" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" show_stripe_button="false" />
@@ -558,143 +545,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/components/showFrame/showFrame.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_PLUGINS_DIR$/weapp-support-plugin.jar!/lib/weixin-app/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="3428" selection-start-line="3427" selection-end-line="3428" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/cal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-968">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/base64.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-94">
-          <caret line="226" column="68" selection-start-line="226" selection-start-column="68" selection-end-line="226" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/achieve/achieve.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/ec-canvas/wx-canvas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="55" column="23" lean-forward="true" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/ec-canvas/echarts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="21" column="712257" selection-start-line="21" selection-start-column="712257" selection-end-line="21" selection-end-column="712257" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/ec-canvas/ec-canvas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/achieve/achieve.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="124" selection-start-line="8" selection-start-column="124" selection-end-line="8" selection-end-column="124" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/billbar/billbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="52" column="120" selection-start-line="52" selection-start-column="120" selection-end-line="52" selection-end-column="120" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/user/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/promisify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/icon/icon.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/icon/icon.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/icon/icon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-62">
-          <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -740,36 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="961">
-          <caret line="123" column="5" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/teamDetail/teamDetail.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/teamDetail/teamDetail.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding>
-            <element signature="n#view#0;n#view#1;n#view#1;n#view#0;n#!!top" />
-            <element signature="n#view#1;n#view#1;n#view#1;n#view#0;n#!!top" />
-            <element signature="n#view#2;n#view#1;n#view#1;n#view#0;n#!!top" />
-            <element signature="n#view#3;n#view#1;n#view#1;n#view#0;n#!!top" />
-            <element signature="n#view#0;n#view#2;n#view#1;n#view#0;n#!!top" />
-            <element signature="n#view#1;n#view#2;n#view#1;n#view#0;n#!!top" />
-            <element signature="n#view#2;n#view#2;n#view#1;n#view#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/keyboard/keyboard.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -812,13 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/login/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -840,24 +657,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/accept/accept.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/billChart/billChart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="42" column="31" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/accept/accept.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -868,53 +671,218 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/teamDetail/teamDetail.js">
+    <entry file="file://$PROJECT_DIR$/pages/index/index.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        <state relative-caret-position="297">
+          <caret line="77" column="19" lean-forward="true" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/team/team.js">
+    <entry file="file://$PROJECT_DIR$/components/billbar/billbar.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/manage/manage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="33" column="44" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="44" />
+          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/icon/icon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="52" column="14" lean-forward="true" selection-start-line="50" selection-start-column="12" selection-end-line="52" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="260" column="32" selection-start-line="260" selection-start-column="32" selection-end-line="260" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="65" column="11" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="110" column="1" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/accept/accept.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="1" lean-forward="true" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/team/team.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/icon/td2.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/team/team.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="1" lean-forward="true" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/accept/accept.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../vue/TchainSystem/dist/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/team/team.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        <state relative-caret-position="228">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.wxs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="3" lean-forward="true" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/teamDetail/teamDetail.wxs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/icon/join.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/icon/out.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/icon/tc.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/icon/add.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/icon/bj.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/icon/sc.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="29" column="129" selection-start-line="29" selection-start-column="129" selection-end-line="29" selection-end-column="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/teamDetail/teamDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="220" column="70" selection-start-line="220" selection-start-column="70" selection-end-line="220" selection-end-column="70" />
+          <folding>
+            <element signature="e#21#393#0" />
+            <element signature="e#404#600#0" />
+            <element signature="e#1738#1879#0" />
+            <element signature="e#2017#2110#0" />
+            <element signature="e#2138#2447#0" />
+            <element signature="e#2492#3297#0" />
+            <element signature="e#3319#3407#0" />
+            <element signature="e#3429#3478#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+        <state relative-caret-position="2223">
+          <caret line="118" column="18" selection-start-line="118" selection-start-column="18" selection-end-line="118" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/team/team.wxss">
+    <entry file="file://$PROJECT_DIR$/pages/teamDetail/teamDetail.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="627">
+          <caret line="40" column="23" lean-forward="true" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/icon/td.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.less">
+    <entry file="file://$PROJECT_DIR$/pages/tbDetail/tbDetail.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="72" column="11" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="11" />
+        <state relative-caret-position="95">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/icon/gl.svg">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/components/billbar/billbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/tbDetail/tbDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/teamDetail/teamDetail.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="56" column="30" lean-forward="true" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="62" column="44" lean-forward="true" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/tbDetail/tbDetail.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/team/team.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

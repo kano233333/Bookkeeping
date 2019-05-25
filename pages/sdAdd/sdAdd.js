@@ -1,6 +1,6 @@
 let calCommonExp = require("../../utils/cal").calCommonExp
 const icon = require("../../utils/base64")
-let aicon , sicon
+let aicon , sicon, _options
 let formatTime = require('../../utils/util').formatTime
 let app = getApp()
 const day = app.globalData.day
@@ -46,6 +46,7 @@ Page({
     calAcmount:''
   },
   onLoad: function (options) {
+    _options = options
     setIcon()
     let icon = setSwiperIcon(0)
     this.data.icon = aicon[0]
@@ -140,6 +141,12 @@ Page({
     if(this.data.mode=='edit'){
       obj.bid = this.data.billData.bid
     }
+
+    if(_options.isTeam==1){
+      this.addTeamBill(obj)
+      return
+    }
+
     let reqObj = {
       url:app.globalData.ip+'/'+this.data.mode+'Bill',
       method:'get',
@@ -183,14 +190,11 @@ Page({
                 }
               })
             },500)
-          }).then(()=>{
-            var page = getCurrentPages()[0]
-            page.onLoad()
           })
         }
       }.bind(this)
     }
-     app.isLogin(reqObj)
+    app.isLogin(reqObj)
   },
   userBadge:function(badge){
     let obj = {
@@ -240,6 +244,26 @@ Page({
   pickerEvent:function(e){
     this.setData({
       timePick:e.detail.timeData
+    })
+  },
+  addTeamBill:function(obj){
+    obj.tid = _options.tid
+    obj.nickName = app.globalData.userInfo.nickName
+    let _request = {
+      url:'',
+      data:obj,
+      success:function(res){
+
+      }
+    }
+    obj.bid = obj.bid || '1234'
+    app.team = {
+      type:_options.mode || 'add',
+      data:obj
+    }
+
+    wx.navigateBack({
+      delta:1
     })
   }
 })

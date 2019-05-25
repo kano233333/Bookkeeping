@@ -1,0 +1,21 @@
+<view>
+  <view class="head">
+    <text>{{billData.tname}}</text>
+    <view class="head_del">
+      <image src="{{billData.src}}" />
+      <text>{{billData.labelName}}</text>
+    </view>
+  </view>
+
+  <view class="main">
+    <view class="info">
+      操作人：{{billData.name}}
+    </view>
+    <view class="info">
+      金额：{{billData.amount}}
+    </view>
+    <view class="info">
+      操作时间：{{billData.operationTime}}
+    </view>
+  </view>
+</view>

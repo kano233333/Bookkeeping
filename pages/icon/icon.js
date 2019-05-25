@@ -71,8 +71,6 @@ Page({
   },
   addLocalIcon:function(label){
     let deal = app.dealLabel(label)
-    console.log("deal:")
-    console.log(deal)
     app.globalData.userIcon[deal.type].push(deal.obj)
   }
 })

@@ -1,8 +1,9 @@
-<view class="bill_detail" style="height:{{billHeight}};animation:0.5s left_enter forwards {{index/5+'s'}};">
+<view class="bill_detail" style="height:{{billHeight}};animation:0.5s left_enter forwards {{index/8+'s'}};">
   <view class="bill_upper" bindtap="showMore">
     <view class="bill_left">
       <image style="background-color:{{textColor[1]}}" class="icon" src="{{src}}"></image>
       <text class="text">{{text}}</text>
+      <text class="text" style="color:#ccc;">{{billData.isSelf?'我':billData.nickName}}</text>
     </view>
     <view class="bill_right">
       <text>{{billData.time}}</text>
@@ -13,7 +14,7 @@
   <view wx:if="{{moreShow}}" class="bz">
     <view style="background-color:{{textColor[2]}}" class="before"></view>
     <text>备注:{{billData.remarks}}</text>
-    <view class="operation">
+    <view class="operation" wx:if="{{isAdmin}}">
       <text bindtap="editBill">编辑</text>
       <text bindtap="deleteBill">删除</text>
     </view>

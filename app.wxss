@@ -86,6 +86,15 @@
   color: #68a1df;
   box-shadow: 0 0 2px #5180b4 inset;
 }
+.add_wrap {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
 .addX {
   width: 9vw;
   height: 9vw;

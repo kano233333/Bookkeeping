@@ -27,6 +27,18 @@ Component({
     index:{
       type:Number,
       value:0
+    },
+    isAdmin:{
+      type:Number,
+      value:1
+    },
+    isTeam:{
+      type:Number,
+      value:0
+    },
+    tid:{
+      type:String,
+      value:''
     }
   },
   methods: {
@@ -48,12 +60,16 @@ Component({
       }
     },
     editBill:function(){
-      console.log(this.data.billData)
       wx.navigateTo({
-        url:'/pages/sdAdd/sdAdd?type='+this.data.billData.type+'&mode=edit&billData='+JSON.stringify(this.data.billData)
+        url:'/pages/sdAdd/sdAdd?type='+this.data.billData.type+'&mode=edit&billData='+JSON.stringify(this.data.billData)+"&isTeam="+this.data.isTeam+"&tid="+this.data.tid
       })
     },
     deleteBill:function(){
+      if(this.data.isTeam){
+        this.triggerEvent("refreshList",{dataType:"bill",type:"delete",dataX:this.data.index})
+        return
+      }
+
       let _this = this
       let delObj = {
         url:app.globalData.ip+'/delBill',

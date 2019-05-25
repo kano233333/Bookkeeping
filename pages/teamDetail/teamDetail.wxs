@@ -1,0 +1,10 @@
+var isAdmin = function(isAdmin,isSelf){
+  if(isAdmin==1 || isSelf==1){
+    return 1
+  }
+  return 0
+}
+
+module.exports = {
+  isAdmin: isAdmin
+}

@@ -8,9 +8,9 @@ App({
   globalData: {
     userInfo: null,
     userStatus:'',
-    ip:'https://www.victorzuo.top/wx',
-    // ip:'http://192.168.1.70:8080/wx',
-    intervalTime:60000,
+    // ip:'https://www.victorzuo.top/wx',
+    ip:'http://192.168.1.70:8080/wx',
+    intervalTime:600000,
     day : [1,30,99,199,299,365],
     bill : [1,49,99,199,299,399]
   },
@@ -47,8 +47,8 @@ App({
       try{
         wx.request({
           header: {
-            cookie: "JSESSIONID=" + sessionID + ";domain=www.victorzuo.top;path=/wx"
-            // cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
+            // cookie: "JSESSIONID=" + sessionID + ";domain=www.victorzuo.top;path=/wx"
+            cookie: "JSESSIONID=" + sessionID + ";domain=localhost;path=/wx"
           },
           url: obj.url,
           data: obj.data,
@@ -63,11 +63,18 @@ App({
               data = data.replace(/'/g, '"')
               data = JSON.parse(data).data==undefined ? JSON.parse(data) :JSON.parse(data).data
             }
+            console.log(data)
+            if(data.state==401){
+              _this.doLogin(codeback);
+              return
+            }
+
             obj.success(data) || function(){}
             wx.hideNavigationBarLoading()
             wx.hideLoading()
           },
-          fail:function(){
+          catch:function(res){
+            console.log(res)
             _this.requestFail()
           }
         })
@@ -91,6 +98,8 @@ App({
     wx.getUserInfo({
       success(res){
         _this.globalData.userInfo = res.userInfo;
+        wx.hideNavigationBarLoading()
+        wx.hideLoading()
       }
     })
   },
