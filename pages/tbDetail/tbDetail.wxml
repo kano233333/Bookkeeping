@@ -15,7 +15,7 @@
       金额：{{billData.amount}}
     </view>
     <view class="info">
-      操作时间：{{billData.operationTime}}
+      操作时间：{{billData.time}}
     </view>
   </view>
 </view>

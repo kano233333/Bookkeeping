@@ -3,7 +3,7 @@
     <view class="bill_left">
       <image style="background-color:{{textColor[1]}}" class="icon" src="{{src}}"></image>
       <text class="text">{{text}}</text>
-      <text class="text" style="color:#ccc;">{{billData.isSelf?'我':billData.nickName}}</text>
+      <text class="text" style="color:#ccc;">{{billData.isSelf==1?'我':billData.nickName}}</text>
     </view>
     <view class="bill_right">
       <text>{{billData.time}}</text>

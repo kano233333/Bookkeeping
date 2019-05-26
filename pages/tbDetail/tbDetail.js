@@ -4,11 +4,10 @@ Page({
     billData:{}
   },
   onLoad: function (options) {
-    let iconX = billData.label.split("-")
-    src = icon.all[iconX[0]][iconX[1]].value
-    text = icon.all[iconX[0]][iconX[1]].name
-
     let bill = JSON.parse(options.billData)
+    let iconX = bill.label.split("-")
+    let src = icon.all[iconX[0]][iconX[1]].value
+    let text = icon.all[iconX[0]][iconX[1]].name
     bill.src = src
     bill.labelName = text
     bill.tname = options.tname

@@ -66,7 +66,22 @@ Component({
     },
     deleteBill:function(){
       if(this.data.isTeam){
-        this.triggerEvent("refreshList",{dataType:"bill",type:"delete",dataX:this.data.index})
+        let obj = {
+          url:app.globalData.ip+'/delTeamBill',
+          data:{
+            tid:this.data.tid,
+            name:app.globalData.userInfo.nickName,
+            label:this.data.billData.label,
+            amount:this.data.billData.amount,
+            bid:this.data.billData.bid
+          },
+          success:function(res){
+            if(res.static==1){
+              this.triggerEvent("refreshList",{dataType:"bill",type:"delete",dataX:{bid:this.data.billData.bid}})
+            }
+          }.bind(this)
+        }
+        app.isLogin(obj)
         return
       }
 

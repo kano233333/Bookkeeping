@@ -58,6 +58,7 @@ Page({
     this.data.mode = options.mode || 'add'
     if(this.data.mode=='edit'){
       let billData = JSON.parse(options.billData)
+      this.data.icon = aicon[billData.type]
       let iconX = billData.label.split("-")
       let iconAll = this.data.iconAll
       this.data.billData = billData
@@ -158,7 +159,7 @@ Page({
           if(this.data.mode=='add'){
             app.globalData.userNum.totalAccount++
             let index = bill.indexOf(app.globalData.userNum.totalAccount)
-            let num = app.globalData.badge.bill.split('g')[1]
+            let num = app.globalData.badge.bill.split('g')[1] || 0
             if(index!=-1 && bill[index]>num){
               isGet = 'bg'+bill[index]
               this.userBadge({type:'bill',badge:'bg'+bill[index]})
@@ -166,7 +167,7 @@ Page({
             if(res.isSignIn){
               app.globalData.userNum.signInDays++
               let index = day.indexOf(app.globalData.userNum.signInDays)
-              let num = app.globalData.badge.day.split('g')[1]
+              let num = app.globalData.badge.day.split('g')[1] || 0
               if(index!=-1 && day[index]>num){
                 isGet = 'dg'+day[index]
                 this.userBadge({type:'day',badge:'dg'+day[index]})
@@ -248,22 +249,50 @@ Page({
   },
   addTeamBill:function(obj){
     obj.tid = _options.tid
-    obj.nickName = app.globalData.userInfo.nickName
-    let _request = {
-      url:'',
-      data:obj,
-      success:function(res){
-
+    if(_options.mode == 'edit'){
+      obj.bid = JSON.parse(_options.billData).bid
+      obj.nickName = JSON.parse(_options.billData).nickName
+      let _obj = {
+        url:app.globalData.ip + '/editTeamBill',
+        data:obj,
+        success:function(res){
+          if(res.static==1){
+            obj.isSelf = 1
+            app.team = {
+              type:'edit',
+              data:obj
+            }
+          }else{
+            wx.showToast({
+              title:'失败',
+              icon:'none',
+              duration:1000
+            })
+          }
+          wx.navigateBack({
+            delta:1
+          })
+        }
       }
+      app.isLogin(_obj)
+    }else{
+      obj.nickName = app.globalData.userInfo.nickName
+      let _request = {
+        url:app.globalData.ip+'/addTeamBill',
+        data:obj,
+        success:function(res){
+          obj.bid = res.bid
+          obj.isSelf = 1
+          app.team = {
+            type:_options.mode || 'add',
+            data:obj
+          }
+          wx.navigateBack({
+            delta:1
+          })
+        }
+      }
+      app.isLogin(_request)
     }
-    obj.bid = obj.bid || '1234'
-    app.team = {
-      type:_options.mode || 'add',
-      data:obj
-    }
-
-    wx.navigateBack({
-      delta:1
-    })
   }
 })

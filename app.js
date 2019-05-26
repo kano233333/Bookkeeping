@@ -9,7 +9,8 @@ App({
     userInfo: null,
     userStatus:'',
     // ip:'https://www.victorzuo.top/wx',
-    ip:'http://192.168.1.70:8080/wx',
+    // ip:'http://192.168.1.70:8080/wx',
+    ip:'http://192.168.43.231:8080/wx',
     intervalTime:600000,
     day : [1,30,99,199,299,365],
     bill : [1,49,99,199,299,399]
@@ -63,7 +64,6 @@ App({
               data = data.replace(/'/g, '"')
               data = JSON.parse(data).data==undefined ? JSON.parse(data) :JSON.parse(data).data
             }
-            console.log(data)
             if(data.state==401){
               _this.doLogin(codeback);
               return

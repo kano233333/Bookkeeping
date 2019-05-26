@@ -5,6 +5,17 @@ var isAdmin = function(isAdmin,isSelf){
   return 0
 }
 
+var isOut = function(isAdmin,isSelf){
+  if(isAdmin==1){
+    if(isSelf==1){
+      return 0
+    }
+    return 1
+  }
+  return 0
+}
+
 module.exports = {
-  isAdmin: isAdmin
+  isAdmin: isAdmin,
+  isOut: isOut
 }

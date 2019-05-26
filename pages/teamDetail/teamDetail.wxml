@@ -11,7 +11,7 @@
     <view wx:if="{{styleStr}}" class="{{styleStr=='' ? '' : 'add_wrap'}}" bindtap="hideAdd"></view>
     <view bindtap="showAdd" class="head_img" style="{{styleStr}}">
       <image wx:if="{{!styleStr}}" src="/static/icon/{{teamData.isAdmin==1?'gl':'td'}}.svg" />
-      <text wx:if="{{styleStr}}" class="text" style="background-color:{{teamData.isAdmin==1?'#6dabf1':'#F4BD6D'}}">{{teamData.isAdmin==1?'解散团队':'退出团队'}}</text>
+      <text wx:if="{{styleStr}}" class="text" style="background-color:{{teamData.isAdmin==1?'#6dabf1':'#F4BD6D'}}" bindtap="userTeam">{{teamData.isAdmin==1?'解散团队':'退出团队'}}</text>
     </view>
   </view>
 
@@ -30,10 +30,10 @@
         <view class="m_left jz_y">
           <image src="/static/icon/member.svg" />
           <text>{{item.nickName}}</text>
-          <text class="gly" wx:if="{{item.isAdministrator}}">管理员</text>
+          <text class="gly" wx:if="{{item.isAdministrator==1}}">管理员</text>
         </view>
-        <view wx:if="{{teamData.isAdmin}}" class="m_right">
-          <image bindtap="deleteMember" data-uid="{{item.uid}}" data-index="{{index}}" src="/static/icon/cha2.svg" />
+        <view wx:if="{{tools.isOut(teamData.isAdmin,item.isAdministrator)}}" class="m_right">
+          <image bindtap="deleteMember" data-uid="{{item.uid}}" data-index="{{index}}" src="/static/icon/cha2.svg" data-nickName="{{item.nickName}}"/>
         </view>
       </view>
 

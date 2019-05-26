@@ -3,7 +3,7 @@ Page({
   data: {
     styleStr:'',
     teams:[],
-    page:0,
+    page:1,
     setName:''
   },
   onLoad: function (options) {
@@ -21,23 +21,23 @@ Page({
   },
   getTeams:function(){
     let obj = {
-      url:app.globalData.ip+'/getTeamBill',
+      url:app.globalData.ip+'/getTeam',
       data:{
         page:this.data.page
       },
       success:function(res){
-
-      }
+        this.setData({
+          teams:res
+        })
+      }.bind(this)
     }
-
-    this.setData({
-      teams:[
-        {tid:'12',name:'aaa',isAdministrator:0},
-        {tid:'12',name:'bbb',isAdministrator:0},
-        {tid:'12',name:'ccc',isAdministrator:1},
-        {tid:'12',name:'ddd',isAdministrator:1}
-      ]
-    })
+    app.isLogin(obj)
+  },
+  onShow:function(){
+    if(app.isTeamChange){
+      this.getTeams()
+      app.isTeamChange = 1
+    }
   },
   onReachBottom:function(){
     this.data.page++
@@ -48,10 +48,10 @@ Page({
     let obj = {
       url: app.globalData.ip + '/setTeam',
       data: {
-        name: this.data.setName
+        tname: this.data.setName,
+        uname:app.globalData.userInfo.nickName
       },
       success: function (res) {
-        console.log(res)
         let _this = this
         teams.push({
           name: this.data.setName,

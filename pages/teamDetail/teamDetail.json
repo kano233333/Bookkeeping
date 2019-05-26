@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "bill-bar":"../../components/billbar/billbar"
-  }
+  },
+  "enablePullDownRefresh":true
 }

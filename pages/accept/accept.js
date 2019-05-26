@@ -22,8 +22,22 @@ Page({
   },
   selectJoin:function (e) {
     let select = e.target.dataset.accept
-    wx.switchTab({
-      url:'/pages/team/team'
-    })
+    let obj = {
+      url:app.globalData.ip + '/isJoin',
+      data:{
+        isJoin:select,
+        tid:this.data.team.tid,
+        tname:this.data.team.tname,
+        name:app.globalData.userInfo.nickName
+      },
+      success:function(res){
+        console.log(res)
+        app.isTeamChange = 1
+        wx.switchTab({
+          url:'/pages/team/team'
+        })
+      }
+    }
+    app.isLogin(obj)
   }
 })
