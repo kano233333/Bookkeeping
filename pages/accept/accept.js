@@ -32,7 +32,6 @@ Page({
       },
       success:function(res){
         console.log(res)
-        app.isTeamChange = 1
         wx.switchTab({
           url:'/pages/team/team'
         })

@@ -70,7 +70,7 @@
     padding:1.5vw;
 }
 
-.gly {
+.m_left .gly {
     border-radius:5px;
     background-color: #ebca59;
     color: #fff;

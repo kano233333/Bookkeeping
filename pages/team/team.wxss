@@ -38,3 +38,10 @@
 .bar text {
     margin:0 5vw;
 }
+.msg {
+    padding:0 1vw;
+    background-color: #eb5d5a;
+    color:#fff;
+    border-radius:50%;
+    font-size:3.5vw;
+}

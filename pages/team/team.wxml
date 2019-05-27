@@ -15,6 +15,8 @@
     <navigator wx:for="{{teams}}" wx:key="{{index}}" url="/pages/teamDetail/teamDetail?tid={{item.tid}}&name={{item.name}}&isAdmin={{item.isAdministrator}}" style="animation:0.5s left_enter forwards;" class="bar jz_y">
       <image src="/static/icon/{{item.isAdministrator==0?'td.svg':'gl.svg'}}" />
       <text>{{item.name}}</text>
+      <text class="msg">{{item.unread}}</text>
     </navigator>
   </view>
+  <empty wx:if="{{isEmpty}}"></empty>
 </view>

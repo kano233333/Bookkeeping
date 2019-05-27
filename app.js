@@ -64,10 +64,17 @@ App({
               data = data.replace(/'/g, '"')
               data = JSON.parse(data).data==undefined ? JSON.parse(data) :JSON.parse(data).data
             }
+
+            if(data.static && data.static==0){
+              _this.requestFail()
+              return
+            }
+
             if(data.state==401){
               _this.doLogin(codeback);
               return
             }
+
 
             obj.success(data) || function(){}
             wx.hideNavigationBarLoading()
@@ -184,9 +191,6 @@ App({
       return 0
     }
     return 1
-  },
-  onShareAppMessage:function(options){
-    console.log(options)
   },
   getBadge:function(){
     let obj = {

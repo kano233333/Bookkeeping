@@ -39,14 +39,15 @@ Page({
     isrefresh:true,
     styleStr:'',
     isEnd:[false,false,false],
-    noticeEvent:noticeEvent
+    noticeEvent:noticeEvent,
+    isEmpty:false
   },
   onLoad: function (options) {
     this.setData({
       teamData:options
     })
     this.data.isfirst[0] = false
-    this.getData('bill',1)
+    this.getData('bill')
   },
   onShow:function(){
     let _this = this
@@ -75,7 +76,7 @@ Page({
     }
     return info
   },
-  getData:function(type,aaa){
+  getData:function(type){
     let obj = {
       url:app.globalData.ip + urlTo[type],
       data:{
@@ -83,12 +84,6 @@ Page({
         page:this.data.page[this.data.type]
       },
       success:function(res){
-        if(aaa){
-          this.setData({
-            [type]:res
-          },)
-          return
-        }
         if(res.length<10){
           this.data.isEnd[this.data.type] = true
         }
@@ -100,8 +95,13 @@ Page({
         }else{
           arr = [...arr,...res]
         }
+        let isEmpty = false
+        if(arr.length==0){
+          isEmpty = true
+        }
         this.setData({
-          [type]:arr
+          [type]:arr,
+          isEmpty:isEmpty
         })
       }.bind(this)
     }
@@ -129,10 +129,17 @@ Page({
         uid:uid
       },
       success:function(res){
-        this.data.member.splice(index,1)
-        this.setData({
-          member:this.data.member
-        })
+        if(res.static==1){
+          wx.showToast({
+            title:'成功',
+            icon:'none',
+            duration:1000
+          })
+          this.data.member.splice(index,1)
+          this.setData({
+            member:this.data.member
+          })
+        }
       }.bind(this)
     }
     app.isLogin(obj)
@@ -186,7 +193,6 @@ Page({
     })
   },
   tdDetail:function(e){
-    console.log(e)
     let data = e.currentTarget.dataset.data
     if(data.event<3){return}
     wx.navigateTo({
@@ -200,7 +206,11 @@ Page({
         tid:this.data.teamData.tid
       },
       success:function(res){
-        console.log(res)
+        wx.showToast({
+          title:'成功',
+          icon:'none',
+          duration:1000
+        })
         app.isTeamChange = 1
         wx.switchTab({
           url:'/pages/team/team'
@@ -221,11 +231,11 @@ Page({
     let typeName = typeTo[this.data.type]
     let _this = this
     this.data.page[this.data.type] = 1
+    this.data.isEnd[this.data.type] = false
     this.setData({
       [typeName]:[]
     },()=>{
-      _this.getData(typeName,1)
+      _this.getData(typeName)
     })
-
   }
 })

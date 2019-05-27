@@ -5,9 +5,13 @@ let formatTime = require('../../utils/util').formatTime
 let app = getApp()
 const day = app.globalData.day
 const bill = app.globalData.bill
-let setIcon = function(){
+let setIcon = function(isTeam){
   sicon = app.globalData.userIcon
-  aicon = [[...icon.outcome,...sicon[0]],[...icon.income,...sicon[1]]]
+  if(isTeam==1){
+    aicon = [icon.outcome,icon.income]
+  }else{
+    aicon = [[...icon.outcome,...sicon[0]],[...icon.income,...sicon[1]]]
+  }
 }
 let SELECT = [0,0]
 let setSwiperIcon = function(type){
@@ -47,7 +51,7 @@ Page({
   },
   onLoad: function (options) {
     _options = options
-    setIcon()
+    setIcon(options.isTeam)
     let icon = setSwiperIcon(0)
     this.data.icon = aicon[0]
     this.setData({
@@ -257,17 +261,16 @@ Page({
         data:obj,
         success:function(res){
           if(res.static==1){
+            wx.showToast({
+              title:'成功',
+              icon:'none',
+              duration:1000
+            })
             obj.isSelf = 1
             app.team = {
               type:'edit',
               data:obj
             }
-          }else{
-            wx.showToast({
-              title:'失败',
-              icon:'none',
-              duration:1000
-            })
           }
           wx.navigateBack({
             delta:1
@@ -281,6 +284,11 @@ Page({
         url:app.globalData.ip+'/addTeamBill',
         data:obj,
         success:function(res){
+          wx.showToast({
+            title:'成功',
+            icon:'none',
+            duration:1000
+          })
           obj.bid = res.bid
           obj.isSelf = 1
           app.team = {

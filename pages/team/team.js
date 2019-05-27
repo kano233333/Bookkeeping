@@ -4,10 +4,11 @@ Page({
     styleStr:'',
     teams:[],
     page:1,
-    setName:''
+    setName:'',
+    isEmpty:false
   },
   onLoad: function (options) {
-    this.getTeams()
+    this.onShow()
   },
   hideAdd:function(){
     this.setData({
@@ -26,18 +27,20 @@ Page({
         page:this.data.page
       },
       success:function(res){
+        let isEmpty = false
+        if(res.length==0){
+          isEmpty = true
+        }
         this.setData({
-          teams:res
+          teams:res,
+          isEmpty:isEmpty
         })
       }.bind(this)
     }
     app.isLogin(obj)
   },
   onShow:function(){
-    if(app.isTeamChange){
-      this.getTeams()
-      app.isTeamChange = 1
-    }
+    this.getTeams()
   },
   onReachBottom:function(){
     this.data.page++

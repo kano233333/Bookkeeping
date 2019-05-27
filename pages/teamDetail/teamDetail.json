@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "bill-bar":"../../components/billbar/billbar"
+    "bill-bar":"../../components/billbar/billbar",
+    "empty":"../../components/empty/empty"
   },
   "enablePullDownRefresh":true
 }
