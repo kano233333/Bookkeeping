@@ -35,7 +35,7 @@
       },
       {
         "pagePath": "pages/team/team",
-        "text": "小记",
+        "text": "团队",
         "iconPath": "/static/imgs/ji1.png",
         "selectedIconPath": "/static/imgs/ji2.png"
       },

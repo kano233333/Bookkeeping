@@ -5,10 +5,8 @@ Page({
     teams:[],
     page:1,
     setName:'',
-    isEmpty:false
-  },
-  onLoad: function (options) {
-    this.onShow()
+    isEmpty:false,
+    isEnd:false
   },
   hideAdd:function(){
     this.setData({
@@ -31,8 +29,12 @@ Page({
         if(res.length==0){
           isEmpty = true
         }
+        if(res.length<10){
+          this.data.isEnd = true
+        }
+        let teams = this.data.teams
         this.setData({
-          teams:res,
+          teams:[...teams,...res],
           isEmpty:isEmpty
         })
       }.bind(this)
@@ -40,14 +42,19 @@ Page({
     app.isLogin(obj)
   },
   onShow:function(){
+    this.data.teams = []
+    this.data.page = 1
     this.getTeams()
   },
   onReachBottom:function(){
+    if(this.data.isEnd){
+      return
+    }
     this.data.page++
+    this.getTeams()
   },
   setTeam:function(){
     let teams = this.data.teams
-
     let obj = {
       url: app.globalData.ip + '/setTeam',
       data: {
@@ -64,7 +71,8 @@ Page({
         this.setData({
           teams:teams,
           setName:'',
-          styleStr:''
+          styleStr:'',
+          isEmpty:false
         },()=>{
           _this.hideAdd()  //btn上bindtap有事件
         })
@@ -74,5 +82,9 @@ Page({
   },
   setTeamName:function(e){
     this.data.setName = e.detail.value
+  },
+  onPullDownRefresh(){
+    this.onShow()
+    wx.stopPullDownRefresh()
   }
 })

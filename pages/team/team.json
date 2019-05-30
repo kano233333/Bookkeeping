@@ -3,5 +3,6 @@
     "empty":"../../components/empty/empty"
   },
   "navigationBarTitleText":"团队记账",
-  "navigationBarTextStyle":"white"
+  "navigationBarTextStyle":"white",
+  "enablePullDownRefresh":true
 }

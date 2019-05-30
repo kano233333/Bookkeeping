@@ -1,3 +1,6 @@
+.add {
+    background: linear-gradient(to top right,#98c5f7,#4387d3);
+}
 .head {
     height:25vw;
     background-color: #72b1eb;
@@ -34,7 +37,7 @@
     font-size:4.5vw;
 }
 .main>view {
-    margin-bottom: 8vw;
+    margin-bottom: 10vw;
 }
 .tab {
     background-color: #68a1df;

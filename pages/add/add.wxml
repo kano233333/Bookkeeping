@@ -2,7 +2,7 @@
   <view class="add-wrap">
     <view class="add-bg" bindtap="hideAdd"></view>
     <view class="add">
-      <view>
+      <view bindtap="getScancode">
         <image src="/static/imgs/add/1.png"/>
         <text>扫一扫</text>
       </view>

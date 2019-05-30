@@ -66,7 +66,15 @@ Page({
       if(_this.data.isfirst[type]){
         _this.getData(typeTo[type])
         _this.data.isfirst[type] = false
+        return
       }
+      let isEmpty = false
+      if(_this.data[typeTo[type]].length<=0){
+        isEmpty = true
+      }
+      _this.setData({
+        isEmpty:isEmpty
+      })
     })
   },
   onShareAppMessage(res){
@@ -118,14 +126,14 @@ Page({
   deleteMember:function(e){
     let uid = e.currentTarget.dataset.uid
     let index = e.currentTarget.dataset.index
-    let nickName = e.currentTarget.dataset.nickName
+    let nickname = e.currentTarget.dataset.nickname
     console.log(e)
     let obj =  {
       url:app.globalData.ip + '/leaveTeam',
       data:{
         operator:app.globalData.userInfo.nickName,
         tid:this.data.teamData.tid,
-        name:nickName,
+        name:nickname,
         uid:uid
       },
       success:function(res){
@@ -173,9 +181,14 @@ Page({
         data.splice(index,1);
         break;
     }
+    let isEmpty = false
+    if(data.length<=0){
+      isEmpty = true
+    }
     this.setData({
       [dataType]:data,
-      isrefresh:false
+      isrefresh:false,
+      isEmpty:isEmpty
     },()=>{
       _this.setData({
         isrefresh:true
