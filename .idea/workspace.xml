@@ -3,27 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ee387a40-08af-493c-962d-dc5cdf3d3ef5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.less" beforeDir="false" afterPath="$PROJECT_DIR$/app.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/app.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.wxss.map" beforeDir="false" afterPath="$PROJECT_DIR$/app.wxss.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about/about.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/about.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/add/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/add/add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/add/add.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/add/add.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/tbDetail/tbDetail.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tbDetail/tbDetail.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/team/team.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/team/team.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/team/team.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/team/team.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/teamDetail/teamDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/teamDetail/teamDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/font/iconfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/font/iconfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/font/iconfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/font/iconfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/font/iconfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/icon/td2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/icon/td2.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/ji/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/logo/er.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/canvas.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/pages/add/add.wxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -63,8 +42,8 @@
       <file leaf-file-name="team.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/team/team.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+            <state relative-caret-position="627">
+              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -72,8 +51,8 @@
       <file leaf-file-name="app.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="223" column="23" lean-forward="true" selection-start-line="223" selection-start-column="23" selection-end-line="223" selection-end-column="23" />
+            <state relative-caret-position="4237">
+              <caret line="223" column="23" selection-start-line="223" selection-start-column="23" selection-end-line="223" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -87,18 +66,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="team.wxss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="team.wxss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/team/team.wxss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
-              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+              <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="td2.svg" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/icon/td2.svg">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -339,7 +313,7 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Administrator/Documents/web/wechat/Bookkeeping/components/login/login.wxml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../js233/html5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../electron/notebook" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
@@ -484,12 +458,13 @@
       <workItem from="1558966576950" duration="61000" />
       <workItem from="1559020611938" duration="7784000" />
       <workItem from="1559105586971" duration="10848000" />
-      <workItem from="1559186951882" duration="1528000" />
+      <workItem from="1559186951882" duration="2165000" />
+      <workItem from="1559192586418" duration="623000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="598500000" />
+    <option name="totallyTimeSpent" value="599760000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -502,7 +477,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" show_stripe_button="false" />
       <window_info anchor="right" id="SvgViewer" order="3" show_stripe_button="false" />
@@ -510,8 +484,8 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.34582624" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4962631" weight="0.44463372" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21001495" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4962631" visible="true" weight="0.44463372" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21001495" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" show_stripe_button="false" />
       <window_info id="Structure" order="1" show_stripe_button="false" side_tool="true" weight="0.25" />
@@ -545,6 +519,34 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pages/team/team.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4237">
+          <caret line="223" column="23" lean-forward="true" selection-start-line="223" selection-start-column="23" selection-end-line="223" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/team/team.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/team/team.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/achieve/achieve.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -835,7 +837,7 @@
     <entry file="file://$PROJECT_DIR$/pages/add/add.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -846,26 +848,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/icon/1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/imgs/bill1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/imgs/add.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/team/team.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        <state relative-caret-position="627">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="223" column="23" lean-forward="true" selection-start-line="223" selection-start-column="23" selection-end-line="223" selection-end-column="23" />
+        <state relative-caret-position="4237">
+          <caret line="223" column="23" selection-start-line="223" selection-start-column="23" selection-end-line="223" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -879,12 +872,9 @@
     <entry file="file://$PROJECT_DIR$/pages/team/team.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/icon/td2.svg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
   <component name="masterDetails">
