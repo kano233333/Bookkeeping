@@ -408,7 +408,7 @@ function setSun(canvas, width, height) {
 function getName(label){
   let sp = label.split('-')
   if(sp.length>2){
-    let _userIcon = app.globalData
+    let _userIcon = app.globalData._userIcon
     for(let i=0;i<_userIcon.length;i++){
       if(_userIcon[i].label==label){
         return _userIcon[i].name

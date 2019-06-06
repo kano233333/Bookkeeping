@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee387a40-08af-493c-962d-dc5cdf3d3ef5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/billChart/billChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/billChart/billChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/team/team.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/team/team.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,38 +43,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="team.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/team/team.js">
+      <file leaf-file-name="tbDetail.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/tbDetail/tbDetail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+            <state relative-caret-position="133">
+              <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.less">
+      <file leaf-file-name="billChart.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/billChart/billChart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4237">
-              <caret line="223" column="23" selection-start-line="223" selection-start-column="23" selection-end-line="223" selection-end-column="23" />
+            <state relative-caret-position="34">
+              <caret line="403" column="26" lean-forward="true" selection-start-line="403" selection-start-column="26" selection-end-line="403" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="team.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/team/team.wxml">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="19" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="19" />
+            <state relative-caret-position="188">
+              <caret line="147" column="33" selection-start-line="147" selection-start-column="24" selection-end-line="147" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="team.wxss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="team.wxss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/team/team.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+            <state relative-caret-position="114">
+              <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -86,8 +90,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>obj</find>
-      <find>refreshList</find>
       <find>aaa</find>
       <find>notice</find>
       <find>teamData</find>
@@ -116,6 +118,8 @@
       <find>isEnd</find>
       <find>td2</find>
       <find>head</find>
+      <find>icon</find>
+      <find>-</find>
     </findStrings>
     <replaceStrings>
       <replace>setLine</replace>
@@ -131,43 +135,43 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/pages/manage/manage.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/utils/base64.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/utils/promisify.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/components/empty/empty.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/pages/tbDetail/tbDetail.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/pages/index/index.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/project.config.json" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/pages/index/index.wxml" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/components/showFrame/showFrame.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/pages/add/add.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/components/billbar/billbar.wxml" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.wxs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pages/achieve/achieve.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/app.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/pages/add/add.wxml" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/components/pullRefresh/pullRefresh.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pages/accept/accept.wxml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/pages/accept/accept.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/pages/billChart/billChart.wxml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/project.config.json" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pages/manage/manage.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pages/index/index.wxml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/components/pullRefresh/pullRefresh.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.wxs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pages/index/index.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/components/showFrame/showFrame.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/components/ec-canvas/ec-canvas.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/utils/base64.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pages/icon/icon.wxml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pages/team/team.wxml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/utils/cal.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/components/billbar/billbar.wxml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/utils/util.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pages/team/team.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/components/keyboard/keyboard.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/pages/user/user.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/components/ec-canvas/ec-canvas.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/pages/billChart/billChart.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/pages/team/team.wxml" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/pages/teamDetail/teamDetail.wxml" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/utils/cal.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/components/billbar/billbar.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pages/add/add.wxml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/pages/teamDetail/teamDetail.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pages/teamDetail/teamDetail.wxml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/components/empty/empty.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pages/add/add.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/components/login/login.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/pages/teamDetail/teamDetail.wxs" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/pages/accept/accept.wxml" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/pages/icon/icon.wxml" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/components/time/time.wxml" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/pages/achieve/achieve.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/pages/icon/icon.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/pages/team/team.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/utils/promisify.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pages/tbDetail/tbDetail.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pages/billChart/billChart.wxml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/components/time/time.wxml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pages/billChart/billChart.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/components/time/time.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/utils/util.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/components/billbar/billbar.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -181,7 +185,6 @@
         <option value="$PROJECT_DIR$/pages/achieve/achieve.wxml" />
         <option value="$PROJECT_DIR$/pages/achieve/achieve.js" />
         <option value="$PROJECT_DIR$/pages/achieve/achieve.less" />
-        <option value="$PROJECT_DIR$/pages/billChart/billChart.js" />
         <option value="$PROJECT_DIR$/components/ec-canvas/wx-canvas.js" />
         <option value="$PROJECT_DIR$/components/ec-canvas/echarts.js" />
         <option value="$PROJECT_DIR$/components/ec-canvas/ec-canvas.js" />
@@ -210,7 +213,6 @@
         <option value="$PROJECT_DIR$/pages/index/index.wxml" />
         <option value="$PROJECT_DIR$/pages/teamDetail/teamDetail.wxml" />
         <option value="$PROJECT_DIR$/pages/teamDetail/teamDetail.json" />
-        <option value="$PROJECT_DIR$/pages/team/team.wxml" />
         <option value="$PROJECT_DIR$/pages/sdAdd/sdAdd.js" />
         <option value="$PROJECT_DIR$/pages/team/team.json" />
         <option value="$PROJECT_DIR$/pages/about/about.wxml" />
@@ -223,6 +225,8 @@
         <option value="$PROJECT_DIR$/pages/team/team.js" />
         <option value="$PROJECT_DIR$/app.less" />
         <option value="$PROJECT_DIR$/static/icon/td2.svg" />
+        <option value="$PROJECT_DIR$/pages/billChart/billChart.js" />
+        <option value="$PROJECT_DIR$/pages/team/team.wxml" />
       </list>
     </option>
   </component>
@@ -257,6 +261,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -278,42 +283,30 @@
               <item name="Bookkeeping" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bookkeeping" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="team" type="462c0819:PsiDirectoryNode" />
+              <item name="billChart" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Bookkeeping" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bookkeeping" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="teamDetail" type="462c0819:PsiDirectoryNode" />
+              <item name="tbDetail" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Bookkeeping" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bookkeeping" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bookkeeping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bookkeeping" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="icon" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bookkeeping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bookkeeping" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="imgs" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="team" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Administrator/Documents/web/wechat/Bookkeeping/components/login/login.wxml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../electron/notebook" />
+    <property name="last_opened_file_path" value="$USER_HOME$/electron/notebook" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
@@ -328,18 +321,18 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\components" />
-      <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\static\imgs\user" />
-      <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\static\imgs\other" />
-      <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\static\imgs" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\static\icon" />
       <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\static\logo" />
       <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\components\keyboard" />
       <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\static\imgs\ji" />
       <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\components\showFrame" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\components" />
+      <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\static\imgs\user" />
+      <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\static\imgs\other" />
+      <recent name="C:\Users\Administrator\Documents\web\wechat\Bookkeeping\static\imgs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -355,7 +348,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="main.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="main.js" working-dir="$PROJECT_DIR$/../../../university/c/tongruan/tr2" />
+    <configuration name="main.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="main.js" working-dir="$USER_HOME$/university/c/tongruan/tr2" />
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.main.js" />
@@ -460,11 +453,12 @@
       <workItem from="1559105586971" duration="10848000" />
       <workItem from="1559186951882" duration="2165000" />
       <workItem from="1559192586418" duration="623000" />
+      <workItem from="1559793645436" duration="1718000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="599760000" />
+    <option name="totallyTimeSpent" value="601478000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -477,6 +471,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" show_stripe_button="false" />
       <window_info anchor="right" id="SvgViewer" order="3" show_stripe_button="false" />
@@ -484,8 +479,8 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.34582624" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4962631" visible="true" weight="0.44463372" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21001495" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4962631" visible="true" weight="0.2572402" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21001495" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" show_stripe_button="false" />
       <window_info id="Structure" order="1" show_stripe_button="false" side_tool="true" weight="0.25" />
@@ -510,7 +505,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/../../../university/c/tongruan/tr2/main.js</url>
+          <url>file://$USER_HOME$/university/c/tongruan/tr2/main.js</url>
           <line>25</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -631,13 +626,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../vue/TchainSystem/dist/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../vue/TchainSystem/dist/package.json" />
     <entry file="file://$PROJECT_DIR$/pages/sdAdd/sdAdd.wxs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -649,13 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2223">
           <caret line="118" column="18" selection-start-line="118" selection-start-column="18" selection-end-line="118" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/billChart/billChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -677,20 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/tbDetail/tbDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/billbar/billbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -820,13 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1957">
-          <caret line="103" column="20" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/promisify.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -862,17 +823,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/team/team.wxml">
+    <entry file="file://$PROJECT_DIR$/components/billbar/billbar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="19" />
+        <state relative-caret-position="302">
+          <caret line="142" column="21" lean-forward="true" selection-start-line="131" selection-start-column="8" selection-end-line="142" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="147" column="33" selection-start-line="147" selection-start-column="24" selection-end-line="147" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/team/team.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        <state relative-caret-position="114">
+          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/team/team.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/billChart/billChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="403" column="26" lean-forward="true" selection-start-line="403" selection-start-column="26" selection-end-line="403" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/tbDetail/tbDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
         </state>
       </provider>
     </entry>
