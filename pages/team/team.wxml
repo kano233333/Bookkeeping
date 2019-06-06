@@ -6,7 +6,7 @@
   <view class="addX" bindtap="showAdd" style="{{styleStr}}">
     <image wx:if="{{!styleStr}}" src="/static/icon/add.svg" />
     <view wx:if="{{styleStr}}">
-      <input maxlength="7" value="{{setName}}" bindinput="setTeamName" cursor-spacing="60" placeholder="请输入团队名" />
+      <input maxlength="7" value="{{setName}}" bindinput="setTeamName" cursor-spacing="60" placeholder="团队名（最多7个字）" />
       <button bindtap="setTeam">确定</button>
     </view>
   </view>

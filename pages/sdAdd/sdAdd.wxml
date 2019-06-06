@@ -13,7 +13,7 @@
     <input type="number" disabled="true" value="{{amount+''+calAcmount}}" bindtap="setAmount" placeholder="输入金额" />
   </view>
   <view class="remarks">
-    <text class="title">备注</text>
+    <text class="title">备注（最多20个字）</text>
     <input maxlength="20" bindinput="setRemarks" value="{{remarks}}" />
   </view>
   <view class="icon">
