@@ -41,6 +41,7 @@ Page({
       },
       success:function(res){
         if(res.static==1){
+          app.globalData._userIcon.push({name:this.data.inputVal,label:label})
           this.addLocalIcon(_icon)
           wx.showToast({
             title: '成功',

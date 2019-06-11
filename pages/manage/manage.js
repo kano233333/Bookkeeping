@@ -45,6 +45,13 @@ Page({
       },
       success:function(res){
         if(res.static==1){
+          // let userIcon = app.globalData.userIcon;
+          // for(let i = 0;i<userIcon.length;i++){
+          //   if(userIcon[i].label == label){
+          //     app.globalData.userIcon = userIcon.split(i,1)
+          //     break;
+          //   }
+          // }
           this.deleteLocalIcon(this.data.type,label)
           wx.showToast({
             title: '成功',

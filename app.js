@@ -9,7 +9,7 @@ App({
     userInfo: null,
     userStatus:'',
     ip:'https://www.victorzuo.top/wx',
-    // ip:'http://192.168.1.69:8080/wx',
+    // ip:'http://localhost:8080/wx',
     // ip:'http://192.168.43.231:8080/wx',
     intervalTime:600000,
     day : [1,30,99,199,299,365],
@@ -80,7 +80,6 @@ App({
             wx.hideLoading()
           },
           catch:function(res){
-            console.log(res)
             _this.requestFail()
           }
         })

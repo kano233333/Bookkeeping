@@ -101,7 +101,6 @@ Page({
       },
       success: function (res) {
         let data = res
-        console.log(res)
         barData = []
         this.data.barData = data
         let type = this.data.type==0 ? 'outcome' : 'income'
